@@ -37,7 +37,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-/*    z-index: -1;*/ 
+    z-index: -1;
 }
 /* Avatar & Name Positioning */
 .banner .container[data-v-5445dac8] {
@@ -49,7 +49,7 @@
 	bottom: 46px;
     max-width: 100%;
 }
-.data-v-5445dac8 {
+.nav-btn[data-v-5445dac8] {
     z-index: 999;
 }
 /*==================================================*/
