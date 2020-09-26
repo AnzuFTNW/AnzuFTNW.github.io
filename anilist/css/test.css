@@ -36,8 +36,7 @@
 .banner[data-v-5445dac8] {
     height: 100%;
     width: 100%;
-    position: fixed;
-    z-index: -1;
+    position: fixed;  
 }
 /* Avatar & Name Positioning */
 .banner .container[data-v-5445dac8] {
@@ -49,8 +48,8 @@
 	bottom: 46px;
     max-width: 100%;
 }
-.nav-btn[data-v-5445dac8] {
-    z-index: 999;
+.section[data-v-5c30286e] {
+    z-index: 900;
 }
 /*==================================================*/
 /* Page Content */
@@ -101,3 +100,4 @@
 }*/
 /*==================================================*/
 /*==================================================*/
+
