@@ -157,6 +157,9 @@
 .progress[data-v-5d42c114] {
     background-color: rgb(var(--cc-green));
 }
+.markdown video {
+	border: 2px solid rgb(var(--cc-border));
+}
 /*==================================================*/
 /*==================================================*/
 /* Colors */
