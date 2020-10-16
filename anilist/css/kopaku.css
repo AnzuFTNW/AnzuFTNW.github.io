@@ -89,6 +89,11 @@
 .overview[data-v-5c30286e] {
     display: block;
 }
+/* Fix Hoh Stuff */
+.filters[data-v-310d8b7e] {
+    position: sticky;
+    z-index: 2;
+}
 /*==================================================*/
 /* Disabled*/
 .footer[data-v-82d0a8cc], .stats-wrap[data-v-5c30286e], .desktop[data-v-5c30286e], .avatar[data-v-5445dac8], .name[data-v-5445dac8], .follower-badge[data-v-5445dac8] {
