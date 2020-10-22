@@ -2,10 +2,19 @@
 /* If you read this, hoi.
 /* Please don't collapse if you read through this code, I've never used CSS before and 
 /* I've only coded a little before so my experience is quite low, keep that in mind :holyfuk:
+/*
+/* Changelog:
+/* 2020/10/14 - markdown video border added, increased border size from 2px to 4px, adapted logo and social avatar size to bigger borders
+/* 2020/10/17 - fixed hoh filters and buttons under the social tab
+/* 2020/10/22 - fixed light and contrast mode, changed konpaku gif to resize itself depending on the users resolution (hopefully), fixed forum comments section, fixed a variable in the color section
+/*
+/* Known Bugs: 
+/* Stats page is a mess, every single tab is broken cuz of the narrow content shizzle 
+/* Navbar hiding in mobile mode makes konpaku cut off, if you read this anzu, you shouldn't care thanks, np bro i won't
 /*==================================================*/
 /* Nav Bars (Top & Bottom) */
 /* No Transparent */
-.site-theme-dark .nav-unscoped.transparent, .site-theme-dark .nav-unscoped.transparent:hover, .site-theme-dark .nav-unscoped {
+.site-theme-dark .nav-unscoped.transparent, .site-theme-dark .nav-unscoped.transparent:hover, .site-theme-dark .nav-unscoped, .nav[data-v-4fbac4e1], .solid[data-v-4fbac4e1], .transparent[data-v-4fbac4e1]:hover {
     background: linear-gradient(145deg, rgba(var(--cc-hair-top),1) 0%, rgba(var(--cc-hair-bottom),1) 100%);
     color: rgb(var(--color-text-light));
 }
@@ -57,12 +66,12 @@
     padding-right: 20px;
     padding-top: 0;
     padding-bottom: 0;
-	bottom: 46px;
+	bottom: 50px;
     max-width: 100%;
     background-image: url("https://s8.gifyu.com/images/konpaku-gif-tt7c99b3c72790f9d8.gif") !important;
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: auto 845px;
+    background-size: auto calc(100% - 96px); /* please work :pepehands: edit: omg it works :pepohappy: */
 }
 /* Hoh Download Position (top right)*/
 .hohDownload {
@@ -126,7 +135,7 @@
 }
 /*==================================================*/
 /* Coloring */
-.about .content-wrap[data-v-5c30286e], .wrap[data-v-5e514b1e], .load-more[data-v-6f203cf2], .reply[data-v-5a191921], .medialist.table .list-section, .theme-switch[data-v-17f4caca], .favourites-wrap[data-v-45543a61], .bar-chart-wrap[data-v-46edc0ca], .switch[data-v-05bb5e72], .pie-chart[data-v-26dc9635], .horizontal-scroller, .follow-card[data-v-39573fe2], .markdown-editor, .el-textarea, .button[data-v-93c5960c], .hamburger[data-v-8aeb5e9a], .menu.visible[data-v-8aeb5e9a] {
+.about .content-wrap[data-v-5c30286e], .wrap[data-v-5e514b1e], .load-more[data-v-6f203cf2], .reply[data-v-5a191921], .medialist.table .list-section, .theme-switch[data-v-17f4caca], .favourites-wrap[data-v-45543a61], .bar-chart-wrap[data-v-46edc0ca], .switch[data-v-05bb5e72], .pie-chart[data-v-26dc9635], .horizontal-scroller, .follow-card[data-v-39573fe2], .markdown-editor, .el-textarea, .button[data-v-93c5960c], .hamburger[data-v-8aeb5e9a], .menu.visible[data-v-8aeb5e9a], .comment-wrap[data-v-768af104] {
     background: linear-gradient(145deg, rgba(var(--cc-hair-top),1) 0%, rgba(var(--cc-hair-bottom),1) 100%);
     border: 4px solid rgb(var(--cc-border));
     border-radius: 4px;
@@ -168,10 +177,13 @@
 .heading[data-v-72dc5b51] .switch {
     height: 35px;
 }
+.user-comments[data-v-ee1a47a4] {
+    position: relative;
+}
 /*==================================================*/
 /*==================================================*/
 /* Colors */
-.body, .site-theme-dark, .site-theme-contrast {
+:root, .body, .site-theme-dark, .site-theme-contrast {
     --cc-border: var(--cc-gray);
     --cc-pink: 255, 164, 181;
     --cc-green: 124, 173, 156;
@@ -181,7 +193,7 @@
     --cc-hair-shadow: 129, 115, 156;   
     
     --color-background: var(--cc-hair-top);
-    --color-foreground: 210, 208, 226; /* ??? */
+    --color-foreground: var(--cc-hair-top);
     --color-text: var(--cc-gray);
     --color-text-light: var(--cc-gray);
     --color-text-lighter: var(--cc-gray);
