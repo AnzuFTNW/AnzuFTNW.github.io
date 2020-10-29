@@ -1,0 +1,1 @@
+javascript:(function(){var s=document.createElement('link');s.setAttribute('href','https://anzuftnw.github.io/anilist/css/kopaku.css');s.setAttribute('rel','stylesheet');s.setAttribute('type','text/css');document.getElementsByTagName('head')[0].appendChild(s);alert('Stylesheet injected! Remember to reload when you\'re done!');})();
