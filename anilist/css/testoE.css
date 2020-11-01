@@ -1,0 +1,19 @@
+a[href="https://anilist.co/user/Anzu"] {
+    background: #1a1a1a;
+    display: block;
+    position: fixed;
+    z-index: 999;
+    bottom: 5%;
+    box-shadow: 0 0 50px black;
+    border-radius: 16px;
+    width: 550px;
+    right: -325px;
+    transition: right 0.2s linear;
+}
+
+a[href="https://anilist.co/user/Anzu"] > img {
+    width: 1000px;
+}
+
+a[href="https://anilist.co/user/Anzu"]:hover {
+    right: 0px;
