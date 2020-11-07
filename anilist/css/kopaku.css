@@ -103,6 +103,12 @@
     position: sticky;
     z-index: 2;
 }
+/* List and Stat Page Fix - ty to @cakes <3*/ 
+.user[type] > .container {
+    margin: initial;
+    max-width: initial;
+    padding: 5rem 20rem 5rem 20rem;
+}
 /*==================================================*/
 /* Disabled*/
 .footer[data-v-82d0a8cc], .stats-wrap[data-v-5c30286e], .desktop[data-v-5c30286e], .avatar[data-v-5445dac8], .name[data-v-5445dac8], .follower-badge[data-v-5445dac8] {
