@@ -9,6 +9,8 @@
 /*
 /* Bug List
 /*  - all critical problems fixed - 2020/11/08
+/*  - Anime List, Manga List in Server Selection Bar target /Anzu/xxx so visitors of my page won't see the Icons from the pseudo ::after element.
+/*  - Theme Selection Bar often misses a square top right, reloading helps, not sure what causes it.
 /*
 /* Notes
 /*  - * There are a lot of uneccesary attributes/properties, wrong decision early on that
