@@ -973,7 +973,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding-left: 18px;
 }
 
-.nav .router-link-active[href="/user/Hanazawa/"]::after {
+.nav .router-link-active[href="/user/Anzu/"]::after {
     content: "overview";
     position: fixed;
     top: 20px;
@@ -982,7 +982,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/animelist"]::after {
+.nav .router-link-active[href="/user/Anzu/animelist"]::after {
     content: "anime-list";
     position: fixed;
     top: 20px;
@@ -991,7 +991,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/mangalist"]::after {
+.nav .router-link-active[href="/user/Anzu/mangalist"]::after {
     content: "manga-list";
     position: fixed;
     top: 20px;
@@ -1000,7 +1000,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/favorites"]::after {
+.nav .router-link-active[href="/user/Anzu/favorites"]::after {
     content: "favorites";
     position: fixed;
     top: 20px;
@@ -1009,7 +1009,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/stats/anime/overview"]::after {
+.nav .router-link-active[href="/user/Anzu/stats/anime/overview"]::after {
     content: "stats";
     position: fixed;
     top: 20px;
@@ -1018,7 +1018,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/social"]::after {
+.nav .router-link-active[href="/user/Anzu/social"]::after {
     content: "social";
     position: fixed;
     top: 20px;
@@ -1027,7 +1027,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/reviews"]::after {
+.nav .router-link-active[href="/user/Anzu/reviews"]::after {
     content: "reviews";
     position: fixed;
     top: 20px;
@@ -1036,7 +1036,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
     padding: 15.5px 48.5px
 }
 
-.nav .router-link-active[href="/user/Hanazawa/submissions"]::after {
+.nav .router-link-active[href="/user/Anzu/submissions"]::after {
     content: "submissions";
     position: fixed;
     top: 20px;
