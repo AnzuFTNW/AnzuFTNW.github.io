@@ -1,16 +1,17 @@
 /* ======================================================================================= */
 /*
 /* discord.css*
-/*  - version: 1.01
+/*  - version: 1.02
 /*
 /* Changelog
 /*  - 2020/11/09 - 1.0  - pogu
 /*  -            - 1.01 - fixed some reference issues
+/*  -            - 1.02 - removed activity post max height
 /*
 /* Bug List
 /*  - all critical problems fixed - 2020/11/08
 /*  - Anime List, Manga List in Server Selection Bar target /Anzu/xxx so visitors of my page won't see the Icons from the pseudo ::after element.
-/*  - Theme Selection Bar often misses a square top right, reloading helps, not sure what causes it.
+/*  - Theme Selection Bar often misses a square top right, reloading helps, not sure what causes it. Also happends with the activity input.
 /*
 /* Notes
 /*  - * There are a lot of uneccesary attributes/properties, wrong decision early on that
@@ -901,6 +902,7 @@ a[href="https://discord.gg/anilist"]:hover:before {
 
 .text[data-v-5e514b1e] .markdown {
     margin: 0;
+    max-height: none;
 }
 
 .time[data-v-5e514b1e] {
