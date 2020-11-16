@@ -1,4 +1,4 @@
-/* Discord.css Version 1.1 Update */
+/* Discord.css Version 1.1.1 Update */
 
 /* To Do:
 - Changing the reply design to look more like the changed activities
@@ -85,83 +85,16 @@
     margin-bottom: 0;
 }
 
-/* Temporary Server Icons "Fix" */
-.link[data-v-4fbac4e1] {
-    padding: 14px 0px;
-    height: 46px;
-    width: 46px;
-    background: var(--color-bg-shade3);
-    border-radius: 100px;
-    text-align: center;
-    margin-bottom: 8px;
-    font-size: 1rem;
-}
+/* Server Icons Fix thanks to @cakes for getting me aware of the :nth pseudo classes */
+.wrap .link[data-v-4fbac4e1]:nth-child(1)::before { content: "H"; font-size: initial; font-weight: 800; }
+.wrap .link[data-v-4fbac4e1]:nth-child(2)::before { content: "P"; font-size: initial; font-weight: 800; }
+.wrap .link[data-v-4fbac4e1]:nth-child(3)::before { content: "AL"; font-size: initial; font-weight: 800; }
+.wrap .link[data-v-4fbac4e1]:nth-child(4)::before { content: "ML"; font-size: initial; font-weight: 800; }
+.wrap .link[data-v-4fbac4e1]:nth-child(5)::before { content: "B"; font-size: initial; font-weight: 800; }
+.wrap .link[data-v-4fbac4e1]:nth-child(6)::before { content: "F"; font-size: initial; font-weight: 800; }
 
-.link[data-v-4fbac4e1]:hover {
-    background: var(--color-blue-shade1);
-    border-radius: 15px;
-}
-
-.wrap .link[href="/home"] {
-    padding: 15.5px 0px;
-    height: 46px;
-    width: 46px;
-    background: var(--color-bg-shade3);
-    border-radius: 100px;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 8px;
-    font-size: 0;
-}
-.wrap .link[href="/search/anime"] {
-    padding: 15.5px 0px;
-    height: 46px;
-    width: 46px;
-    background: var(--color-bg-shade3);
-    border-radius: 100px;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 8px;
-    font-size: 0;
-}
-.wrap .link[href="/forum/overview"] {
-    padding: 15.5px 0px;
-    height: 46px;
-    width: 46px;
-    background: var(--color-bg-shade3);
-    border-radius: 100px;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 8px;
-    font-size: 0;
-}
-.wrap .link[href="/user/Anzu/"]::before { content: ""; font-size: 0; font-weight: 0; }
-.wrap .link[href="/user/Anzu/animelist"]::before { content: ""; font-size: 0; font-weight: 0; }
-.wrap .link[href="/user/Anzu/mangalist"]::before { content: ""; font-size: 0; font-weight: 0; }
-.link[data-v-4fbac4e1]:hover {
-    background: var(--color-blue-shade1);
-    border-radius: 15px;
-}
-
-/* Random Width Bug Fix Attempt - Atleast it fixes the background for now, so it dosnt look as bad as before... */
-
-/* Top Bar */
-#app {
-    width: 100%;
-}
-.page-content {
-    width: calc(100% - 240px);
-}
-
-/* Input Field */
-#app::after {
-    content: "";
-    position: fixed;
-    bottom: 0;
-    right: calc(0px + 240px - 17px);
-    width: 17px;
-    height: 66px;
-    background: var(--color-bg-shade2);
-    z-index: -1;
+/* Width Bug Fix Attempt - Seems like it dosn't interrupt anything else */
+html {
+    overflow: hidden;
 }
 
