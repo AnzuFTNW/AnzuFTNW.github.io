@@ -1,4 +1,4 @@
-/* Discord.css Version 1.1.1 Update */
+/* Discord.css Version 1.2 Update */
 
 /* To Do:
 - Changing the reply design to look more like the changed activities
@@ -98,3 +98,136 @@ html {
     overflow: hidden;
 }
 
+/* Anilist Update */
+
+.wrap[data-v-6f9ee47f] {
+    position: fixed;
+    display: block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.wrap[data-v-6f9ee47f]::before {
+    content: "ANILIST";
+    position: absolute;
+    left: 0;
+    margin-left: 8.1px;
+    margin-right: 8.1px;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: var(--color-text-shade2);
+}
+.footer[data-v-6f9ee47f] {
+    margin: 0;
+    padding: 0;
+    min-height: 20px;
+    background: var(--color-bg-shade6);
+}
+.container[data-v-6f9ee47f] {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+.theme-selector[data-v-6f9ee47f] {
+    margin-left: auto;
+    margin-right: 5px;
+}
+.theme-preview[data-v-6f9ee47f] {
+    height: 14px;
+    width: 14px;
+    font-size: 10px;
+    padding: 1px;
+    margin: 0;
+    margin-right: 5px;
+}
+.links[data-v-6f9ee47f] {
+    display: none;
+}
+h2[data-v-6f9ee47f] {
+    display: none;
+}
+.dark[data-v-6f9ee47f] {
+    background: #202225;
+}
+
+
+.wrap[data-v-6c3dc0b8] {
+    background: var(--color-bg-shade2);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.wrap[data-v-6c3dc0b8]:hover {
+    background: var(--color-bg-shade3);
+}
+.text[data-v-6c3dc0b8] {
+    padding: 3px;
+    color: var(--color-icon-shade2);
+}
+.text .header[data-v-6c3dc0b8] {
+    height: 21px;
+}
+.text .avatar[data-v-6c3dc0b8] {
+    border-radius: 100px;
+    position: relative;
+    top: 9px;
+}
+.text .name[data-v-6c3dc0b8] {
+    /*line-height: 25px;*/
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: var(--color-icon-shade1);
+}
+.text .activity-markdown[data-v-6c3dc0b8] {
+    position: relative;
+    width: calc(100% - 40px - 12px);
+    left: calc(40px + 12px);   
+}
+.text[data-v-6c3dc0b8] .markdown {
+    margin: 0;
+    max-height: none;
+}
+.time[data-v-6c3dc0b8] {
+    color: var(--color-text-shade2);
+    top: 5px;
+}
+.actions[data-v-6c3dc0b8] {
+    bottom: 5px;
+    color: var(--color-icon-shade3);   
+}
+.actions .action[data-v-6c3dc0b8]:hover {
+    color: var(--color-icon-shade2);
+}
+.preview[data-v-6c3dc0b8] {
+    margin-top: 15.5px !important;
+    margin-bottom: -3.5px !important;
+}
+.activity-entry[data-v-6c3dc0b8] {
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+/* Activity Edit Preview */
+.activity-entry[data-v-6c3dc0b8] {
+    margin-bottom: 12px;
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-6c3dc0b8] {
+    max-height: calc(75vh - 35px - 18px - 15.5px - 15.5px - 35px - 12px);
+    border: 2px solid rgba(0,0,0,0.15);
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-6c3dc0b8]::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade2);
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-6c3dc0b8]:hover::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade3);
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-6c3dc0b8] {
+    display: inline-flex;
+    order: 1;
+    min-height: 50px;
+    max-height: calc(75vh - 25vh - 18px - 15.5px - 15.5px - 35px - 12px);
+    width: 100%;
+    overflow-y: auto;
+}
+.activity-entry[data-v-93c5960c] .text[data-v-6c3dc0b8] {
+    width: 100%;
+}
