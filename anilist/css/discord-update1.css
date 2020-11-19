@@ -2,7 +2,7 @@
 
 /* To Do:
 - Changing the reply design to look more like the changed activities
-- Inverted Activity Feed worked but broke a lot of diff. things (Loading even more activities after pressing load more, followers, favorites) [ty @cakes for making me aware of the latter two]
+- Loading new things dosnt work, fav, followers, more activities etc.
 */
 
 /* Activity Edit Rewrite - Y-Axis-Scaleable Inputbox - Thankfully I found out about the "order" property. */
@@ -250,7 +250,4 @@ h2[data-v-6f9ee47f] {
 }
 .el-dialog__body .markdown-editor[data-v-93c5960c]::before {
     border-top: none;
-}
-.activity-entry[data-v-6c3dc0b8] {
-    margin-bottom: 0px;
 }
