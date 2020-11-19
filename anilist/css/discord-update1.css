@@ -2,9 +2,7 @@
 
 /* To Do:
 - Changing the reply design to look more like the changed activities
-- Scroll down on load up / Load up scrolled down? 
-- Fixing the width bug on top row and input - (probably) related to scrollbar? [Temp. Fixed]
-- Fixing the link bug on the server icons for profile, anime list and manga list. [Temp. Fixed]
+- Inverted Activity Feed worked but broke a lot of diff. things (Loading even more activities after pressing load more, followers, favorites) [ty @cakes for making me aware of the latter two]
 */
 
 /* Activity Edit Rewrite - Y-Axis-Scaleable Inputbox - Thankfully I found out about the "order" property. */
@@ -66,7 +64,7 @@
     box-shadow: inset 0 0 16px 16px var(--color-bg-shade4);
 }
 
-/* Inverted Activity Feed */
+/* Inverted Activity Feed
 .activity-feed-wrap[data-v-09492909] {
     display: flex;
     flex-direction: column-reverse;
@@ -84,6 +82,7 @@
     margin-top: 12px;
     margin-bottom: 0;
 }
+*/
 
 /* Server Icons Fix thanks to @cakes for getting me aware of the :nth pseudo classes */
 .wrap .link[data-v-4fbac4e1]:nth-child(1)::before { content: "H"; font-size: initial; font-weight: 800; }
@@ -99,7 +98,6 @@ html {
 }
 
 /* Anilist Update */
-
 .wrap[data-v-6f9ee47f] {
     position: fixed;
     display: block;
@@ -206,6 +204,7 @@ h2[data-v-6f9ee47f] {
     margin-bottom: 0;
     margin-top: 12px;
 }
+
 /* Activity Edit Preview */
 .activity-entry[data-v-6c3dc0b8] {
     margin-bottom: 12px;
@@ -230,4 +229,28 @@ h2[data-v-6f9ee47f] {
 }
 .activity-entry[data-v-93c5960c] .text[data-v-6c3dc0b8] {
     width: 100%;
+}
+
+/* Activtiy Edit  */
+.v-modal {
+    display: none;
+}
+.el-dialog {
+    width: calc(100% - 480px - 70px);
+    margin-left: auto;
+    margin-right: 240px;
+}
+.el-dialog__body {
+    padding: 0 !important;
+}
+.el-dialog__body .activity-edit[data-v-93c5960c] {
+    bottom: unset;
+    border: 2px solid var(--color-bg-shade6);
+    outline: 69vh solid rgba(0,0,0,.5);
+}
+.el-dialog__body .markdown-editor[data-v-93c5960c]::before {
+    border-top: none;
+}
+.activity-entry[data-v-6c3dc0b8] {
+    margin-bottom: 0px;
 }
