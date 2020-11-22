@@ -251,3 +251,19 @@ h2[data-v-6f9ee47f] {
 .el-dialog__body .markdown-editor[data-v-93c5960c]::before {
     border-top: none;
 }
+
+/* Activity Margin */
+.activity-entry[data-v-6c3dc0b8] {
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.activity-feed-wrap[data-v-09492909] {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.load-more[data-v-6f203cf2] {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
