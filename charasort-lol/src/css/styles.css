@@ -1,0 +1,287 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.progress {
+  margin: 1em auto;
+  width: 500px;
+  display: none;
+}
+
+.progressbar {
+  position: relative;
+  width: 492px;
+  border: 1px solid black;
+  padding: 3px;
+  margin: 2px 0px;
+}
+
+.progresstext {
+  position: absolute;
+  width: 492px;
+  margin: 3px 0px;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.progressfill {
+  height: 20px;
+  background-color: lightgreen;
+  width: 0%;
+}
+
+.sorter {
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  grid-gap: 5px;
+  width: 420px;
+}
+
+.button {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10%;
+  grid-column: 2 / 3;
+  cursor: pointer;
+}
+
+.starting.start.button {
+  grid-row: span 6;
+}
+
+.starting.load.button {
+  grid-row: span 3;
+  display: none;
+}
+
+.sorting.button, .finished.button {
+  grid-row: span 2;
+  display: none;
+}
+
+.loading.button {
+  grid-row: span 6;
+  display: none;
+}
+
+.loading.button > div {
+  width: 25px;
+  height: 25px;
+  margin: 50px auto;
+  background-color: #333;
+
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+/* Animation taken from: http://tobiasahlin.com/spinkit/ */
+
+.loading.button > span {
+  margin: auto auto 20%;
+  font-size: 0.7em;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.sorter > .image {
+  width: 120px;
+  height: 180px;
+  margin: auto;
+  grid-row: 1 / 7;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.sorter > .text {
+  width: 120px;
+  height: 60px;
+  display: none;
+}
+
+.sorter > .text > p {
+  margin: 0.5em 5px 0px;
+  width: calc(100%-10px);
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.sorter > .left {
+  grid-column: 1 / 2;
+  border: 1px solid #000000;
+}
+
+.sorter > .right {
+  grid-column: 3 / 4;
+  border: 1px solid #000000;
+}
+
+.options {
+  margin: 1em auto;
+  display: grid;
+  text-align: left;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 450px;
+}
+
+.options > div {
+  font-size: 0.5625em;
+}
+
+label {
+  cursor: pointer;
+}
+
+label:hover {
+  color: #990000;
+}
+
+.options > .large.option, .options > hr {
+  grid-column: span 3;
+  text-align: center;
+  width: 100%;
+}
+
+.image.selector {
+  margin-top: 0.5em;
+  width: 500px;
+  display: none;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.time.taken {
+  margin-top: 0.5em;
+  width: 500px;
+  display: none;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.results {
+  font-size: 0.75em;
+  display: flex;
+  align-content: flex-start;
+  width: 80%;
+  margin: 2em auto;
+}
+
+@media all and (min-width: 600px) {
+  .results {
+    flex-flow: column wrap;
+    max-height: calc(5 * (175px + 2px) + 1 * (15px + 2px));
+    /* 2px for borders */
+  }
+}
+
+@media all and (max-width: 600px) {
+  .results {
+    flex-flow: column nowrap;
+  }
+}
+
+.result {
+  height: 15px;
+  margin-bottom: -1px;
+  display: grid;
+  width: 211px;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #000;
+  margin-right: 5px;
+}
+
+.result.image {
+  height: 175px;
+}
+
+.result.image img {
+  height: 160px;
+}
+
+.result.spacer {
+  height: 1px;
+  background-color: #000;
+}
+
+.result.head {
+  background-color: #000;
+  color: #FFF;
+}
+
+.result > .left {
+  width: 35px;
+  padding: 1px 3px 1px 0.5em;
+  grid-column: 1 / 2;
+  text-align: right;
+}
+
+.result.image .left {
+  position: relative;
+}
+
+.result.image > .left span {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  margin-top: -0.375em;
+}
+
+.result > .right {
+  width: 160px;
+  padding: 1px 0em 1px 0em;
+  grid-column: 2 / 3;
+  border-left: 1px solid #000;
+  text-align: center;
+}
+
+.info {
+  margin: 2em auto 3em;
+  display: block;
+  text-align: center;
+  font-size: 0.6875em;
+  width: 80%;
+  line-height: 1.2em;
+}
+
+a {
+  color: #990000;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #FF6600;
+}
+
+a:visited {
+  color: #6600FF;
+}
