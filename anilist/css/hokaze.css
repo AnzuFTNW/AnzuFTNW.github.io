@@ -1,6 +1,6 @@
 /* Anilist.co Custom CSS
 /* - Name: Hokaze.css
-/* - Author: @Anzu on Anilist.co
+/* - Author: @Anzu
 /* - Date: 2021/01/05
 
 /* Changelog
@@ -18,7 +18,8 @@
   --hokaze-sb: 4px;  /* Scrollbar Width */
   --hokaze-vo: 0.7;  /* Opacity For Various Elements */
   --hokaze-vs: 0.9;  /* Scale For Various Elements */
-  --hokaze-vb: 4px;  /* Various Avatar Border Thickness */
+  --hokaze-vb: 2px;  /* Various Avatar Border Thickness */
+  --hokaze-sr: 4px;  /* Social Page Border Thickness */
   --hokaze-fr: 30px; /* Footer Border Radius */
   --hokaze-fl: 85%;  /* Footer Length */
   --hokaze-vt: all 0.5s ease-in-out; /* Transition For Various Elements */
@@ -53,6 +54,7 @@
   --hokaze-bcc: calc(var(--hokaze-bch) / 2);
   --hokaze-bctc: calc(var(--hokaze-bcc) - 36px / 2 );
   --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));  
+  --hokaze-sab: var(--hokaze-sr) solid rgb(var(--color-background));
 }
 
 /* Code */
@@ -327,7 +329,7 @@ svg:not(:root).svg-inline--fa:hover {
   transition: var(--hokaze-vt);
 }
 .avatar[data-v-39573fe2] {
-  border: var(--hokaze-vab);
+  border: var(--hokaze-sab);
   border-radius: var(--hokaze-ar);
   transition: var(--hokaze-vt);
 }
