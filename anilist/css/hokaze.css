@@ -1,0 +1,382 @@
+/* Anilist.co Custom CSS
+/* - Name: Hokaze.css
+/* - Author: @Anzu
+/* - Date: 2021/01/05
+
+/* Changelog
+/* - 2021/01/05: Initial Release
+
+/* Settings */
+:root, .site-theme-dark {
+  /* General Settings */
+  --hokaze-br: 15px; /* Global Border Radius */
+  --hokaze-pv: 30px; /* Vertical Content Padding */
+  --hokaze-ph: 30px; /* Horizontal Content Padding */
+  --hokaze-bt: 0.3;  /* Content Background Transparency*/
+  --hokaze-nr: 30px; /* Navbar Border Radius */
+  --hokaze-nl: 80%;  /* Navbar Length */
+  --hokaze-sb: 4px;  /* Scrollbar Width */
+  --hokaze-vo: 0.7;  /* Opacity For Various Elements */
+  --hokaze-vs: 0.9;  /* Scale For Various Elements */
+  --hokaze-vb: 4px;  /* Various Avatar Border Thickness */
+  --hokaze-fr: 30px; /* Footer Border Radius */
+  --hokaze-fl: 85%;  /* Footer Length */
+  --hokaze-vt: all 0.5s ease-in-out; /* Transition For Various Elements */
+  --hokaze-bs: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px,
+               rgba(0, 0, 0, 0.07) 0px 4px 8px,
+               rgba(0, 0, 0, 0.07) 0px 8px 16px;
+  --hokaze-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow For Navbar */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px;
+  
+  /* Avatar Settings */
+  --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
+  --hokaze-ap: 0% 20%; /* Inner Avatar Position */
+  --hokaze-ab: 10px;   /* Avatar Border Thickness */
+  --hokaze-ar: 255px;  /* Avatar Border Radius */
+  --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
+  --hokaze-av: url("https://i.imgur.com/xaGCQdT.jpg"); /* Avatar Picture Link */
+  --hokaze-ah: 1.1; /* Avatar Hover Scale */
+  
+  /* Quick Maths - !DON'T TOUCH! */
+  --hokaze-brt: var(--hokaze-br) var(--hokaze-br) 0 0;
+  --hokaze-brb: 0 0 var(--hokaze-br) var(--hokaze-br);
+  --hokaze-bra: var(--hokaze-br) var(--hokaze-br) var(--hokaze-br) var(--hokaze-br);
+  --hokaze-pdh: var(--hokaze-pv) var(--hokaze-ph);
+  --hokaze-maw: calc(1520px - 2 * ( 100px - var(--hokaze-ph)));
+  --hokaze-abs: var(--hokaze-ab) solid rgb(var(--color-foreground));
+  --hokaze-nbr: 0 0 var(--hokaze-nr) var(--hokaze-nr);
+  --hokaze-nbl: calc((100% - var(--hokaze-nl)) / 2);
+  --hokaze-fbr: var(--hokaze-fr) var(--hokaze-fr) 0 0;
+  --hokaze-fbl: calc((100% - var(--hokaze-fl)) / 2);
+  --hokaze-bch: calc(330px - 75px);
+  --hokaze-bcc: calc(var(--hokaze-bch) / 2);
+  --hokaze-bctc: calc(var(--hokaze-bcc) - 36px / 2 );
+  --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));  
+}
+
+/* Code */
+/* Header */
+.nav[data-v-4fbac4e1] {
+  background: rgb(var(--color-foreground)) !important;
+  color: rgb(var(--color-text-light)) !important;
+  border-radius: var(--hokaze-nbr);
+  left: var(--hokaze-nbl);
+  width: var(--hokaze-nl);
+  box-shadow: var(--hokaze-bs);
+}
+.hide[data-v-4fbac4e1], .nav.nav-unscoped {
+  top: -60px !important;
+}
+.nav.nav-unscoped.transparent, .nav:hover {
+  top: 0px !important;
+}
+.link[data-v-4fbac4e1]:hover {
+  color: rgb(var(--color-blue));
+}
+
+/* Banner */
+.banner[data-v-5445dac8] {
+  visibility: hidden;
+}
+.banner .container[data-v-5445dac8] {
+  visibility: visible;
+  justify-content: center;
+}
+.banner-content[data-v-5445dac8] {
+  height: var(--hokaze-bch);
+  width: 0;
+  align-items: center;
+  justify-content: center;
+}
+.avatar[data-v-5445dac8] {
+  width: 0;
+  height: 0;
+  padding: var(--hokaze-as);
+  background: var(--hokaze-av);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: var(--hokaze-ap);
+  border-radius: var(--hokaze-ar);
+  border: var(--hokaze-abs);
+  box-shadow: var(--hokaze-bs);
+  transition: var(--hokaze-at);
+  z-index: 100;
+}
+.name[data-v-5445dac8] {
+  position: absolute;
+  transition: var(--hokaze-vt);
+  transform: translateY(8vh);
+  z-index: 110;
+  opacity: 1;
+}
+.mod-badge[data-v-5445dac8] {
+  position: absolute;
+  bottom: var(--hokaze-bctc);
+  margin: 0;
+  padding: 11.5px 10px;
+  transition: var(--hokaze-at);
+}
+.mod-badge[data-v-5445dac8]:hover {
+  background: rgba(var(--color-blue),1);
+}
+.actions[data-v-5445dac8] {
+  position: absolute;
+  bottom: var(--hokaze-bctc);
+  margin: 0;
+  padding: 0;
+  transition: var(--hokaze-at);
+}
+.nav-btn[data-v-5445dac8] {
+  width: 84.14px;
+  transition: var(--hokaze-at);
+}
+.banner-content[data-v-5445dac8]:hover .avatar[data-v-5445dac8] {
+  border-color: rgb(var(--color-blue));
+  transform: scale(var(--hokaze-ah));
+}
+.banner-content[data-v-5445dac8]:hover .mod-badge[data-v-5445dac8] {
+  transform: translateX(-170px);
+}
+.banner-content[data-v-5445dac8]:hover .actions[data-v-5445dac8] {
+  transform: translateX(183px);
+}
+.banner-content[data-v-5445dac8]:hover .name[data-v-5445dac8] {
+  opacity: 0;
+}
+
+/* Container */
+.nav-wrap[data-v-5445dac8] {
+  max-width: var(--hokaze-maw);
+  margin: 0 auto;
+  border-radius: var(--hokaze-brt);
+  box-shadow: var(--hokaze-ns);
+  position: relative;
+}
+.nav .link[data-v-5445dac8] {
+  position: relative;
+}
+.nav .link[data-v-5445dac8]:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: rgb(var(--color-blue));
+  transition: all 0.3s ease-in-out;
+}
+.nav .router-link-active[data-v-5445dac8]:after {
+  left: 0;
+  width: 100%;
+  background: rgb(var(--color-blue-dim));
+}
+.nav .link[data-v-5445dac8]:hover:after {
+  left: 0;
+  width: 100%;
+  background: rgb(var(--color-blue));
+}
+.content.container {
+  background: rgba(var(--color-foreground-grey-dark),var(--hokaze-bt));
+  max-width: var(--hokaze-maw);
+  padding: var(--hokaze-pdh);
+  border-radius: var(--hokaze-brb);
+  box-shadow: var(--hokaze-bs);
+}
+
+/* Content - Overview */
+.overview[data-v-5c30286e] {
+  margin-top: 0;
+}
+.overview[data-v-5c30286e] .content-wrap, .wrap[data-v-6c3dc0b8], .favourite[data-v-728ccf84], .load-more[data-v-6f203cf2], .user-page-unscoped .markdown-editor, .el-textarea__inner, .input[data-v-93c5960c] {
+  border-radius: var(--hokaze-bra);
+  box-shadow: var(--hokaze-bs);
+  transition: var(--hokaze-vt);
+}
+.history-day[data-v-514856af]:hover {
+  transform: scale(1.5);
+}
+.list-stats:nth-child(1), .list-stats:nth-child(2) {
+  height: calc(121px - 45px);
+}
+.list-stats:nth-child(1):hover, .list-stats:nth-child(2):hover {
+  height: 121px;
+}
+.name[data-v-aedb6876], .favourite[data-v-728ccf84] {
+  opacity: var(--hokaze-vo);
+  transform: scale(var(--hokaze-vs));
+  transition: var(--hokaze-vt);
+}
+.percentage[data-v-aedb6876] {
+  opacity: var(--hokaze-vo);
+}
+.name[data-v-aedb6876]:hover, .percentage[data-v-aedb6876]:hover, .favourite[data-v-728ccf84]:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.overview[data-v-5c30286e] .content-wrap {
+  transform: scale(var(--hokaze-vs));
+}
+.overview[data-v-5c30286e] .content-wrap:hover {
+  transform: scale(1);
+}
+.wrap[data-v-6c3dc0b8] {
+  transition: var(--hokaze-vt);
+  max-height: 70px;
+}
+.activity-entry[data-v-6c3dc0b8]:hover .wrap[data-v-6c3dc0b8] {
+  max-height: 663px; /*  663 560px max height, 28px margin, 70px header, 5px idk? kek */
+}
+.text[data-v-6c3dc0b8] {
+  padding-top: 15px;
+}
+.avatar[data-v-6c3dc0b8], .cover[data-v-6c3dc0b8] {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+}
+.wrap[data-v-6c3dc0b8]:hover .cover[data-v-6c3dc0b8] {
+  opacity: 1;
+}
+.text .avatar[data-v-6c3dc0b8], .user[data-v-b23584ce] {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+  border-radius: var(--hokaze-ar);
+  border: var(--hokaze-vab);
+}
+.wrap[data-v-6c3dc0b8]:hover .avatar[data-v-6c3dc0b8], .user[data-v-b23584ce]:hover {
+  opacity: 1;
+  border-color: rgb(var(--color-blue));
+}
+.text .name[data-v-6c3dc0b8] {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+}
+.wrap[data-v-6c3dc0b8]:hover .name[data-v-6c3dc0b8] {
+  opacity: 1;
+  font-weight: bold;
+}
+.activity-entry[data-v-6c3dc0b8], .input[data-v-93c5960c], svg:not(:root).svg-inline--fa {
+  transition: var(--hokaze-vt);
+}
+.list .title[data-v-6c3dc0b8], .input[data-v-93c5960c] .el-textarea__inner {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+}
+.activity-manga_list[data-v-6c3dc0b8]:hover, .activity-anime_list[data-v-6c3dc0b8]:hover {
+  transform: scale(1.1);  
+}
+.activity-manga_list[data-v-6c3dc0b8]:hover .title[data-v-6c3dc0b8], .activity-anime_list[data-v-6c3dc0b8]:hover .title[data-v-6c3dc0b8] {
+  opacity: 1;
+  font-weight: bold;
+}
+.input[data-v-93c5960c]:hover {
+  transform: scale(1.02);
+}
+.input[data-v-93c5960c]:hover .el-textarea__inner {
+  opacity: 1;
+}
+svg:not(:root).svg-inline--fa:hover {
+  transform: scale(1.2);
+}
+.load-more[data-v-6f203cf2] {
+  margin-top: 0;
+}
+.load-more[data-v-6f203cf2]:hover {
+  color: rgb(var(--color-blue));
+  box-shadow: var(--hokaze-bs);
+  transform: scale(1.02)
+}
+
+/* Content - Anime List / Manga List */
+.medialist[data-v-17f4caca] {
+  margin-top: 0;
+}
+.filter-group>span[data-v-6c3edee8]:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+.medialist.table .entry:hover .title a {
+  font-weight: bold;
+}
+
+/* Content - Favorites */
+.favourites[data-v-45543a61] {
+  margin-top: 0;
+}
+
+/* Content - Stats */
+.stats[data-v-1e00b9da] {
+  margin-top: 0;
+}
+.filter-group a[data-v-1e00b9da]:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+
+/* Content - Social */
+.user-social[data-v-310d8b7e] {
+  margin-top: 0;
+}
+.filter-group span[data-v-310d8b7e]:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+.follow-card[data-v-39573fe2] {
+  opacity: var(--hokaze-vo);
+  border-radius: var(--hokaze-ar);
+  transition: var(--hokaze-vt);
+}
+.avatar[data-v-39573fe2] {
+  border: var(--hokaze-vab);
+  border-radius: var(--hokaze-ar);
+  transition: var(--hokaze-vt);
+}
+.follow-card[data-v-39573fe2]:hover, .avatar[data-v-39573fe2]:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: rgb(var(--color-blue));
+}
+.name[data-v-39573fe2] {
+      background: rgba(var(--color-shadow),.4);
+}
+
+/* Content - Reviews */
+.review-wrap[data-v-5e6a17b4] {
+  margin-top: 0;
+}
+
+/* Footer */
+.footer[data-v-6f9ee47f] {
+  position: relative;
+  background: rgb(var(--color-foreground));
+  border-radius: var(--hokaze-fbr);
+  left: var(--hokaze-fbl);
+  width: var(--hokaze-fl);
+  box-shadow: var(--hokaze-bs);
+}
+.dark[data-v-6f9ee47f] {
+  background: #000;
+}
+
+/* Sorry Hoh */
+:root {
+  --color-green: var(--color-blue);
+}
+.hohColourPicker, .contrast[data-v-6f9ee47f] {
+  display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: var(--hokaze-sb);
+}
+::-webkit-scrollbar-thumb {
+background: rgba(var(--color-text-light),.5);
+border-radius: var(--hokaze-br);
+}
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
+background: rgb(var(--color-blue));
+}
+::-webkit-scrollbar-track {
+background: rgb(var(--color-background));
+}
