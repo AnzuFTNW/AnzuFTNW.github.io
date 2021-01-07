@@ -76,7 +76,7 @@
 .header[data-v-6c3dc0b8] > a[href="/user/Vereen/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-vereen);}
 /*a[href="/user//"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-);}
 
-a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
+.header[data-v-6c3dc0b8] > a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
     content: "Aiwaz";
     position: relative;
     background: none;
@@ -89,6 +89,6 @@ a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::be
     font-weight: normal;
 }
 
-a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link) {
+.header[data-v-6c3dc0b8] > a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link) {
     font-size: 0;
 }
