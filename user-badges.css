@@ -1,0 +1,76 @@
+/* Anilist.co Custom CSS
+/* - Name:        user-badges.css
+/* - Author:      @Anzu
+/* - Last Update: 2021/01/07
+
+/* Special Thanks:
+/* - @siwshlicious { Idea & Code }
+
+/* Changelog
+2021/01/05:
+- initial release 
+
+*/
+
+/* Badges */
+:root, .site-theme-dark, .site-theme-contrast {
+  --ub-anzu:           "Genshin Addict";
+  --ub-awaiz:          "Smort Boi";
+  --ub-baros:          "Cuddle Master";
+  --ub-cakes:          "Coding Senpai";
+  --ub-ducky:          "Cookie Monster";
+  --ub-dxvxdffm:       "";
+  --ub-haylee:         "Nerd";
+  --ub-iyuukkii:       "";
+  --ub-jyojifujisaki:  "Kooti";
+  --ub-kunimaru:       "Idol Master";
+  --ub-l3gend4ry:      "Love of my life <3";
+  --ub-lynnx:          "osu! Champ";
+  --ub-pantsugod:      "";
+  --ub-polyoma:        "Paps 😳";
+  --ub-read:           "📚";
+  --ub-robiracer:      "";
+  --ub-sei:            "owo fuck";
+  --ub-souldestroy:    "Depresso";
+  --ub-stefankun:      "Bossu";
+  --ub-stoicf:         "🙏🗿";
+  --ub-triss:          "";
+  --ub-vereen:         "Villainess";
+}
+
+/* Template */
+a:not(.avatar):not(.user):not(.link):not(.primary-link)::after, a:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
+  position: relative;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+  border-radius: 3px;
+  font-size: 1.2rem;
+  letter-spacing: .03em;
+  margin-left: 5px;
+  padding: 3px 6px;
+}
+
+/* User */ 
+a[href="/user/Anzu/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-anzu);}
+a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-awaiz);}
+a[href="/user/Baros/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-baros);}
+a[href="/user/cakes/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-cakes);}
+a[href="/user/Ducky/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-ducky);}
+a[href="/user/Dxvxdffm/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-dxvxdffm);}
+a[href="/user/haylee/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-haylee);}
+a[href="/user/iYuukkii/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-iyuukkii);}
+a[href="/user/JyojiFujisaki/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-jyojifujisaki);}
+a[href="/user/Kunimaru/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-kunimaru);}
+a[href="/user/L3GEND4RY/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-l3gend4ry);}
+a[href="/user/Lynnx/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-lynnx);}
+a[href="/user/PantsuGod/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-pantsugod);}
+a[href="/user/Polyoma/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-polyoma);}
+a[href="/user/Read/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-read);}
+a[href="/user/Robiracer/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-robiracer);}
+a[href="/user/Sei/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::before {content: var(--ub-sei);}
+a[href="/user/SoulDestroy/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-souldestroy);}
+a[href="/user/StefanKun/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-stefankun);}
+a[href="/user/StoicF/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-stoicf);}
+a[href="/user/Triss/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-triss);}
+a[href="/user/Vereen/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-vereen);}
+/*a[href="/user//"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-);}
