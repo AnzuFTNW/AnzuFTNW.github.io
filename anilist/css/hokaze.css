@@ -1,13 +1,32 @@
 /* Anilist.co Custom CSS
-/* - Name: Hokaze.css
-/* - Author: @Anzu
-/* - Date: 2021/01/05
+/* - Name:        Hokaze.css
+/* - Author:      @Anzu
+/* - Last Update: 2021/01/07
+
+/* Special Thanks:
+/* - @cakes { Navbar Tab Highlight }
 
 /* Changelog
-/* - 2021/01/05: Initial Release
+2021/01/05:
+- initial release 
+
+2021/01/07:
+- added customizable logo
+- added blur filter to content background
+- added user badge template
+- disabled hoh's dismiss notifications feature
+- changed activity input and load more button scaling
+- changed statswrap gradient progression bar
+- changed progress bar / loading bar
+- changed theme selector header color
+- changed footer text color
+- changed scrollbar height
+- changed scrollbar corner
+- integrated dropdown menu values
+*/
 
 /* Settings */
-:root, .site-theme-dark {
+:root, .site-theme-dark, .site-theme-contrast {
   /* General Settings */
   --hokaze-br: 15px; /* Global Border Radius */
   --hokaze-pv: 30px; /* Vertical Content Padding */
@@ -22,7 +41,15 @@
   --hokaze-sr: 4px;  /* Social Page Border Thickness */
   --hokaze-fr: 30px; /* Footer Border Radius */
   --hokaze-fl: 85%;  /* Footer Length */
+  --hokaze-bl: 6px;  /* Background 'Window' Blur Amount */
+  --hokaze-rs: 1.05; /* Scaling For Load More Button And Activity Input */
+  --hokaze-gs: var(--color-blue);    /* Stats Wrap Gradient Start Color */
+  --hokaze-ge: var(--color-blue);    /* Stats Wrap Gradient End Color */
   --hokaze-vt: all 0.5s ease-in-out; /* Transition For Various Elements */
+  --hokaze-li: initial; /* Anilist Logo Source */ 
+  --hokaze-lb: 0px;     /* Anilist Logo Border Thickness */
+  --hokaze-lr: 0px;     /* Anilist Logo Border Radius */
+  --hokaze-ls: 1.2;     /* Anilist Logo Hover Scaling */
   --hokaze-bs: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow */
                rgba(0, 0, 0, 0.07) 0px 2px 4px,
                rgba(0, 0, 0, 0.07) 0px 4px 8px,
@@ -55,9 +82,12 @@
   --hokaze-bctc: calc(var(--hokaze-bcc) - 36px / 2 );
   --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));  
   --hokaze-sab: var(--hokaze-sr) solid rgb(var(--color-background));
+  --hokaze-lob: var(--hokaze-lb) solid rgb(var(--color-blue));
 }
 
 /* Code */
+@import url("https://anzuftnw.github.io/anilist/css/user-badges.css");
+
 /* Header */
 .nav[data-v-4fbac4e1] {
   background: rgb(var(--color-foreground)) !important;
@@ -75,6 +105,18 @@
 }
 .link[data-v-4fbac4e1]:hover {
   color: rgb(var(--color-blue));
+}
+.progress[data-v-5d42c114] {
+    background-color: rgb(var(--color-blue));
+}
+.logo img[data-v-4fbac4e1] {
+    content: var(--hokaze-li);
+    border-radius: var(--hokaze-lr);
+    border: var(--hokaze-lob);
+    transition: var(--hokaze-vt);
+}
+.logo img[data-v-4fbac4e1]:hover {
+    transform: scale(var(--hokaze-ls));
 }
 
 /* Banner */
@@ -158,7 +200,7 @@
 .nav .link[data-v-5445dac8] {
   position: relative;
 }
-.nav .link[data-v-5445dac8]:after {
+.nav .link[data-v-5445dac8]::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -168,12 +210,12 @@
   background: rgb(var(--color-blue));
   transition: all 0.3s ease-in-out;
 }
-.nav .router-link-active[data-v-5445dac8]:after {
+.nav .router-link-active[data-v-5445dac8]::after {
   left: 0;
   width: 100%;
   background: rgb(var(--color-blue-dim));
 }
-.nav .link[data-v-5445dac8]:hover:after {
+.nav .link[data-v-5445dac8]:hover::after {
   left: 0;
   width: 100%;
   background: rgb(var(--color-blue));
@@ -184,6 +226,7 @@
   padding: var(--hokaze-pdh);
   border-radius: var(--hokaze-brb);
   box-shadow: var(--hokaze-bs);
+  backdrop-filter: blur(var(--hokaze-bl));
 }
 
 /* Content - Overview */
@@ -203,6 +246,9 @@
 }
 .list-stats:nth-child(1):hover, .list-stats:nth-child(2):hover {
   height: 121px;
+}
+.progress .bar[data-v-815ccddc] {
+    background: linear-gradient(270deg,rgb(var(--hokaze-gs)),rgb(var(--hokaze-ge))) !important;
 }
 .name[data-v-aedb6876], .favourite[data-v-728ccf84] {
   opacity: var(--hokaze-vo);
@@ -272,7 +318,7 @@
   font-weight: bold;
 }
 .input[data-v-93c5960c]:hover {
-  transform: scale(1.02);
+  transform: scale(var(--hokaze-rs));
 }
 .input[data-v-93c5960c]:hover .el-textarea__inner {
   opacity: 1;
@@ -286,7 +332,7 @@ svg:not(:root).svg-inline--fa:hover {
 .load-more[data-v-6f203cf2]:hover {
   color: rgb(var(--color-blue));
   box-shadow: var(--hokaze-bs);
-  transform: scale(1.02)
+  transform: scale(var(--hokaze-rs));
 }
 
 /* Content - Anime List / Manga List */
@@ -348,7 +394,7 @@ svg:not(:root).svg-inline--fa:hover {
 }
 
 /* Footer */
-.footer[data-v-6f9ee47f] {
+.footer[data-v-506f9cb3] {
   position: relative;
   background: rgb(var(--color-foreground));
   border-radius: var(--hokaze-fbr);
@@ -356,21 +402,28 @@ svg:not(:root).svg-inline--fa:hover {
   width: var(--hokaze-fl);
   box-shadow: var(--hokaze-bs);
 }
-.dark[data-v-6f9ee47f] {
+.dark[data-v-506f9cb3] {
   background: #000;
+}
+h2[data-v-506f9cb3] {
+  color: rgb(var(--color-blue));
+}
+a, a:visited {
+    color: rgb(var(--color-text));
 }
 
 /* Sorry Hoh */
 :root {
   --color-green: var(--color-blue);
 }
-.hohColourPicker, .contrast[data-v-6f9ee47f] {
+.hohColourPicker, .contrast[data-v-506f9cb3], .hohDismiss {
   display: none;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
 width: var(--hokaze-sb);
+height: var(--hokaze-sb);
 }
 ::-webkit-scrollbar-thumb {
 background: rgba(var(--color-text-light),.5);
@@ -381,4 +434,18 @@ background: rgb(var(--color-blue));
 }
 ::-webkit-scrollbar-track {
 background: rgb(var(--color-background));
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Dropdown Integration */
+:root, .site-theme-dark, .site-theme-contrast {
+    --color-background-100: var(--color-foreground);
+    --color-background-200: var(--color-background);
+    --color-gray-100: var(--color-foreground);
+    --color-gray-600: var(--color-text-light);
+    --color-gray-700: var(--color-text-light);
+    --color-gray-800: var(--color-blue);
+    --color-gray-900: var(--color-blue);
 }
