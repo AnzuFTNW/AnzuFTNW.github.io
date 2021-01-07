@@ -75,3 +75,20 @@ a[href="/user/StoicF/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::a
 a[href="/user/Triss/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-triss);}
 a[href="/user/Vereen/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-vereen);}
 /*a[href="/user//"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-);}
+
+a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
+    content: "Aiwaz";
+    position: relative;
+    background: none;
+    color: rgb(var(--color-blue));
+    border-radius: 0px;
+    font-size: 1.4rem;
+    letter-spacing: .00em;
+    margin-left: 0px;
+    padding: 0px 0px;
+    font-weight: normal;
+}
+
+a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link) {
+    font-size: 0;
+}
