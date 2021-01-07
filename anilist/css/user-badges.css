@@ -74,7 +74,7 @@
 .header[data-v-6c3dc0b8] > a[href="/user/StoicF/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-stoicf);}
 .header[data-v-6c3dc0b8] > a[href="/user/Triss/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-triss);}
 .header[data-v-6c3dc0b8] > a[href="/user/Vereen/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-vereen);}
-/*a[href="/user//"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-);}
+/*a[href="/user//"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {content: var(--ub-);}*/
 
 .header[data-v-6c3dc0b8] > a[href="/user/Awaiz/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
     content: "Aiwaz";
