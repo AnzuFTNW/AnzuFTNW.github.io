@@ -14,27 +14,27 @@
 
 /* Badges */
 :root, .site-theme-dark, .site-theme-contrast {
-  --ub-anzu:           "Genshin Addict";
+  --ub-anzu:           "Kek Lord";
   --ub-awaiz:          "Smort Boi";
   --ub-baros:          "Cuddle Master";
   --ub-cakes:          "Coding Senpai";
   --ub-ducky:          "Cookie Monster";
-  --ub-dxvxdffm:       "";
+  --ub-dxvxdffm:       "Frech";
   --ub-haylee:         "Nerd";
-  --ub-iyuukkii:       "";
+  --ub-iyuukkii:       "Toga-Enjoyer";
   --ub-jyojifujisaki:  "Kooti";
   --ub-kunimaru:       "Idol Master";
   --ub-l3gend4ry:      "Love of my life <3";
   --ub-lynnx:          "osu! Champ";
-  --ub-pantsugod:      "";
+  --ub-pantsugod:      "Ahoy!";
   --ub-polyoma:        "Paps 😳";
   --ub-read:           "📚";
-  --ub-robiracer:      "";
+  --ub-robiracer:      "Act-Age Geek";
   --ub-sei:            "owo fuck";
   --ub-souldestroy:    "Depresso";
   --ub-stefankun:      "Bossu";
   --ub-stoicf:         "🙏🗿";
-  --ub-triss:          "";
+  --ub-triss:          "Genshin Connoisseur";
   --ub-vereen:         "Villainess";
 }
 
@@ -48,6 +48,7 @@ a:not(.avatar):not(.user):not(.link):not(.primary-link)::after, a:not(.avatar):n
   letter-spacing: .03em;
   margin-left: 5px;
   padding: 3px 6px;
+  font-weight: bold;
 }
 
 /* User */ 
