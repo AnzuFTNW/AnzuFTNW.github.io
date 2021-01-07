@@ -39,7 +39,7 @@
 }
 
 /* Template */
-a:not(.avatar):not(.user):not(.link):not(.primary-link)::after, a:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
+.header[data-v-6c3dc0b8] > a:not(.avatar):not(.user):not(.link):not(.primary-link)::after, .header[data-v-6c3dc0b8] > a:not(.avatar):not(.user):not(.link):not(.primary-link)::before {
   position: relative;
   background: rgb(var(--color-background));
   color: rgb(var(--color-text));
