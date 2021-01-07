@@ -23,6 +23,7 @@
 - changed scrollbar height
 - changed scrollbar corner
 - integrated dropdown menu values
+- reverted activity username opacity
 */
 
 /* Add Ons */
@@ -297,7 +298,6 @@
   border-color: rgb(var(--color-blue));
 }
 .text .name[data-v-6c3dc0b8] {
-  opacity: var(--hokaze-vo);
   transition: var(--hokaze-vt);
 }
 .wrap[data-v-6c3dc0b8]:hover .name[data-v-6c3dc0b8] {
