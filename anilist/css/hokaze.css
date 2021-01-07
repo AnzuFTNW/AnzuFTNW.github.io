@@ -24,6 +24,8 @@
 - changed scrollbar corner
 - integrated dropdown menu values
 */
+/* Add Ons */
+@import url("https://anzuftnw.github.io/anilist/css/user-badges.css");
 
 /* Settings */
 :root, .site-theme-dark, .site-theme-contrast {
@@ -86,8 +88,6 @@
 }
 
 /* Code */
-@import url("https://anzuftnw.github.io/anilist/css/user-badges.css");
-
 /* Header */
 .nav[data-v-4fbac4e1] {
   background: rgb(var(--color-foreground)) !important;
