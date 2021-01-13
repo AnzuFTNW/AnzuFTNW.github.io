@@ -309,10 +309,15 @@ a:visited {
 .navbar {
   display: flex;
   justify-content: center;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: center;
   align-items: center;
   background: var(--color-foreground);
   height: 50px;
-  width: 30%;
+  padding: 0px 20px;
   position: fixed;
   border-radius: 0 0 25px 25px;
   backdrop-filter: blur(0.5rem);
@@ -323,12 +328,6 @@ a:visited {
               rgba(0, 0, 0, 0.07) 0px 2px 4px,
               rgba(0, 0, 0, 0.07) 0px 4px 8px,
               rgba(0, 0, 0, 0.07) 0px 8px 16px;
-}
-
-.nav-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav-wrap > a {
