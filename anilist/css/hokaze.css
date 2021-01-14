@@ -342,7 +342,7 @@ body {
   border-radius: var(--hokaze-ar) !important;
   border: var(--hokaze-vab);
 }
-.wrap:hover .header > .avatar, .users > .user:hover {
+.wrap:hover .header > .avatar, .users > .user:hover, .reply:hover .header > .avatar {
   opacity: 1;
   border-color: rgb(var(--color-blue));
 }
@@ -383,6 +383,13 @@ svg:not(:root).svg-inline--fa:hover {
   color: rgb(var(--color-blue));
   box-shadow: var(--hokaze-bs);
   transform: scale(var(--hokaze-rs));
+}
+.activity-replies > .reply {
+  border-radius: var(--hokaze-br);
+}
+.reply:hover .header > .name {
+  opacity: 1;
+  font-weight: bold;
 }
 
 /* Content - Anime List / Manga List */
