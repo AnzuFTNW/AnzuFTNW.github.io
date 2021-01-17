@@ -1,14 +1,16 @@
 /* Anilist.co Custom CSS
 /* - Name:        user-badges.css
 /* - Author:      @Anzu
-/* - Last Update: 2021/01/07
+/* - Last Update: 2021/01/17
 
 /* Special Thanks:
-/* - @siwshlicious { Idea & Code }
+/* - @siwshlicious { Idea & Original Code }
 
 /* Changelog
 2021/01/05:
 - initial release 
+2021/01/17
+- changed a few titles
 
 */
 
@@ -34,7 +36,7 @@
   --ub-souldestroy:    "Depresso";
   --ub-stefankun:      "Bossu";
   --ub-stoicf:         "🙏🗿";
-  --ub-triss:          "Genshin Connoisseur";
+  --ub-triss:          "Waifu";
   --ub-vereen:         "Villainess";
 }
 
