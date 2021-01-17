@@ -76,7 +76,7 @@
   --hokaze-ab: 10px;   /* Avatar Border Thickness */
   --hokaze-ar: 255px;  /* Avatar Border Radius */
   --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
-  --hokaze-av: url("https://i.pximg.net/img-original/img/2019/12/30/01/00/01/78572714_p0.jpg"); /* Avatar Picture Link */
+  --hokaze-av: url("https://anzuftnw.github.io/src/assets/bg3.jpg"); /* Avatar Picture Link */
   --hokaze-ah: 1.1; /* Avatar Hover Scale */
   
   /* Quick Maths - !DON'T TOUCH! */
@@ -132,7 +132,7 @@
 /* Code */
 /* Body */
 body {
-    background-image: url("https://i.pximg.net/img-original/img/2019/03/12/00/56/18/73636925_p0.jpg");
+    background-image: url("https://anzuftnw.github.io/src/assets/bg2.jpg");
     background-position: 50% 50%;
     background-size: 120%;
     background-repeat: no-repeat;
