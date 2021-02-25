@@ -1,7 +1,7 @@
 /* Anilist.co Custom CSS
 /* - Name:        Hokaze.css
 /* - Author:      @Anzu
-/* - Last Update: 2021/01/13
+/* - Last Update: 2021/02/25
 
 /* Special Thanks:
 /* - @cakes { Navbar Tab Highlight }
@@ -32,6 +32,17 @@
 - added background, not yet integrated into the variable mess
 - added customizable dark and light mode
 
+2021/02/25
+- changed value for scaling for various elements
+- changed value for global border radius
+- changed value for scaling for load more button and iactivity input
+- changed scaling for activity history days on hover
+- disabled collapsing text activity entrys
+- changed scaling for manga and anime activity entrys
+- added scaling for text activity entrys
+- changed value for avatar border thickness
+- reverted color pallette in dark & light mode
+
 */
 
 /* Add Ons */
@@ -40,7 +51,7 @@
 /* Settings */
 :root, .site-theme-dark, .site-theme-contrast {
   /* General Settings */
-  --hokaze-br: 15px; /* Global Border Radius */
+  --hokaze-br: 10px; /* Global Border Radius */
   --hokaze-pv: 30px; /* Vertical Content Padding */
   --hokaze-ph: 30px; /* Horizontal Content Padding */
   --hokaze-bt: 0.3;  /* Content Background Transparency*/
@@ -48,13 +59,13 @@
   --hokaze-nl: 80%;  /* Navbar Length */
   --hokaze-sb: 4px;  /* Scrollbar Width */
   --hokaze-vo: 0.7;  /* Opacity For Various Elements */
-  --hokaze-vs: 0.9;  /* Scale For Various Elements */
+  --hokaze-vs: 0.975;  /* Scale For Various Elements */
   --hokaze-vb: 2px;  /* Various Avatar Border Thickness */
   --hokaze-sr: 4px;  /* Social Page Border Thickness */
   --hokaze-fr: 30px; /* Footer Border Radius */
   --hokaze-fl: 85%;  /* Footer Length */
-  --hokaze-bl: 6px;  /* Background 'Window' Blur Amount */
-  --hokaze-rs: 1.05; /* Scaling For Load More Button And Activity Input */
+  --hokaze-bl: 7px;  /* Background 'Window' Blur Amount */
+  --hokaze-rs: 1.025; /* Scaling For Load More Button And Activity Input */
   --hokaze-gs: var(--color-blue);    /* Stats Wrap Gradient Start Color */
   --hokaze-ge: var(--color-blue-dim);    /* Stats Wrap Gradient End Color */
   --hokaze-vt: all 0.5s ease-in-out; /* Transition For Various Elements */
@@ -73,7 +84,7 @@
   --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
   --hokaze-ap: 51% 40%; /* Inner Avatar Position */
   --hokaze-ai: 800%;
-  --hokaze-ab: 10px;   /* Avatar Border Thickness */
+  --hokaze-ab: 7px;   /* Avatar Border Thickness */
   --hokaze-ar: 255px;  /* Avatar Border Radius */
   --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
   --hokaze-av: url("https://anzuftnw.github.io/src/assets/bg3.jpg"); /* Avatar Picture Link */
@@ -98,7 +109,7 @@
   --hokaze-lob: var(--hokaze-lb) solid rgb(var(--color-blue));
 }
 
-/* Light Theme */
+/* Light Theme
 :root {
     --color-background:             217,219,227;
     --color-foreground:             230,232,240;
@@ -114,7 +125,7 @@
 
 }
 
-/* Dark Theme */
+Dark Theme
 .site-theme-dark {
     --color-background:             15, 23, 25;
     --color-foreground:             28, 36, 38;
@@ -127,7 +138,7 @@
     --color-blue:                   169, 126, 73;
     --color-blue-dim:               91, 75, 64;
     --color-green:                  169, 126, 73;
-}
+} */
 
 /* Code */
 /* Body */
@@ -290,7 +301,7 @@ body {
   transition: var(--hokaze-vt);
 }
 .history-day:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .list-stats:nth-child(1), .list-stats:nth-child(2) {
   height: calc(121px - 45px);
@@ -321,13 +332,17 @@ body {
 }
 .activity-entry > .wrap {
   transition: var(--hokaze-vt);
-  max-height: 70px;
+  max-height: none /*70px*/;
 }
 .activity-entry:hover .wrap {
-  max-height: 663px; /*  663 560px max height, 28px margin, 70px header, 5px idk? kek */
+  transform: scale(1.025); 
+  max-height: none /*663px*/; /*  663 560px max height, 28px margin, 70px header, 5px idk? kek */
 }
 .wrap > .text {
   padding-top: 15px;
+}
+.text > .activity-markdown > .markdown {
+  max-height: none;
 }
 .header > .avatar, .list > .cover {
   opacity: var(--hokaze-vo);
@@ -361,7 +376,7 @@ body {
   transition: var(--hokaze-vt);
 }
 .activity-manga_list:hover, .activity-anime_list:hover {
-  transform: scale(1.1);  
+  transform: scale(1.025);  
 }
 .activity-manga_list:hover .title, .activity-anime_list:hover .title {
   opacity: 1;
