@@ -83,8 +83,8 @@
   
   /* Avatar Settings */
   --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
-  --hokaze-ap: 51% 40%; /* Inner Avatar Position */
-  --hokaze-ai: 800%;
+  --hokaze-ap: 50% 27%; /* Inner Avatar Position */
+  --hokaze-ai: 300%;
   --hokaze-ab: 7px;   /* Avatar Border Thickness */
   --hokaze-ar: 255px;  /* Avatar Border Radius */
   --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
