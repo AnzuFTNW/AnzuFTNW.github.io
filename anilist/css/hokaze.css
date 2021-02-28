@@ -112,7 +112,7 @@
 
 /* Fix For Current Profile */
 .about > .content-wrap {
-  transform: scale(1);
+  transform: scale(1) !important;
   max-height: none !important;
 }
 
