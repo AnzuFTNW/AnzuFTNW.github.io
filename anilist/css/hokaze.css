@@ -65,7 +65,7 @@
   --hokaze-sr: 4px;  /* Social Page Border Thickness */
   --hokaze-fr: 30px; /* Footer Border Radius */
   --hokaze-fl: 85%;  /* Footer Length */
-  --hokaze-bl: 7px;  /* Background 'Window' Blur Amount */
+  --hokaze-bl: 4px;  /* Background 'Window' Blur Amount */
   --hokaze-rs: 1.025; /* Scaling For Load More Button And Activity Input */
   --hokaze-gs: var(--color-blue);    /* Stats Wrap Gradient Start Color */
   --hokaze-ge: var(--color-blue-dim);    /* Stats Wrap Gradient End Color */
@@ -108,6 +108,16 @@
   --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));  
   --hokaze-sab: var(--hokaze-sr) solid rgb(var(--color-background));
   --hokaze-lob: var(--hokaze-lb) solid rgb(var(--color-blue));
+}
+
+/* Fix For Current Profile */
+.about > .content-wrap {
+  transform: scale(1);
+  max-height: none !important;
+}
+
+.markdown img {
+  border-radius: 0px;
 }
 
 /* Light Theme
