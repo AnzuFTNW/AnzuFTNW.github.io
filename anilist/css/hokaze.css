@@ -1,7 +1,7 @@
 /* Anilist.co Custom CSS
 /* - Name:        Hokaze.css
 /* - Author:      @Anzu
-/* - Last Update: 2021/02/25
+/* - Last Update: 2021/03/03
 
 /* Special Thanks:
 /* - @cakes { Navbar Tab Highlight }
@@ -43,6 +43,13 @@
 - changed value for avatar border thickness
 - reverted color pallette in dark & light mode
 - removed max-height for text activity entrys
+
+2021/03/03
+- added following changes for the current profile only:
+- removed bio hover scaling
+- removed bio max height
+- removed markdown image border radius
+- added opacity 0 to follower badge and actions button (opacity 1 on hover)
 
 */
 
@@ -108,16 +115,6 @@
   --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));  
   --hokaze-sab: var(--hokaze-sr) solid rgb(var(--color-background));
   --hokaze-lob: var(--hokaze-lb) solid rgb(var(--color-blue));
-}
-
-/* Fix For Current Profile */
-.about > .content-wrap {
-  transform: scale(1) !important;
-  max-height: none !important;
-}
-
-.markdown img {
-  border-radius: 0px;
 }
 
 /* Light Theme
@@ -528,4 +525,30 @@ background: rgb(var(--color-background));
     --color-gray-700: var(--color-text-light);
     --color-gray-800: var(--color-blue);
     --color-gray-900: var(--color-blue);
+}
+
+/* Fixes For Current Profile */
+.about > .content-wrap {
+  transform: scale(1) !important;
+  max-height: none !important;
+}
+
+.markdown img {
+  border-radius: 0px;
+}
+
+.banner-content > .mod-badge {
+  opacity: 0;
+}
+
+.banner-content > .actions {
+  opacity: 0;
+}
+.banner-content:hover > .mod-badge {
+  transform: translateX(-170px);
+  opacity: 1;
+}
+.banner-content:hover > .actions {
+  transform: translateX(183px);
+  opacity: 1;
 }
