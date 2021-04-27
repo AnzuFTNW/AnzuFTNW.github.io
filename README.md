@@ -1,2 +1,2 @@
 # AnzuFTNW.github.io
-Kek
+This is a mess and I probably won't change that. 
