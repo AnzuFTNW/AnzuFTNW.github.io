@@ -90,6 +90,13 @@
     display: var(--cdb-toggle);
 }
 
+/* Fix For AniList's Native Badge Positioning */
+.header > .name::after, .header > .name::before {
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+}
+
 /* Animated GIF Avatar */
 .banner-content > .avatar {
     border-radius: 4px 4px 0 0;
