@@ -11,9 +11,7 @@
 /* SETTINGS */
 :root {
     /* User Badges */
-    --ub-all-users: "Baka";
-    --ub-anzu: "Kek Master Fresh";
-  /*--ub-<username>: "<badge-name>";*/
+    --ub-all-users: unset;
 }
 
 /* CODE */
@@ -40,6 +38,4 @@
 }
 
 /* Badges */
-.header > .name:after {content: var(--ub-all-users);}
-.header > a[href="/user/Anzu/"].name:after {content: var(--ub-anzu);}
-/*.header > a[href="/user/<username>/"].name:after {content: var(--ub-<username>);}*/
+.header > .name:after{content: var(--ub-all-users);}
