@@ -5,7 +5,7 @@ If you do I'd appreciate it if you credit [me](https://anilist.co/user/Anzu/) ei
 
 ### I subdivide my css files into three categories:
 
-## 1. [Themes]()
+## 1. [Themes](https://anzuftnw.github.io/anilist-css/themes/)
 This category contains fully fledged out css themes that transform an AniList profile.<br>
 There are ones that change your profile heavily and some that only slightly enhance the basic AniList experience.
 
@@ -13,7 +13,7 @@ There are ones that change your profile heavily and some that only slightly enha
 This category contains little plugins/addons that offer customizable features.<br>
 You should be able to add these to your already existing css/theme without much problems.
 
-## 3. [Snippets]()
+## 3. [Snippets](https://anzuftnw.github.io/anilist-css/snippets/)
 This category contains random little pieces of code.<br>
 Mostly stuff I made for other people.
 
