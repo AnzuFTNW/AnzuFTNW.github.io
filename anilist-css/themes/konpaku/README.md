@@ -6,8 +6,8 @@
 2. Then copy the following code somewhere below it and configure it to your liking.
 
 ```css
+/* SETTINGS */
 :root, .body, .site-theme-dark, .site-theme-contrast {
-    /* settings */
     --konpaku-navbar-height: 46px;
     --konpaku-border-size: 4px;
     --konpaku-shadow: 0 0 36px rgba(0, 0, 0, 0.5);
@@ -20,24 +20,6 @@
     --konpaku-background-image: url("https://i.imgur.com/3dXf8eK.gif");
     --konpaku-render-image: url("https://s8.gifyu.com/images/konpaku-gif-tt7c99b3c72790f9d8.gif");
     --konpaku-logo-image: url("https://i.imgur.com/Qc21ypw.png");
-    
-    /* color overwrite */
-    --color-background: var(--konpaku-color-hair);
-    --color-foreground: var(--konpaku-color-hair);
-    --color-text: var(--konpaku-color-gray);
-    --color-text-light: var(--konpaku-color-gray);
-    --color-text-lighter: var(--konpaku-color-gray);
-    --color-text-bright: var(--konpaku-color-gray);
-    --color-blue: var(--konpaku-color-green);
-    --color-blue-dim: var(--konpaku-color-gray);
-    --color-green: var(--konpaku-color-green);
-    --color-background-100: var(--konpaku-color-hair);
-    --color-background-200: var(--konpaku-color-hair);
-    --color-gray-100: var(--konpaku-color-hair);
-    --color-gray-600: var(--konpaku-color-gray);
-    --color-gray-700: var(--konpaku-color-gray);
-    --color-gray-800: var(--konpaku-color-green);
-    --color-gray-900: var(--konpaku-color-green);
 }
 ```
 
