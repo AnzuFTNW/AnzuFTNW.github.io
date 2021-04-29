@@ -1,4 +1,4 @@
-# [Hokaze Theme - Version 1.0.0](https://anzuftnw.github.io/anilist-css/themes/hokaze/main.css)
+# [Hokaze Theme - Version 1.5.2](https://anzuftnw.github.io/anilist-css/themes/hokaze/main.css)
 My current AniList theme.<br>
 
 ## How To Install This Theme
