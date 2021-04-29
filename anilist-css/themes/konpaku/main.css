@@ -1,43 +1,11 @@
 /*
-    Kopaku CSS - Version 2.0
-        by Anzu @ https://anilist.co/user/Anzu/
-
-    Notes
-        - my first css :yay:
+    Kopaku Theme - Version 2.0.0
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
 
     Special Thanks
-        to cakes @ https://anilist.co/user/cakes/
-            for fixing stat-page width back in the day
-
-    Changelog
-        2021/04/27
-        - 2.0 release
-        - rewritten from sratch
-        - integrated dropdown menus
-        - removed all data tags
-        - added and fixed a lot of minor things
-        - added a few settings for easier theme customization
-        - fixed a fucking typo in file name, finally after all this time.. [kopaku -> konpaku]
-
-        2020/11/07
-        - final version
-
-        2020/10/22
-        - fixed light and contrast mode
-        - changed konpaku gif to resize itself depending on the users resolution (hopefully)
-        - fixed forum comments section
-        - fixed a variable in the color section
-
-        2020/10/17
-        - fixed hoh filters and buttons under the social tab
-
-        2020/10/14 
-        - markdown video border added
-        - increased border size from 2px to 4px
-        - adapted logo and social avatar size to bigger borders
-
-        2020/10/13
-        - initial release 
+        to https://anilist.co/user/cakes/
+        for fixing stat-page width back in the day
 */
 :root, .body, .site-theme-dark, .site-theme-contrast {
     /* settings */
