@@ -84,5 +84,5 @@ If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anili
   - initial release
 
 ## Known Bugs
-- Incompatible with the [`user-badges`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) plugin (mainly the donator badge)
+- Incompatible with the [`user-badges`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) plugin (mainly the donator badge part) 
 - Donator badge text color is white and not gray (should only be white with rainbow mode)
