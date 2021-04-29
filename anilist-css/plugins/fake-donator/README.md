@@ -1,5 +1,5 @@
 # Fake Donator Plugin - Version 1.0.0
-This plugin emulates some of AniList's donator features.<br>They only work on your profile.
+This plugin emulates some of AniList's donator features.<br>This will only work on your profile.
 
 ## Features
 - Customizable profile accent color
