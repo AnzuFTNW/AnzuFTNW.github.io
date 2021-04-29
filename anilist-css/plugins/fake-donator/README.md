@@ -84,5 +84,12 @@ If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anili
   - initial release
 
 ## Known Bugs
-- Incompatible with the [`user-badges`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) plugin (mainly the donator badge part) 
+- Incompatible with the [`user-badges`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) plugin (mainly the donator badge part)
+  - Can be fixed if you use [`main.css`](https://anzuftnw.github.io/anilist-css/plugins/fake-donator/main.css) instead of the `@import` variant and delete the `/* (Rainbow) Donator Badge */` part
 - Donator badge text color is white and not gray (should only be white with rainbow mode)
+  - Fix can't be automated (I think?) so use the following code if you don't wanna use rainbow donater badges:
+```css
+.header > .name:after {
+    color: rgb(var(--color-white));
+}
+```
