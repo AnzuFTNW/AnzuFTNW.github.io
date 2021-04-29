@@ -16,3 +16,6 @@ You should be able to add these to your already existing css/theme without much 
 ## 3. [Snippets]()
 This category contains random little pieces of code.<br>
 Mostly stuff I made for other people.
+
+---
+### [<- Back](https://anzuftnw.github.io/)
