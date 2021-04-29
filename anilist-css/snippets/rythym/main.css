@@ -1,0 +1,43 @@
+/*
+    Rythym Snippet - Version 1.0.0
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
+        for https://anilist.co/user/Rythym/
+*/
+
+/* settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  /* values */
+  --rythym-cbc: 17,25,35; /* content background color */
+  --rythym-cbo: 1;                               /* content background opacity */
+  --rythym-gap: 2vh;                             /* gap-size between content and navbar */
+  --rythym-ncd: 0px;                             /* width difference navbar to content */
+
+  /* temp values */
+  --rythym-pdv: 30px;                            /* vertical content padding */
+  --rythym-pdh: 30px;                            /* horizontal content padding */
+  --anilist-cbw: 1520px;                         /* default content width (1520px) */
+
+  /* quick maths */
+  --rythym-nav-max: calc(var(--anilist-cbw) + var(--rythym-ncd) - 2 * ( 100px - var(--rythym-pdh)));
+  --rythym-con-max: calc(var(--anilist-cbw) - 2 * ( 100px - var(--rythym-pdh)));
+  --rythym-con-pdg: var(--rythym-pdv) var(--rythym-pdh);
+}
+
+/* navbar */
+.header-wrap > .nav-wrap {
+  max-width: var(--rythym-nav-max);
+  margin: 0 auto;
+}
+
+/* container */
+.content.container {
+  background: rgba(var(--rythym-cbc),var(--rythym-cbo));
+  max-width: var(--rythym-con-max);
+  padding: var(--rythym-con-pdg);
+  margin-top: var(--rythym-gap);
+  margin-bottom: var(--rythym-gap);
+}
+.content > .overview {
+  margin-top: 0px;
+}
