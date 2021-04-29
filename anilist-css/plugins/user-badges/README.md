@@ -55,3 +55,6 @@ If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anili
 
 ## Known Bugs
 - Incompatible with the [`fake-donator`](https://anzuftnw.github.io/anilist-css/plugins/fake-donator/main.css) plugin (mainly the donator badge)
+
+---
+### [<- Back](https://anzuftnw.github.io/anilist-css/plugins/)
