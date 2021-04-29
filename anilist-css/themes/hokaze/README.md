@@ -4,6 +4,7 @@ My current AniList theme.<br>
 ## How To Install This Theme
 1. Put this line `@import url("https://anzuftnw.github.io/anilist-css/themes/hokaze/main.css");` on top of your custom css.
 2. Then copy the following code somewhere below it and configure it to your liking.
+
 ```css
 /* Settings */
 :root, .site-theme-dark, .site-theme-contrast {
@@ -97,6 +98,7 @@ Dark Theme
     --color-green:                  169, 126, 73;
 } */
 ```
+
 Alternatively, if you want full control, just copy parts or the whole content of [`main.css`](https://anzuftnw.github.io/anilist-css/themes/hokaze/main.css) into your custom css.
 
 
