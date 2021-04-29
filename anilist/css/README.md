@@ -18,8 +18,13 @@ to the top of your file and replace `<addon-name>` with the name of the correspo
 
 ## Changelog
 
+### 2021/04/29 - Version 1.0.1
+- Updated [`hokaze.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/blob/master/anilist/css/hokaze.css) - v1.5.1
+  - Removed scrollbar-track properties for all but the body element
+  - Changed footer content spacing
+
 ### 2021/04/27 - Version 1.0.0
-- Added [`konpaku.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/tree/master/anilist/css/konpaku.css)
-- Added [`discord.css`]() placeholder
-- Added [`hokaze.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/blob/master/anilist/css/hokaze.css)
-- Added [`user-badges.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/tree/master/anilist/css/user-badges.css)
+- Added [`konpaku.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/tree/master/anilist/css/konpaku.css) - v2.0.0
+- Added [`discord.css`]() - placeholder 
+- Added [`hokaze.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/blob/master/anilist/css/hokaze.css) - v1.5.0
+- Added [`user-badges.css`](https://github.com/AnzuFTNW/AnzuFTNW.github.io/tree/master/anilist/css/user-badges.css) - v1.2.0
