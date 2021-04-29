@@ -5,4 +5,4 @@ For further information about each plugin, just click on it!
 - [`fake-donator`](https://anzuftnw.github.io/anilist-css/plugins/fake-donator/) - Version 1.0.0 - Emulates AniList donator features
 
 ---
-### [<- Back](https://anzuftnw.github.io/anilist-css//)
+### [<- Back](https://anzuftnw.github.io/anilist-css/)
