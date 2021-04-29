@@ -51,4 +51,4 @@ First of all it dosn't work out of the box, you need to set up atleast one user-
   - initial release
 
 ## Known Bugs
-- Incompatible with the [`user-badges`]() plugin (mainly the donator badge)
+- Incompatible with the [`fake-donator`](https://anzuftnw.github.io/anilist-css/plugins/fake-donator/main.css) plugin (mainly the donator badge)
