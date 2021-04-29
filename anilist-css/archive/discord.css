@@ -1,0 +1,1253 @@
+/* ======================================================================================= */
+/*
+/* discord.css*
+/*  - version: 1.02
+/*
+/* Changelog
+/*  - 2020/11/09 - 1.0  - pogu
+/*  -            - 1.01 - fixed some reference issues
+/*  -            - 1.02 - removed activity post max height
+/*
+/* Bug List
+/*  - all critical problems fixed - 2020/11/08
+/*  - Anime List, Manga List in Server Selection Bar target /Anzu/xxx so visitors of my page won't see the Icons from the pseudo ::after element.
+/*  - Theme Selection Bar often misses a square top right, reloading helps, not sure what causes it. Also happends with the activity input.
+/*
+/* Notes
+/*  - * There are a lot of uneccesary attributes/properties, wrong decision early on that
+/*    made later code uncesseary complicated and way larger then it should've been because
+/*    I'm just learning this shit. Maybe I'll clean the code from scratch in the future.
+/*
+/* Thoughts
+/*  - It should be possible to display the correct discord status (Online, Busy etc.) with
+/*    the discord widget service thigy that a bunch of people on AL use. If you clip out only
+/*    the activity point from the auto updated image, or shouldn't it? *thinking* 
+/* ======================================================================================= */
+/*
+
+todo:
+aboutpage - done
+server member pseudo stuff - canceled
+activity design - done
+getting max-height 25vh to work on the input - canceled :(
+other pages - done
+kms
+light mode - done
+contrast mode - kinda done
+
+
+
+
+/* ======================================================================================= */
+/*
+/*  1.0 | Setup
+/*  1.1 |  - Variables
+/*  2.0 | Universal Changes
+/*  2.1 |  - Background
+/*  2.2 |  - Scrollbar
+/*
+/*  I give up on the documentation, I just wanna finish this design and move on kekw
+/*
+/*  3 - Theme Selection Bar
+/*
+/*  4 - Server Selection Bar
+/*    4.1 - Core
+/*    4.2 - Logo
+/*    4.3 - Servers
+/*    4.4 - Dropdown Menu
+/*    4.5 - Custom Servers
+/*
+/*  5 - Server Name Box
+/*
+/*  6 - Channel Selection Box
+/*
+/*  7 - User Box
+/*
+/*  8 - Channel Name Bar
+/*
+/*  9 - Content Box
+/*
+/* 10 - Input Box
+/*
+/* 11 - Shithole Box on the right side amina koyim 
+/*
+/*
+/*
+/*
+/* ======================================================================================= */
+
+/* ======================================================================================= */
+/*
+/*  1.0 - Setup
+/*
+/* ======================================================================================= */
+
+/* ======================================================================================= */
+/*  1.1 - Setup - Variables
+/* ======================================================================================= */
+
+:root {
+    
+    /* Strings */
+    --discord-username: "Anzu";
+    --discord-hashtag: "#9645";
+
+    /* Colors */
+    --color-blue-shade1: #6f85d2;   /* Bot Tag, Notification Row */
+    --color-green-shade1: #43b581;  /* Online */
+    --color-yellow-shade1: #faa61a; /* Idle */
+    --color-red-shade1: #f04747;    /* Do Not Disturb, Notification, Muted Mic */
+    --color-mention-bg: #3d414f;    /* Highlighted Mentions */
+    --color-mention-text: #6989da;  /* Mentions */
+    --color-text-link: #0ea9ee;     /* Links */
+    
+    --color-bg-shade6: #e3e5e8;
+    --color-bg-shade5: #ebedef;
+    --color-bg-shade4: #f2f3f5;
+    --color-bg-shade3: #f2f2f2;
+    --color-bg-shade2: #ffffff;
+    --color-bg-shade1: #ebedef;
+    --color-text-shade3: #c7ccd1;
+    --color-text-shade2: #747f8d;
+    --color-text-shade1: #3b3f3e;
+    --color-icon-shade3: #4f5660;
+    --color-icon-shade2: #2e3338;
+    --color-icon-shade1: #060607;
+    --color-channel-hover: #e8eaed;
+    --color-channel-active: #d4d7dc;
+    
+    --color-background: 227, 229, 232;
+    --color-foreground: 242, 243, 245;
+    --color-text: 46, 51, 56;
+    --color-text-bright: 46, 51, 56;
+    --color-blue: 105, 137, 218;
+    /* Values */
+}
+
+.site-theme-dark {
+    --color-bg-shade6: #202225;     /* Top Row, Server Column, Search Box, Scrollbar Thumb */
+    --color-bg-shade5: #292b2f;     /* Namecard */
+    --color-bg-shade4: #2f3136;     /* Channel Column, User Column */
+    --color-bg-shade3: #32353b;     /* Scrollbar Track */
+    --color-bg-shade2: #36393f;     /* Channel Name Row, Chat BG, Active Channel BG */
+    --color-bg-shade1: #40444b;     /* Chat Input Field */
+    --color-text-shade3: #4f545c;   /* Muted Categorys, Muted Channels */
+    --color-text-shade2: #72767d;   /* Categorys, Channels, Roles, Status, Hashtag */
+    --color-text-shade1: #ffffff;   /* Active Channel, Channel Header, Name, Unread, Server Name */
+    --color-icon-shade3: #b9bbbe;   /* Icon */
+    --color-icon-shade2: #dcddde;   /* Icon - Hover */
+    --color-icon-shade1: #ffffff;   /* Icon - Active */
+    --color-channel-hover: #34373c;
+    --color-channel-active: #393c43;
+    
+    --color-background: 32, 34, 37;
+    --color-foreground: 47, 49, 54;
+    --color-text: 220, 221, 222;
+    --color-text-bright: 255,255,255;
+}
+
+/* ======================================================================================= */
+/*
+/*  2.0 - Universal Changes
+/*
+/* ======================================================================================= */
+
+/* ======================================================================================= */
+/*  2.1 - Universal Changes - Background
+/* ======================================================================================= */
+
+/* Background */
+html {
+    background: var(--color-bg-shade2);
+}
+
+body {
+    background: var(--color-bg-shade2);
+    color: var(--color-icon-shade2);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    background: var(--color-bg-shade2);
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.markdown blockquote {
+    background: var(--color-bg-shade6);
+}
+/* ======================================================================================= */
+/*  2.2 - Universal Changes - Scrollbar
+/* ======================================================================================= */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade6);
+    border: solid 4px transparent;
+    border-radius: 50px;
+}
+
+/* Scrollbar Track*/ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade3);
+    border: solid 4px transparent;
+    border-radius: 50px;
+}
+
+/* ======================================================================================= */
+
+/* 3 - Theme Selection Bar
+
+/* ======================================================================================= */
+.wrap[data-v-82d0a8cc] {
+    position: fixed;
+    display: block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.wrap[data-v-82d0a8cc]::before {
+    content: "ANILIST";
+    position: absolute;
+    left: 0;
+    margin-left: 8.1px;
+    margin-right: 8.1px;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: var(--color-text-shade2);
+}
+
+.footer[data-v-82d0a8cc] {
+    margin: 0;
+    padding: 0;
+    min-height: 20px;
+    background: var(--color-bg-shade6);
+}
+
+.container[data-v-82d0a8cc] {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.theme-selector[data-v-82d0a8cc] {
+    margin-left: auto;
+    margin-right: 5px;
+}
+.theme-preview[data-v-82d0a8cc] {
+    height: 14px;
+    width: 14px;
+    font-size: 10px;
+    padding: 1px;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.links[data-v-82d0a8cc] {
+    display: none;
+}
+
+.hohColourPicker {
+    display: none;
+}
+
+h2[data-v-82d0a8cc] {
+    display: none;
+}
+
+.dark[data-v-82d0a8cc] {
+    background: #202225;
+}
+
+/* ======================================================================================= */
+/* 4.1 - ServerSelectionBar - Core
+/* ======================================================================================= */
+
+/* Background */
+.nav-unscoped,
+.nav-unscoped.transparent,
+.nav-unscoped.transparent:hover,
+.site-theme-dark .nav-unscoped,
+.site-theme-dark .nav-unscoped.transparent,
+.site-theme-dark .nav-unscoped.transparent:hover,
+.site-theme-contrast .nav-unscoped,
+.site-theme-contrast .nav-unscoped.transparent,
+.site-theme-contrast .nav-unscoped.transparent:hover {
+    background: var(--color-bg-shade6);
+    color: #29ff39; /* not needed */
+}
+
+/* Disable Hiding */
+.hide[data-v-4fbac4e1] {
+    top: 0px !important;
+}
+
+/* Navbar */
+.nav[data-v-4fbac4e1] {
+    height: auto;
+    width: 70px;
+    margin-top: 20px;   
+    transition: none;
+}
+
+/* Content Wrap */
+.wrap[data-v-4fbac4e1] {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Bottom Patch - Part of z-index fix for custom servers */
+.page-content::before {
+    content: "";
+    background: var(--color-bg-shade6);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+}
+
+/* ======================================================================================= */
+/* 4.2 - Server Selection Bar - Logo
+/* ======================================================================================= */
+
+/* Wrap */
+.logo[data-v-4fbac4e1] {
+    display: inline-block;
+    height: 46px;
+    width: 46px;
+    background: var(--color-bg-shade3);
+    border-radius: 100px;
+    margin-left: 12px;
+}
+
+/* Hover*/
+.logo[data-v-4fbac4e1]:hover {
+    background: var(--color-blue-shade1);
+    border-radius: 15px;
+}
+
+/* Image */
+.logo img[data-v-4fbac4e1] {
+    height: 36px;
+    width: 36px;
+    margin: 5px;
+}
+
+/* Background */ 
+.logo[data-v-4fbac4e1]::after {
+    content: "";
+    background: var(--color-bg-shade3);
+    width: 32px;
+    height: 2px;
+    display: inline-block;
+    margin: 8px 7px;
+    opacity: .7;
+}
+
+/* ======================================================================================= */
+/* 4.3 - Server Selection Bar - Servers
+/* ======================================================================================= */
+.links[data-v-4fbac4e1] {
+    display: inline-block;
+    margin-top: -4px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-transform: uppercase;
+    width: 46px;
+    color: var(--color-icon-shade2);
+}
+
+.link[data-v-4fbac4e1] {
+    padding: 15.5px 0px;
+    height: 46px;
+    width: 46px;
+    background: var(--color-bg-shade3);
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0px;
+}
+
+.link[data-v-4fbac4e1]:hover {
+    background: var(--color-blue-shade1);
+    border-radius: 15px;
+}
+
+.wrap .link[href="/home"]::before { content: "H"; font-size: initial; font-weight: 800; }
+.wrap .link[href="/user/Anzu/"]::before { content: "P"; font-size: initial; font-weight: 800; }
+.wrap .link[href="/user/Anzu/animelist"]::before { content: "AL"; font-size: initial; font-weight: 800; }
+.wrap .link[href="/user/Anzu/mangalist"]::before { content: "ML"; font-size: initial; font-weight: 800; }
+.wrap .link[href="/search/anime"]::before { content: "B"; font-size: initial; font-weight: 800; }
+.wrap .link[href="/forum/overview"]::before { content: "F"; font-size: initial; font-weight: 800; }
+
+/* ======================================================================================= */
+/* 4.4 - Server Selection Bar - Dropdown Menu
+/* ======================================================================================= */
+
+.browse-wrap[data-v-4fbac4e1]:hover .dropdown {
+        animation: none;
+}
+
+.dropdown[data-v-38edf8f8] {
+    text-transform: capitalize;
+    left: 70px;
+    top: calc(-115px + 23px);
+    background: var(--color-bg-shade5);
+}
+
+.dropdown[data-v-38edf8f8]::before {
+    border-bottom: .4rem solid transparent;
+    border-top: .4rem solid transparent;
+    border-right: .6rem solid currentColor;
+    bottom: 50%;
+    color: var(--color-bg-shade5);
+    left: -3.8%;
+}
+
+.dropdown[data-v-38edf8f8]::after {
+    width: 30px;
+    height: 50px;
+    content: "";
+    top: 36%;
+    left: -30px;
+    position: absolute;
+}
+
+.primary-link[data-v-38edf8f8], .secondary-links[data-v-38edf8f8], .primary-link .icon[data-v-38edf8f8] {
+    color: var(--color-icon-shade2);    
+}
+
+.footer[data-v-38edf8f8] {
+    background: var(--color-bg-shade6);
+    color: var(--color-icon-shade2);
+}
+
+.icon[data-v-38edf8f8]:hover {
+    color: var(--color-icon-shade1);
+}
+
+.secondary-links a[data-v-38edf8f8]:hover, .primary-link-text[data-v-38edf8f8]:hover, .footer a[data-v-38edf8f8]:hover, .footer a:hover .icon[data-v-38edf8f8], .primary-link:hover .icon[data-v-38edf8f8] {
+    color: var(--color-icon-shade1);
+}
+
+/* ======================================================================================= */
+/* 4.5 - Server Selection Bar - Custom Servers
+/* ======================================================================================= */
+
+a[href="https://discord.gg/anilist"]::before {
+    content: "";
+    padding: 15.5px 0px;
+    height: 46px;
+    width: 46px;
+    background-image: url("https://media.discordapp.net/attachments/418189460002439169/773372160134742016/Layer_1.png");
+    background-size: contain;
+    border-radius: 100px;
+    margin-bottom: 8px;
+    font-size: 0px;
+    top: calc(20px + (46px * 7) + (8px * 8) + 2px);
+    left: 12px;
+    position: fixed;
+}
+
+a[href="https://discord.gg/anilist"]:hover:before {
+    border-radius: 15px;
+    background-image: url("https://media.discordapp.net/attachments/729349830358597675/772207350861004830/Final_8.gif");
+}
+
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.search[data-v-4fbac4e1] {
+    margin: 0px;
+    position: fixed;
+    left: calc(100% - 240px);
+    top: calc(20px + 12px);
+    padding: 0px;
+    background: var(--color-bg-shade6);
+    
+    width: calc(240px - 10px - 38px - 10px - 30px - 10px);
+    height: 24px;
+    border-radius: 5px;
+
+}
+
+.transparent .search[data-v-4fbac4e1] svg {
+    color: var(--color-text-shade3);
+    width: 142px;
+    height: 14px;
+    top: 5px;
+    position: absolute;
+}
+
+.transparent .search[data-v-4fbac4e1] svg:hover {
+    color: var(--color-text-shade2);
+}
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+/* User Box */
+.user[data-v-4fbac4e1] {
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    top: 20px;
+    left: calc(100% - 48px);
+    justify-content: start;
+    cursor: default;
+}
+
+.user-wrap[data-v-4fbac4e1] {
+    height: inherit;
+    width: inherit;
+    margin-left: 0px;
+}
+
+.user .avatar[data-v-4fbac4e1] {
+    border-radius: 100px;
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    top: 0;
+    left: calc(-38px + -10px);
+    margin-top: 5px;
+    margin-right: 0;
+    margin-left: 100%;
+    transition: 0.3s ease;
+}
+
+.user-wrap[data-v-4fbac4e1]:hover .avatar[data-v-4fbac4e1] {
+    opacity: .5;    
+}
+
+.user .notification-dot[data-v-4fbac4e1] {
+    left: calc(100% - 30px - 10px - 38px - 10px) !important;
+    top: 9px;
+    padding: 0px;
+    margin-right: 0px !important;
+    position: absolute;
+}
+
+.user .chevron[data-v-4fbac4e1] {
+    display: none;
+}
+
+.dropdown[data-v-0bb70ffa] {
+    top: 55px;
+    right: calc(-13px + 10px + 19px);
+    background: var(--color-bg-shade5);
+}
+
+.primary-link[data-v-0bb70ffa]:hover, .primary-link:hover .icon[data-v-0bb70ffa], .secondary-link[data-v-0bb70ffa]:hover {
+    color: var(--color-icon-shade1);
+}
+
+.footer[data-v-0bb70ffa] {
+    background: var(--color-bg-shade6);
+    color: var(--color-icon-shade2); 
+}
+
+.primary-link[data-v-0bb70ffa], .primary-link .icon[data-v-0bb70ffa] {
+    color: var(--color-icon-shade2);    
+}
+
+.dropdown[data-v-0bb70ffa]::before {
+    color: var(--color-bg-shade5);
+    right: 9px;
+}
+
+.user-wrap[data-v-4fbac4e1]:hover .dropdown {
+    animation: none;
+}
+
+.hohDismiss {
+    display: none;
+}
+
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.page-content::after {
+    content: "";
+    position: fixed;
+    top: calc(20px + 48px);
+    left: calc(100% - 240px);
+    background: var(--color-bg-shade4);
+    height: calc(100% - 20px - 48px);
+    width: 240px;
+    z-index: -1;
+}
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.banner[data-v-5445dac8] {
+    height: 53px;
+    width: 240px;
+    position: fixed;
+    top: calc(100% - 53px);
+    left: 70px;
+    z-index: 1;
+    background-image: none !important;
+    background-color: var(--color-bg-shade5);
+}
+
+.banner .shadow[data-v-5445dac8] {
+    background: none;
+}
+
+.banner .container[data-v-5445dac8] {
+    padding: 0;
+    margin: 0;
+    min-width: 240px;  
+    background: var(--color-bg-shade5);
+}
+
+.banner-content[data-v-5445dac8] {
+    height: 53px;
+}
+
+.avatar[data-v-5445dac8] {
+    border-radius: 100px;
+    height: 31px;
+    width: 31px;
+    margin: 11px;
+}
+
+.banner-content[data-v-5445dac8]::after {
+    --circle-size: 10px;
+    --border-size: 3px;
+    --actual-circle-size: calc(var(--circle-size) + ( 2 * var(--border-size)));
+    content: "";
+    position: absolute;
+    height: var(--actual-circle-size);
+    width: var(--actual-circle-size);
+    top: calc(100% - (11px + var(--actual-circle-size) - var(--border-size)));
+    left: calc(11px + 31px - (var(--actual-circle-size) - var(--border-size)));
+    background: var(--color-green-shade1);
+    border: var(--border-size) solid var(--color-bg-shade5);
+    border-radius: 100px;
+}
+
+.name[data-v-5445dac8] {
+    padding: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 14px;
+    left: calc(11px + 31px + 11px);
+}
+
+.name[data-v-5445dac8]:after {
+    content: var(--discord-hashtag);
+    position: absolute;
+    font-size: 1.3rem;
+    color: var(--color-icon-shade3);
+    top: 17px;
+    left: 0;
+}
+
+.banner-content h1.name {
+    filter: none;
+}
+
+.mod-badge[data-v-5445dac8] {
+    margin: 0;
+    padding: 5px;
+    width: 120px;
+    border-radius: 0px 5px 0px 0px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 53px;
+    margin-left: 120px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.follower-badge[data-v-5445dac8], .follower-badge[data-v-5445dac8]:hover {
+    background: var(--color-blue-shade1);
+}
+
+.banner[data-v-5445dac8]:hover .mod-badge {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.actions[data-v-5445dac8] {
+    padding: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    width: 240px;
+    height: 76px;
+    top: -23px;
+}
+
+.nav-btn[data-v-5445dac8],.nav-btn[data-v-5445dac8]:hover {
+    padding: 5px;
+    width: 120px;
+    border-radius: 5px 0px 0px 0px;
+    font-size: 1.2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
+    background: var(--color-blue-shade1);
+    border-right: 1px solid var(--color-bg-shade4);
+    position: absolute;
+    left: -10px;
+}
+
+.banner[data-v-5445dac8]:hover .nav-btn {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown[data-v-5445dac8] {
+    margin: 0;
+    padding: 0px;
+    background: none;
+    position: absolute;
+    top: calc(23px + 11.5px);
+    left: calc(100% - 30px - 11.5px);
+}
+
+.el-icon-arrow-down[data-v-5445dac8] {
+    font-size: 2rem;
+    padding: 5px 6.6px;
+    border-radius: 5px;
+    
+    color: var(--color-icon-shade3);
+}
+
+.el-icon-arrow-down[data-v-5445dac8]:hover  {
+    background: var(--color-bg-shade2);
+    color: var(--color-icon-shade2);
+}
+
+.el-icon-arrow-down[data-v-5445dac8]:before {
+    content: "\2699";
+}
+
+.el-dropdown-menu[data-v-5445dac8], .el-dropdown-menu[data-v-09492909] {
+    background: var(--color-bg-shade6);
+    margin-left: 7px;
+}
+
+.popper__arrow:after {
+    border-top-color: var(--color-bg-shade6) !important;
+    border-bottom-color: var(--color-bg-shade6) !important;
+}
+
+.el-dropdown-menu__item[data-v-5445dac8]:hover, .el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+    background: var(--color-blue-shade1);   
+}
+.hohDownload {
+    display: none;
+}
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.nav[data-v-5445dac8] {
+    text-align: left;
+    min-width: 240px;
+    max-width: 240px;
+}
+
+.nav-wrap[data-v-5445dac8] {
+    height: calc(100% - 73px - 48px);
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 70px;
+    /*z-index: 900;*/
+    margin-top: calc(20px + 48px);
+    background: var(--color-bg-shade4);
+    
+}
+
+.nav-wrap .container[data-v-5445dac8] {
+    margin: 15px 0px 0px 9px;
+    padding: 0;
+}
+
+.nav .link[data-v-5445dac8] {
+    padding: 7px 0px !important;
+    margin: 1px 0px 1px 0px;
+    width: 224px;
+    height: 33px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: var(--color-text-shade2);
+    text-transform: lowercase;
+}
+
+.nav .link[data-v-5445dac8]::before {
+    content: "#";
+    font-size: 2rem;
+    font-weight: 1;
+    color: var(--color-text-shade2);
+    margin: 0px 0px;
+    padding: 0px 9px;
+}
+
+.nav .link[data-v-5445dac8]:hover {
+    background: var(--color-channel-hover);
+    color: var(--color-icon-shade2);
+}
+
+.nav .router-link-active[data-v-5445dac8] {
+    background: var(--color-channel-active) !important;
+    color: var(--color-text-shade1) !important;
+}
+
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.content {
+    padding: 0;
+    margin-left: calc(70px + 240px + 0px);
+    min-width: calc(100% - (70px + 240px + 0px));
+    width: 0;
+    left: 0;
+    top: 0;
+    max-height: calc(100vh - 20px - 48px - 66px);
+    min-height: 0;
+    overflow-y: scroll;
+    margin-top: calc(20px + 48px);
+    padding-right: 0px;
+    background: var(--color-bg-shade2);
+    border-bottom: 2px solid var(--color-bg-shade4);
+    
+}
+
+.overview[data-v-5c30286e] {
+    display: block;
+    margin-top: 0;
+}
+
+
+#app {
+    position: fixed;
+    width: calc(100% - 240px);
+    background: var(--color-bg-shade6);
+}
+
+.page-content {
+    min-height: 0;
+}
+
+.activity-feed-wrap[data-v-09492909] {
+    margin-bottom: 25px
+}
+
+.wrap[data-v-5e514b1e] {
+    background: var(--color-bg-shade2);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.wrap[data-v-5e514b1e]:hover {
+    background: var(--color-bg-shade3);
+}
+
+.load-more[data-v-6f203cf2] {
+   background: var(--color-bg-shade2); 
+}
+
+.load-more[data-v-6f203cf2]:hover {
+    background: var(--color-bg-shade3);
+}
+
+.text[data-v-5e514b1e] {
+    padding: 3px;
+    color: var(--color-icon-shade2);
+}
+
+.text .header[data-v-5e514b1e] {
+    height: 21px;
+}
+
+.text .avatar[data-v-5e514b1e] {
+    border-radius: 100px;
+    position: relative;
+    top: 9px;
+}
+
+.text .name[data-v-5e514b1e] {
+    /*line-height: 25px;*/
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: var(--color-icon-shade1);
+}
+
+.text .activity-markdown[data-v-5e514b1e] {
+    position: relative;
+    width: calc(100% - 40px - 12px);
+    left: calc(40px + 12px);
+    
+}
+
+.text[data-v-5e514b1e] .markdown {
+    margin: 0;
+    max-height: none;
+}
+
+.time[data-v-5e514b1e] {
+    color: var(--color-text-shade2);
+    top: 5px;
+}
+
+.activity-entry > .wrap > .time:hover {
+    background: var(--color-bg-shade§);
+}
+
+.actions[data-v-5e514b1e] {
+    bottom: 5px;
+    color: var(--color-icon-shade3);
+    
+}
+
+.actions .action[data-v-5e514b1e]:hover {
+    color: var(--color-icon-shade2);
+}
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.nav-wrap[data-v-5445dac8]::before {
+    content: "";
+    position: fixed;
+    top: 20px;
+    left: 70px;
+    height: 48px;
+    width: 240px;
+    background: var(--color-bg-shade4);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-radius: 7px 0px 0px 0px;
+}
+
+.nav-wrap[data-v-5445dac8]::after {
+    content:"";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    height: 48px;
+    width: 100%;
+    background: var(--color-bg-shade2);
+    border-bottom: 1px solid rgba(0,0,0,0.3)    
+}
+
+.nav[data-v-5445dac8]::before {
+    content: var(--discord-username)"'s Profile";
+    position: fixed;
+    top: 20px;
+    left: 70px;
+    padding-left: 16px;
+    padding-top: 18px;
+    color: var(--color-text-shade1);
+    font-size: 1.5rem;  
+}
+
+.nav[data-v-5445dac8]::after {
+    content: "#";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    font-size: 3rem;
+    font-weight: 1;
+    color: var(--color-text-shade2);
+    padding-top: 10px;
+    padding-left: 18px;
+}
+
+.nav .router-link-active[href="/user/Anzu/"]::after {
+    content: "overview";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/animelist"]::after {
+    content: "anime-list";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/mangalist"]::after {
+    content: "manga-list";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/favorites"]::after {
+    content: "favorites";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/stats/anime/overview"]::after {
+    content: "stats";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/social"]::after {
+    content: "social";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/reviews"]::after {
+    content: "reviews";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+.nav .router-link-active[href="/user/Anzu/submissions"]::after {
+    content: "submissions";
+    position: fixed;
+    top: 20px;
+    left: calc(70px + 240px);
+    z-index: 999;
+    padding: 15.5px 48.5px
+}
+
+/* ======================================================================================= */
+/*                                                                                         */
+/* ======================================================================================= */
+.about[data-v-5c30286e] {
+    width: 240px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: 0;
+    top: calc(20px + 48px /*+ 250px*/);
+    left: calc(100% - 240px);
+    height: calc(100% - 48px - 20px /*- 250px*/);
+    /*border-top: 2px solid var(--color-bg-shade5);*/
+    /*border-bottom: 2px solid var(--color-bg-shade5);*/
+}
+
+.about .content-wrap[data-v-5c30286e] {
+    max-height: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--color-bg-shade4);
+    border-radius: 0;
+    overflow-y: scroll;
+}
+
+.about .content-wrap[data-v-5c30286e]:hover {
+    overflow-y: scroll;
+}
+
+.about .content-wrap[data-v-5c30286e]::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade4);
+}
+/* ======================================================================================= */
+/* Activitys                                                                               */
+/* ======================================================================================= */
+.overview[data-v-5c30286e] .section-header {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+.el-dropdown[data-v-09492909] {
+    position: fixed;
+    top: calc(20px + 24px - 7px);
+    left: calc(100% - 70px - 240px);
+    /*z-index: 999;*/
+    visibility: visible;
+}
+/* ======================================================================================= */
+/* Activity Edit                                                                           */
+/* ======================================================================================= */
+
+/* Activity Edit Wrap */
+.activity-edit[data-v-93c5960c] {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: calc(66px - 15.5px);
+    position: fixed;
+    width: calc(100% - 70px - 480px);
+    z-index: 1; 
+    min-height: 66px;
+    max-height: 75vh;
+    bottom: 0;
+}
+
+/* Activity Edit Markdown */
+.markdown-editor[data-v-93c5960c] {
+    background: var(--color-bg-shade1);
+    margin-top: 15.5px;
+    color: var(--color-text-shade2);
+}
+.markdown-editor>div:hover {
+    color: var(--color-text-shade1);
+}
+.markdown-editor > [title="Link"] {
+    color: var(--color-text-link);
+}
+.markdown-editor > [title="Image"], .markdown-editor > [title="Youtube Video"], .markdown-editor > [title="WebM Video"] {
+    color: var(--color-red-shade1);
+}
+
+/* Activity Edit Pseudo Background */
+.markdown-editor[data-v-93c5960c]::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--color-bg-shade2);
+    z-index: -1;
+    border-top: 2px solid var(--color-bg-shade4);
+    top: 0;
+}
+
+/* Activity Edit Input Wrap */
+.input[data-v-93c5960c] {
+    background: var(--color-bg-shade2);
+    /*z-index: 999;*/
+    width: calc(100% - 32px);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15.5px;
+}
+
+/* Activity Edit Input */
+.input[data-v-93c5960c] .el-textarea__inner {
+    background: var(--color-bg-shade1);
+    border-radius: 5px; 
+    padding-right: 299.27px;
+    max-height: 35px /*25vh*/;
+}
+
+.input[data-v-93c5960c] .el-textarea__inner::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade1);
+}
+
+/* Activity Edit Preview */
+.activity-entry[data-v-5e514b1e] {
+    margin-bottom: 12px;
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-5e514b1e] {
+    max-height: calc(75vh - 35px - 18px - 15.5px - 15.5px - 35px - 12px);
+    border: 2px solid rgba(0,0,0,0.15);
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-5e514b1e]::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade2);
+}
+.activity-entry[data-v-93c5960c] .wrap[data-v-5e514b1e]:hover::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px 16px var(--color-bg-shade3);
+}
+
+/* Activity Edit Buttons */
+.actions[data-v-93c5960c] {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    margin: 0px 31px 22px 0px;
+    height: 20px;
+    /*z-index: 999;*/
+}
+.button[data-v-93c5960c] {
+    margin-left: 15px;
+    background: var(--color-blue-shade1);
+    color: var(--color-text-shade1);
+}
+.button.cancel[data-v-93c5960c] {
+    background: var(--color-bg-shade2);
+    color: var(--color-text-shade1);
+}
+/* ======================================================================================= */
+/* Overview - Stats - Activity History - Favorites - Genre Overview                        */
+/* ======================================================================================= */
+.stats-wrap[data-v-5c30286e] {
+    display: none;
+}
+.desktop[data-v-514856af]{
+    display: none;
+}
+.desktop[data-v-45543a61] {
+    display: none;
+}
+.desktop[data-v-aedb6876] {
+    display: none;
+}
+/* ======================================================================================= */
+/* Other pages
+/* ======================================================================================= */
+.medialist[data-v-17f4caca], .stats[data-v-1e00b9da], .content > .favourites, .user-social[data-v-310d8b7e], .user-reviews[data-v-5e6a17b4] {
+    padding: 0px 16px;
+    margin-bottom: 40px;
+}
+
+.hohButton {
+    background: var(--color-blue-shade1)
+}
+
+a[href="/user/anzu"], a[href="/user/Anzu"] {
+    background: var(--color-mention-bg);
+    border-radius: 4px;
+    color: var(--color-green-shade1) !important;
+}
+
+.link[data-v-4fbac4e1]:hover {
+    color: #fff;
+}
+
+.site-theme-contrast > #app::before {
+    content: "No";
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    color: #000;
+    font-size: 10rem;
+    align-items: center;
+    display: flex;
+    padding: 0vw 46.5%;
+}
+
+.site-theme-contrast > #app > .wrap[data-v-82d0a8cc] {
+    z-index: 10000; 
+}
