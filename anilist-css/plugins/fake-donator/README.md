@@ -93,3 +93,6 @@ If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anili
     color: rgb(var(--color-text));
 }
 ```
+
+---
+### [<- Back](https://anzuftnw.github.io/anilist-css/plugins/)
