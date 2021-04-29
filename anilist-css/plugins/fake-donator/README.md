@@ -1,4 +1,4 @@
-# Fake Donator Plugin - Version 1.0.0
+# [Fake Donator Plugin - Version 1.0.0](https://anzuftnw.github.io/anilist-css/plugins/fake-donator/main.css)
 This plugin emulates some of AniList's donator features.<br>This will only work on your profile.
 
 ## Features
