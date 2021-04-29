@@ -1,5 +1,5 @@
 # [AniList](https://anilist.co/home) Custom CSS
-Here I'll collect all my CSS files that I create for AniList.<br>
+Here I'll collect all my CSS files that I create for [AniList](https://anilist.co/home).<br>
 Feel free to use and/or modify any of my CSS.<br>
 If you do I'd appreciate it if you credit [me](https://anilist.co/user/Anzu/) either on your profile or in your code.<br>
 
