@@ -1,10 +1,9 @@
 # [User Badges Plugin - Version 2.0.0](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css)
 This plugin allows you to add little badges next to the name of everyone posting on your page or<br>
-only next to the names of certain people you can choose!
+only next to the names of certain people you can choose!<br>
 
 ## Features
 - Customizable badges next to usernames of your choice
-- You are also able to add them infront of usernames instead
 
 ## How To Install This Plugin
 1. Put this line `@import url("https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css");` on top of your custom css.
