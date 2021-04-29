@@ -79,3 +79,7 @@ Here is a list to show you what each variables does and how to use it:
 ## Changelog
 - 2021/04/29 - Version 1.0.0
   - initial release
+
+## Known Bugs
+- Incompatible with the [`user-badges`]() plugin (mainly the donator badge)
+- Donator badge text color is white and not gray (should only be white with rainbow mode)
