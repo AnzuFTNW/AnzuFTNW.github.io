@@ -10,6 +10,10 @@
             for pointing out a few things
 
     Changelog
+        2021/04/29
+        - removed scrollbar track properties for everything but the body element
+        - changed footer content spacing
+        
         2021/04/27
         - redid css comments
         - cleaned up the code a bit
@@ -488,6 +492,9 @@ svg:not(:root).svg-inline--fa:hover {
   width: var(--hokaze-fl);
   box-shadow: var(--hokaze-bs);
 }
+.footer > .container {
+    justify-content: space-between;
+}
 .theme-selector > .dark {
   background: #000;
 }
@@ -502,6 +509,10 @@ a, a:visited {
 .hohColourPicker, .theme-selector > .contrast, .hohDismiss {
   display: none;
 }
+.footer .links {
+    margin-left: 0;
+    transform: translate(0px,0px);
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -515,7 +526,7 @@ border-radius: var(--hokaze-br);
 ::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
 background: rgb(var(--color-blue));
 }
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
 background: rgb(var(--color-background));
 }
 ::-webkit-scrollbar-corner {
