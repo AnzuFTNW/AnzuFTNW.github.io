@@ -40,8 +40,8 @@ First of all it dosn't work out of the box, you need to set up atleast one user-
   - For example: `.header > a[href="/user/Anzu/"].name:after {content: var(--ub-anzu);}` 
   - Make sure to check your capitalization and dont forget the `/` at the end of the link
 
-In the source code of this plugin I've also added a little fix to AniList's native badge position<br>
-to make it look better. If you don't like it copy the [`main.css`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) and delete the part I just described.
+In the source code of this plugin I've also added a little fix to AniList's native badge position to make it look better.<br>
+If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) instead of the `@import` variant and delete the part I just described.
 
 ## Changelog
 - 2021/01/05 - Version 2.0.0
