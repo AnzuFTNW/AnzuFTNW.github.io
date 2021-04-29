@@ -76,6 +76,9 @@ Here is a list to show you what each variables does and how to use it:
   - Enables or disables rainbow color
   - Replace `default` with `rainbow` if you want a rainbow badge
 
+In the source code of this plugin I've also added a little fix to AniList's native badge position to make it look better.<br>
+If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anilist-css/plugins/fake-donator/main.css) instead of the `@import` variant and delete the part I just described.
+
 ## Changelog
 - 2021/04/29 - Version 1.0.0
   - initial release
