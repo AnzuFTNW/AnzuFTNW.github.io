@@ -8,6 +8,7 @@ only next to the names of certain people you can choose!<br>
 ## How To Install This Plugin
 1. Put this line `@import url("https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css");` on top of your custom css.
 2. Then copy the following code somewhere below it and configure it to your liking.
+
 ```css
 /* SETTINGS */
 :root {
@@ -20,6 +21,7 @@ only next to the names of certain people you can choose!<br>
 /* Badges */
 .header > a[href="/user/<username>/"].name:after{content: var(--ub-<username>);}
 ```
+
 Alternatively, if you want full control, just copy parts or the whole content of [`main.css`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) into your custom css.
 
 ## How To Configure This Plugin
