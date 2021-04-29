@@ -23,7 +23,7 @@ only next to the names of certain people you can choose!<br>
 Alternatively, if you want full control, just copy parts or the whole content of [`main.css`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) into your custom css.
 
 ## How To Configure This Plugin
-The configuration of this plugin is a bit more advanced compared to my other plugins.
+The configuration of this plugin is a bit more advanced compared to my other plugins.<br>
 First of all it dosn't work out of the box, you need to set up atleast one user-badge.
 - `--ub-all-users: unset;`
   - Adds a user-badge for everyone
