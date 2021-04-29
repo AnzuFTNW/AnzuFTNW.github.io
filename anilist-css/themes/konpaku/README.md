@@ -4,6 +4,7 @@
 ## How To Install This Theme
 1. Put this line `@import url("https://anzuftnw.github.io/anilist-css/themes/konpaku/main.css");` on top of your custom css.
 2. Then copy the following code somewhere below it and configure it to your liking.
+
 ```css
 :root, .body, .site-theme-dark, .site-theme-contrast {
     /* settings */
@@ -39,6 +40,7 @@
     --color-gray-900: var(--konpaku-color-green);
 }
 ```
+
 Alternatively, if you want full control, just copy parts or the whole content of [`main.css`](https://anzuftnw.github.io/anilist-css/themes/konpaku/main.css) into your custom css.
 
 
