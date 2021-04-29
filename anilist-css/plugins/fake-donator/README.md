@@ -90,6 +90,6 @@ If you don't like it use the whole [`main.css`](https://anzuftnw.github.io/anili
   - Fix can't be automated (I think?) so use the following code if you don't wanna use rainbow donater badges:
 ```css
 .header > .name:after {
-    color: rgb(var(--color-white));
+    color: rgb(var(--color-text));
 }
 ```
