@@ -76,7 +76,13 @@ Here is a list to show you what each variables does and how to use it:
   - Replace `default` with `rainbow` if you want a rainbow badge
 
 ## Changelog
-- 2021/04/29 - Version 1.0.0
+- 2021/01/05 - Version 2.0.0
+  - completely rewritten
+- 2021/04/27 - Version 1.2.0
+  - removed data tags
+- 2021/01/17 - Version 1.1.0
+  - changed a few badges
+- 2021/01/05 - Version 1.0.0
   - initial release
 
 ## Known Bugs
