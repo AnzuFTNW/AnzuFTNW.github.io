@@ -81,5 +81,5 @@ Here is a list to show you what each variables does and how to use it:
   - initial release
 
 ## Known Bugs
-- Incompatible with the [`user-badges`]() plugin (mainly the donator badge)
+- Incompatible with the [`user-badges`](https://anzuftnw.github.io/anilist-css/plugins/user-badges/main.css) plugin (mainly the donator badge)
 - Donator badge text color is white and not gray (should only be white with rainbow mode)
