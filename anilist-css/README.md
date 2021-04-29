@@ -9,7 +9,7 @@ If you do I'd appreciate it if you credit [me](https://anilist.co/user/Anzu/) ei
 This category contains fully fledged out css themes that transform an AniList profile.<br>
 There are ones that change your profile heavily and some that only slightly enhance the basic AniList experience.
 
-## 2. [Plugins]()
+## 2. [Plugins](https://anzuftnw.github.io/anilist-css/plugins/)
 This category contains little plugins/addons that offer customizable features.<br>
 You should be able to add these to your already existing css/theme without much problems.
 
