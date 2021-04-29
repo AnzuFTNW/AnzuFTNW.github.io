@@ -3,7 +3,6 @@ Here I'll collect all my CSS files that I create for AniList.<br>
 Feel free to use and/or modify any of my CSS.<br>
 If you do I'd appreciate it if you credit [me](https://anilist.co/user/Anzu/) either on your profile or in your code.<br>
 
----
 ### I subdivide my css files into three categories:
 
 ## 1. [Themes]()
