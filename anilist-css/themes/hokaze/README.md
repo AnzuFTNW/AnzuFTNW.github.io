@@ -102,7 +102,7 @@ Dark Theme
 Alternatively, if you want full control, just copy parts or the whole content of [`main.css`](https://anzuftnw.github.io/anilist-css/themes/hokaze/main.css) into your custom css.
 
 
-## How To Configure This Plugin
+## How To Configure This Theme
 /
 
 ## Changelog

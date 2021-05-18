@@ -1,0 +1,264 @@
+/*
+    Gakeiv's Kurisu Theme - Version 1.0.0
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
+        for https://anilist.co/user/Gakeiv/
+*/
+
+/* IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* SETTINGS */
+:root, .site-theme-dark, .site-theme-contrast {
+    /* config*/
+    
+    /* color */
+    --genre-color-one: #74cf73;
+    --genre-color-two: #f3a6f3;
+    --genre-color-thr: #bb97d3;
+    --genre-color-fou: #e9a55e;
+    --genre-color-fiv: #ffe599;
+    --genre-color-six: #dc1313;
+    
+    --color-background: 0,0,0,.5;
+    --color-foreground: 0,0,0,.5;
+    --color-foreground-grey: 0,0,0,.5;
+    --color-foreground-grey-dark: 0,0,0,0.5;
+    --color-text: 189, 87, 87;
+    --color-text-light: 190,80,80;
+    --color-text-lightest: 255,80,80;
+    --color-background-100: 0,0,0,.5;
+    --color-background-200: 0,0,0,.5;
+    --color-gray-100: 189, 87, 87;
+    --color-gray-600: 189, 87, 87;
+    --color-gray-700: 189, 87, 87;
+    --color-gray-800: 255,80,80;
+    --color-gray-900: 255,80,80;
+    --color-green: var(--color-text-lightest);
+}
+
+/* CODE */
+/* nav */
+#nav {
+    background: rgba(0,0,0,.5);
+    color: rgb(var(--color-text));
+    top: 0 !important;
+    border-bottom: 1px solid #900;
+}
+.logo img {
+    content: url("https://cdn.discordapp.com/attachments/819867125878620170/844247752241184788/825824568106680380.png");
+    width: 50px !important;
+    height: 50px !important;
+    transition: 1s linear;
+}
+.logo img:hover {
+    transform: rotate(360deg);
+}
+#nav .link:hover {
+    color: rgb(var(--color-text-lightest))
+}
+.transparent .search svg {
+    color: rgb(var(--color-text)) !important;
+}
+.quick-search {
+    background: rgba(40,30,30,.5) !important;
+}
+
+/* header */
+.banner .avatar {
+    order: 0;
+}
+.banner .name {
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    transform: translate(0,5px);
+    order: 0;
+}
+.banner-content h1.name {
+    filter: drop-shadow(0px 0px 6px crimson);
+}
+.banner .banner-content::after {
+    content: "My Fork...";
+    background: rgba(var(--color-blue),.7);
+    border-radius: 4px;
+    color: rgb(var(--color-white));
+    padding: 4px 7px;
+    margin-bottom: 20px;
+    margin-right: 16px;
+    font-size: 1.2rem;
+    font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 600;
+    cursor: text;
+    order: 2;
+}
+.banner .follower-badge {
+    order: 3;
+}
+.banner .actions {
+    order: 4;
+}
+.nav-wrap {
+    border-top: 1px solid #900;
+    border-bottom: 1px solid rgb(153, 0, 0);
+}
+
+/* content */
+#app {
+    background: url(https://i.imgur.com/Hz1BaE3.png) center center / 100% fixed;
+}
+.user {
+    background: none !important;
+}
+.list-stats, .about > .content-wrap, .activity-entry > .wrap, .genre-overview, .activity-history, .load-more, .el-textarea, .markdown-editor, .favourites-wrap, .reply {
+    border: 1px solid #900;
+}
+.user .overview {
+    grid-template-columns: calc(45% - 40px) 55%!important;
+}
+#app .about .content-wrap {
+    background: rgba(0,0,0,.8);
+}
+.genres .genre:nth-child(1) .name {
+    background: var(--genre-color-one) !important;
+}
+.genres .genre:nth-child(1) .amount {
+    color: var(--genre-color-one) !important;
+}
+.percentage-bar .percentage:nth-child(1) {
+    background: var(--genre-color-one) !important;
+}
+.genres .genre:nth-child(2) .name {
+    background: var(--genre-color-two) !important;
+}
+.genres .genre:nth-child(2) .amount {
+    color: var(--genre-color-two) !important;
+}
+.percentage-bar .percentage:nth-child(2) {
+    background: var(--genre-color-two) !important;
+}
+.genres .genre:nth-child(3) .name {
+    background: var(--genre-color-thr) !important;
+}
+.genres .genre:nth-child(3) .amount {
+    color: var(--genre-color-thr) !important;
+}
+.percentage-bar .percentage:nth-child(3) {
+    background: var(--genre-color-thr) !important;
+}
+.genres .genre:nth-child(4) .name {
+    background: var(--genre-color-fou) !important;
+}
+.genres .genre:nth-child(4) .amount {
+    color: var(--genre-color-fou) !important;
+}
+.percentage-bar .percentage:nth-child(4) {
+    background: var(--genre-color-fou) !important;
+}
+.genres .genre:nth-child(5) .name {
+    background: var(--genre-color-fiv) !important;
+}
+.genres .genre:nth-child(5) .amount {
+    color: var(--genre-color-fiv) !important;
+}
+.percentage-bar .percentage:nth-child(5) {
+    background: var(--genre-color-fiv) !important;
+}
+.percentage-bar .percentage:nth-child(6) {
+    background: var(--genre-color-six) !important;
+}
+.overview .favourites > .favourites-wrap {
+    background: rgb(var(--color-foreground)) !important;
+    display: grid !important;
+    grid-gap: 25px !important;
+    grid-template-columns: repeat(auto-fill,85px) !important;
+    margin-bottom: 30px !important;
+    padding: 20px !important;
+    grid-template-rows: unset !important;
+    width: unset;
+}
+.overview .favourites > .favourites-wrap > div, .overview .favourites > .favourites-wrap > a {
+    margin-bottom: 20px !important;
+    margin-right: 21px !important;
+    column-gap: unset !important;
+}
+.favourites.preview .favourites-wrap {
+    display: block !important;
+    margin-bottom: 25px !important;
+    padding: 20px !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+}
+.overview .favourite.studio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,255,255,.6);
+    font-weight: 800;
+    font-size: 6rem;
+}
+.overview .favourite.studio::after {
+    display: none;
+}
+.site-theme-dark .overview .favourite.studio[href="/studio/2/Kyoto-Animation"] {
+    background: url("https://cdn.discordapp.com/attachments/824261675552604210/844269872917381180/thumb-1920-717957.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 0% 70%
+}
+.site-theme-dark .overview .favourite.studio[href="/studio/43/ufotable"] {
+    background: url("https://cdn.discordapp.com/attachments/824261675552604210/844270549273149530/wallpapersden.com_saber-fategrand-order-series_2759x1637.jpg");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: 40% 7%
+}
+.site-theme-dark .overview .favourite.studio[href="/studio/44/Shaft"] {
+    background: url("https://cdn.discordapp.com/attachments/824261675552604210/844271265538768977/714776.jpg");
+    background-size: 1000%;
+    background-repeat: no-repeat;
+    background-position: 35% 10.5%
+}
+.site-theme-dark .overview .favourite.studio[href="/studio/11/MADHOUSE"] {
+    background: url("https://cdn.discordapp.com/attachments/824261675552604210/844274697339666502/hqjf7l.jpg");
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: 70% 15%
+}
+.site-theme-dark .overview .favourite.studio[href="/studio/314/White-Fox"] {
+    background: url("https://media.discordapp.net/attachments/824261675552604210/844276474160218112/Steins-Gate.jpg?width=870&height=544");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 40% 28%;
+}
+.user-page-unscoped.red .progress .bar {
+    background: linear-gradient(270deg,#df0000,#500);
+}
+.wrap > .time {
+    color: rgb(var(--color-text));
+}
+/* footer */
+#app .wrap .footer {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-text));
+    border-top: 1px solid #900;
+}
+.footer > .container {
+    justify-content: space-between;
+}
+.theme-preview.dark {
+    color: lightgrey;
+    background: rgb(var(--color-background))
+}
+.theme-selector > h2 {
+    color: rgb(var(--color-text))
+}
+.theme-selector > .theme-preview {
+    border-color: rgb(40,0,0);
+}
+a:hover {
+    color: rgb(var(--color-text-lightest));
+}
+.hohColourPicker, .hohDismiss, .hohDownload {
+    display: none;
+}
