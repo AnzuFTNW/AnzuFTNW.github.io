@@ -262,3 +262,14 @@ a:hover {
 .hohColourPicker, .hohDismiss, .hohDownload {
     display: none;
 }
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-text-lightest));
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-track {
+  background: black;
+}
