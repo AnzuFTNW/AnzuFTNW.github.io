@@ -107,7 +107,7 @@
 #app {
     background: url(https://i.imgur.com/Hz1BaE3.png) center center / 100% fixed;
 }
-.user {
+#app > .content.container > .user {
     background: none !important;
 }
 .list-stats, .about > .content-wrap, .activity-entry > .wrap, .genre-overview, .activity-history, .load-more, .el-textarea, .markdown-editor, .favourites-wrap, .reply {
