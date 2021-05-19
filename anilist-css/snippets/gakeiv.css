@@ -273,3 +273,11 @@ a:hover {
 body::-webkit-scrollbar-track {
   background: black;
 }
+
+/* notifications page fix ? */
+#app {
+    margin-top: 0;
+}
+.notifications-feed.container {
+    margin-top: 142px !important;
+}
