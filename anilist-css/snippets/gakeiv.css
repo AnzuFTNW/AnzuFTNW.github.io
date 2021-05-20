@@ -118,7 +118,7 @@
 }
 #app .about .content-wrap {
     background: rgba(0,0,0,.8);
-	max-width: none;
+	max-height: none;
 }
 .genres .genre:nth-child(1) .name {
     background: var(--genre-color-one) !important;
