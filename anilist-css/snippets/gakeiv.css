@@ -1,5 +1,5 @@
 /*
-    Gakeiv's Kurisu Theme - Version 1.0.0
+    Gakeiv's Kurisu Theme - Version 1.0.4
         by https://anilist.co/user/Anzu/
         at https://github.com/AnzuFTNW
         for https://anilist.co/user/Gakeiv/
@@ -118,6 +118,7 @@
 }
 #app .about .content-wrap {
     background: rgba(0,0,0,.8);
+	max-width: none;
 }
 .genres .genre:nth-child(1) .name {
     background: var(--genre-color-one) !important;
