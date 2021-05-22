@@ -1,0 +1,91 @@
+/*
+    Baros' Theme - Version 1.0.0
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
+        for https://anilist.co/user/Baros/
+*/
+
+:root, .site-theme-dark, .site-theme-contrast, .site-theme-dark .user-page-unscoped.gray {
+    --color-background: 0,0,0;
+    --color-foreground: 0,0,0;
+    --color-foreground-grey: 0,0,0;
+    --color-foreground-grey-dark: 0,0,0;
+    --color-text: 255,255,255;
+    --color-text-light: 255,255,255;
+    --color-text-lighter: 255,255,255;
+    --color-blue: 200,200,200;
+    --color-blue-dim: 125,125,125;
+    --color-background-100: 0,0,0;
+    --color-background-200: 0,0,0;
+    --color-gray-100: 0,0,0;
+    --color-gray-600: 255,255,255;
+    --color-gray-700: 255,255,255;
+    --color-gray-800: 255,255,255;
+    --color-gray-900: 255,255,255;
+}
+
+#nav {
+    border-bottom: 1px solid white;
+}
+.nav-unscoped.transparent, .site-theme-dark .nav-unscoped.transparent, .site-theme-contrast .nav-unscoped.transparent {
+    background: rgba(var(--color-background),.4);
+}
+.nav-unscoped, .site-theme-dark .nav-unscoped, .site-theme-contrast .nav-unscoped,
+.nav-unscoped.transparent:hover, .site-theme-dark .nav-unscoped.transparent:hover, .site-theme-contrast .nav-unscoped.transparent:hover {
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-text));
+}
+.nav-wrap {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.activity-entry > .wrap, .about > .content-wrap, .desktop > .content-wrap, .stats-wrap > .list-stats, .favourites-wrap, .reply, .el-textarea, .markdown-editor  {
+    border: 1px solid white;
+}
+.user .overview {
+    grid-template-columns: calc(45% - 40px) 55%!important;
+}
+.overview .favourites > .favourites-wrap {
+    background: rgb(var(--color-foreground)) !important;
+    display: grid !important;
+    grid-gap: 25px !important;
+    grid-template-columns: repeat(auto-fill,85px) !important;
+    margin-bottom: 30px !important;
+    padding: 20px !important;
+    grid-template-rows: unset !important;
+    width: unset;
+}
+.overview .favourites > .favourites-wrap > div, .overview .favourites > .favourites-wrap > a {
+    margin-bottom: 20px !important;
+    margin-right: 21px !important;
+    column-gap: unset !important;
+}
+.favourites.preview .favourites-wrap {
+    display: block !important;
+    margin-bottom: 25px !important;
+    padding: 20px !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+}
+.overview .favourite.studio {
+    display: inline-flex;
+    max-width: 85px;
+    font-size: 0rem;
+    justify-content: center;
+    align-items: center;
+}
+.site-theme-dark .overview .favourite.studio {
+    background-color: white !important;
+    border: 1px solid white;
+}
+.user-page-unscoped.gray .progress .bar {
+    background: linear-gradient(270deg,#fff,#666);
+}
+.load-more {
+    border: 1px solid white;
+}
+.wrap > .footer {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-text));
+    border-top: 1px solid white;
+}
