@@ -1,5 +1,5 @@
 /*
-    Hokaze Theme - Version 1.5.2
+    Hokaze Theme - Version 1.5.3
         by https://anilist.co/user/Anzu/
         at https://github.com/AnzuFTNW
 
@@ -507,4 +507,11 @@ background: rgb(var(--color-background));
 .banner-content:hover > .actions {
   transform: translateX(183px);
   opacity: 1;
+}
+
+/* about sectoin fixed cuz after effects sux */
+.about img[src="https://64.media.tumblr.com/570f4e11222d885f2a29aa03721a41d0/94677bcd5144bb29-54/s540x810/77d4a0d24784404e4017f3bd8bead673abb65e1c.gif"] {
+    border: 3px solid #f7bf63;
+    border-radius: 10px;
+    margin-top: 5px;
 }
