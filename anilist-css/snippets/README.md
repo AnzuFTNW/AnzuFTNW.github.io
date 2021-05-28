@@ -5,6 +5,7 @@
 - [`StefanKun`](https://anzuftnw.github.io/anilist-css/snippets/stefankun.css) - Version 1.0.0 - Hidden Avatar & Name, No Scroll Bio, Invis Nav, Wider Follow Buttons
 - [`Gakeiv`](https://anzuftnw.github.io/anilist-css/snippets/gakeiv.css) - Version 1.0.4 - Kurisu Theme
 - [`Baros`](https://anzuftnw.github.io/anilist-css/snippets/baros.css) - Version 1.0.1 - Black/Purple Theme
+- [`Ghoulish`](https://anzuftnw.github.io/anilist-css/snippets/ghoulish.css) - Version 1.0.0 - Some pseudoelemnts added + borders and rounder favourites
 
 ---
 ### [<- Back](https://anzuftnw.github.io/anilist-css/)
