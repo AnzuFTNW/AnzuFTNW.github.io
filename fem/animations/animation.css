@@ -13,4 +13,6 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 400px;
+  background: #b20c14;
+  color: #f29a00;
 }
