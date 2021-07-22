@@ -1,0 +1,32 @@
+/*
+    Chika Theme - Version 0.1.0
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
+
+    !! WORK IN PROGRESS !! 
+/*
+
+/* SETTINGS */
+:root {
+    --chika-accent-color: 238, 212, 219;
+    --chika-accent-color-dim: 208, 182, 189;
+}
+
+/* CODE */
+/* Custom Profile Color */
+.user-page-unscoped {
+    --color-blue: var(--chika-accent-color) !important;
+    --color-blue-dim: var(--chika-accent-color-dim) !important;
+}
+.user.user-page-unscoped .progress .bar {
+    background: rgb(var(--color-blue)) !important;
+    overflow: hidden;
+    position: relative;
+}
+.user.user-page-unscoped .progress .bar:after {
+    background: linear-gradient(530deg, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0));
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
