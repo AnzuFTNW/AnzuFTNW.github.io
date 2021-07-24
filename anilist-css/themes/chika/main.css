@@ -1,5 +1,5 @@
 /*
-    Chika Theme - Version 0.1.0
+    Chika Theme - Version 0.1.1
         by https://anilist.co/user/Anzu/
         at https://github.com/AnzuFTNW
 
@@ -30,3 +30,25 @@
     position: absolute;
     width: 100%;
 }
+
+.user-page-unscoped {
+    background: url("https://i.imgur.com/fvUDP90.png") !important;
+    padding-bottom: 60px;
+}
+
+.header-wrap > .nav-wrap {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.content.container {
+    width: 70%;
+    padding: 30px;
+    
+    background: rgb(var(--color-background));
+}
+
+.content.container > .overview, #app > .wrap, .wrap > .footer {
+    margin-top: 0;
+}
+
