@@ -179,3 +179,7 @@ h2 {
 .more-tab:hover {
   background-color: var(--highlight-color);
 }
+
+.inline-link {
+  color: var(--highlight-color);
+}

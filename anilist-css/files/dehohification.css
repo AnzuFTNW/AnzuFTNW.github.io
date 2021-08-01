@@ -1,0 +1,92 @@
+/*
+  dehohification.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* force site layout back to standart */
+.user .overview {
+  grid-template-columns: calc(45% - 40px) 55% !important;
+}
+
+.overview .favourites .favourites-wrap {
+  display: block !important;
+  padding: 20px 0px 0px 20px !important;
+  grid-gap: unset;
+  column-gap: unset !important;
+  grid-template-columns: unset;
+  grid-template-rows: unset;
+  width: inherit;
+  background: rgb(var(--color-foreground)) !important;
+}
+
+.overview .favourites .favourites-wrap .div,
+.overview .favourites .favourites-wrap a {
+  margin-bottom: 20px !important;
+  margin-right: 21px !important;
+  column-gap: unset !important;
+}
+
+.overview .favourite.studio {
+  min-height: unset;
+  grid-gap: unset;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: unset !important;
+  text-align: unset;
+  align-content: unset;
+}
+
+.site-theme-dark .overview .favourite.studio {
+  background-color: unset !important;
+}
+
+.overview .favourite.studio::after {
+  display: none;
+}
+
+/* force disable banner download button */
+.hohDownload {
+  display: none;
+}
+
+/* force disable color picker */
+.hohColourPicker {
+  display: none;
+}
+
+.footer .links {
+  margin-left: auto;
+  transform: unset;
+}
+
+/* force disable high contrast dark mode */
+.theme-preview.dark-contrast {
+  display: none;
+}
+
+/* force disable notification dismiss */
+.hohDismiss {
+  display: none;
+}
+
+/* force disable activity stuff */
+.hohScore,
+.hohNoteSuffix,
+.hohRewatchSuffix {
+  display: none;
+}
+
+.activity-manga_list > div > div > div > div > .title,
+.hohPinned .list .title[href^="/manga/"] {
+  color: rgb(var(--color-blue)) !important;
+}
+
+/* force enable banner shadow */
+.banner .shadow {
+  display: block;
+}
+
+/* force disable icons */
+.footer a::before {
+  display: none;
+}
