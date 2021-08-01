@@ -154,3 +154,28 @@ h2 {
   background: var(--highlight-color);
   border-radius: 100px;
 }
+
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 100px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.more > a {
+  width: 100%;
+}
+
+.more-tab {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.more-tab:hover {
+  background-color: var(--highlight-color);
+}
