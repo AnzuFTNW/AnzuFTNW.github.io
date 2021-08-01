@@ -28,9 +28,9 @@ body::before {
     background-repeat: no-repeat;
     width: 15%;
     height: 20%;
-
 }
 
+/*
 body::after {
     content: "";
     display: block;
@@ -42,8 +42,8 @@ body::after {
     background-repeat: no-repeat;
     width: 15%;
     height: 70%;
-
 }
+*/
 
 #nav {
   border-bottom: var(--border-width) var(--border-style) var(--border-color);
