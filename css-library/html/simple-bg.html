@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anzu's Library - shadowless.css</title>
+    <title>Anzu's Library - simple-bg.css</title>
     <link rel="stylesheet" href="../src/github-markdown.css" />
     <link rel="stylesheet" href="../src/style.css" />
     <link rel="stylesheet" href="../src/images-compare.css" />
@@ -15,44 +15,35 @@
       <!-- Title -->
       <h1>
         <code>V1.0</code>
-        <a href="../files/shadowless.css">shadowless.css</a>
+        <a href="../files/simple-bg.css">simple-bg.css</a>
       </h1>
       <!-- Description -->
       <h2>Description</h2>
       <p>
-        This mini CSS snippet will remove any type of shadows/depth.<br />
-        Removes the banner shadow just like
-        <a href="https://github.com/hohMiyazawa/Automail">Automail</a> does and
-        is indented to be an addition to my
-        <a href="../html/dehohification.html"
-          ><code>dehohification.css</code> snippet</a
-        >.<br />
-        (But can also be used on its own, since it removes other types of
-        shadows aswell.)
+        This CSS snippet will allow you to customize your background.<br />
+        This will automatically apply
+        <a href="../html/bg-fix.html"><code>bg-fix.css</code></a
+        >.
       </p>
       <!-- Feature List -->
       <h2>Features</h2>
       <ul>
-        <li>Removes banner shadow</li>
-        <li>Removes name shadow</li>
-        <li>Removes dropdown shadow</li>
+        <li>Adds the ability to customize your background</li>
       </ul>
       <!-- Screenshots & Comparsion -->
       <h2>Sceenshots</h2>
-      <p>
-        <code>Screenshot</code> - Banner shadow, name shadow, dropdown shadow
-      </p>
+      <p><code>Screenshot</code> - Background</p>
       <!-- Main div container -->
       <div id="myImageCompare" class="comparsion">
         <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
         <div style="display: none">
           <span class="images-compare-label">Before</span>
-          <img src="../src/img/shadowless-before.png" alt="Before" />
+          <img src="../src/img/simple-bg-before.png" alt="Before" />
         </div>
         <!-- This div will be the back element -->
         <div>
           <span class="images-compare-label">After</span>
-          <img src="../src/img/shadowless-after.png" alt="After" />
+          <img src="../src/img/simple-bg-after.png" alt="After" />
         </div>
       </div>
       <!-- Installation Guide -->
@@ -62,9 +53,9 @@
         Add
         <code
           >@import
-          url("https://anzuftnw.github.io/css-library/files/shadowless.css")</code
+          url("https://anzuftnw.github.io/css-library/files/simple-bg.css")</code
         >
-        into the custom css box inside your app settings and press submit.
+        into the custom css box inside your app setting.
       </p>
       <center>
         <img
@@ -74,12 +65,44 @@
           alt="tutorial image"
         />
       </center>
+      <p>
+        Then add the following code below it, change the options to your liking
+        and press submit:
+      </p>
+      <p>
+        Some
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/background"
+          target="_blank"
+          >Help</a
+        >
+        if needed.
+      </p>
+      <pre><code
+        >/* settings */
+:root {
+  /* simple-bg settings */
+  --bg-img: url("imglink");
+  --bg-scr: fixed;
+  --bg-pos: center;
+  --bg-rpt: no-repeat;
+  --bg-sze: cover;
+}</code
+      ></pre>
+      <center>
+        <img
+          class="tutorial"
+          width="720px"
+          src="../src/img/tutorial-2.png"
+          alt="tutorial image"
+        />
+      </center>
       <h3>Customize</h3>
       <p>
         If you want more freedom and disable or modify some of the things this
         snippet does you probably already know how to do so. Copy the contents
         of
-        <code><a href="../files/shadowless.css">shadowless.css</a></code>
+        <code><a href="../files/simple-bg.css">simple-bg.css</a></code>
         into your custom css box or a seperat file and get started.
       </p>
       <!-- Changelog -->

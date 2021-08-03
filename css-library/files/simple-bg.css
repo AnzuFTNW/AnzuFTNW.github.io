@@ -1,0 +1,25 @@
+/*
+  simple-bg.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* snippets */
+@import url(https://anzuftnw.github.io/css-library/files/bg-fix.css);
+
+/* settings */
+:root {
+  --bg-img: url("https://i.imgur.com/lUkm9Ze.jpeg");
+  --bg-scr: fixed;
+  --bg-pos: center;
+  --bg-rpt: no-repeat;
+  --bg-sze: cover;
+}
+
+/* add bg */
+.page-content > .user {
+  background-attachment: var(--bg-scr) !important;
+  background-image: var(--bg-img) !important;
+  background-position: var(--bg-pos) !important;
+  background-repeat: var(--bg-rpt) !important;
+  background-size: var(--bg-sze) !important;
+}
