@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+  background-image: radial-gradient(
+      rgba(13, 17, 23, 0.5),
+      rgba(13, 17, 23, 1) 75%
+    ),
+    url("img/ina.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+}
+
+.comparsion {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
+  outline: 2px solid #21262d;
+}
+
+.comparsion:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.tutorial {
+  outline: 2px solid #21262d;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #58a6ff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+body > .back {
+  position: fixed;
+  font-size: 3em;
+  color: #c9d1d9;
+  text-decoration: none;
+  left: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+body > .back:hover {
+  transform: rotate(30deg);
+  color: #fff;
+}

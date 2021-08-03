@@ -1,0 +1,19 @@
+/*
+  shadowless.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* remove dropdown shadow*/
+#nav .dropdown {
+  box-shadow: none;
+}
+
+/* remove name shadow */
+.header-wrap h1.name {
+  filter: none;
+}
+
+/* remove banner shadow */
+.banner .shadow {
+  display: none;
+}

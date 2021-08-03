@@ -1,0 +1,14 @@
+/*
+  bg-fix.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* bg-fix */
+.page-content > .user {
+  padding-bottom: 60px;
+}
+
+.wrap > .footer,
+#app > .wrap {
+  margin-top: unset;
+}

@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anzu's Library - dehohification.css</title>
-    <link rel="stylesheet" href="src/github-markdown.css" />
-
-    <link rel="stylesheet" href="src/style.css" />
-
-    <link rel="stylesheet" href="src/images-compare.css" />
+    <link rel="stylesheet" href="../src/github-markdown.css" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/images-compare.css" />
   </head>
   <body>
+    <a href="../index.html" class="back">🠔</a>
     <article class="markdown-body">
       <!-- Title -->
       <h1>
         <code>V1.0</code>
-        <a href="/files/dehohification.css">dehohification.css</a>
+        <a href="../files/dehohification.css">dehohification.css</a>
       </h1>
       <!-- Description -->
       <h2>Description</h2>
@@ -60,12 +59,12 @@
         <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
         <div style="display: none">
           <span class="images-compare-label">Before</span>
-          <img src="src/img/dehohification-before-1.png" alt="Before" />
+          <img src="../src/img/dehohification-before-1.png" alt="Before" />
         </div>
         <!-- This div will be the back element -->
         <div>
           <span class="images-compare-label">After</span>
-          <img src="src/img/dehohification-after-1.png" alt="After" />
+          <img src="../src/img/dehohification-after-1.png" alt="After" />
         </div>
       </div>
       <br /><br />
@@ -75,12 +74,12 @@
         <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
         <div style="display: none">
           <span class="images-compare-label">Before</span>
-          <img src="src/img/dehohification-before-2.png" alt="Before" />
+          <img src="../src/img/dehohification-before-2.png" alt="Before" />
         </div>
         <!-- This div will be the back element -->
         <div>
           <span class="images-compare-label">After</span>
-          <img src="src/img/dehohification-after-2.png" alt="After" />
+          <img src="../src/img/dehohification-after-2.png" alt="After" />
         </div>
       </div>
       <br /><br />
@@ -93,12 +92,12 @@
         <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
         <div style="display: none">
           <span class="images-compare-label">Before</span>
-          <img src="src/img/dehohification-before-3.png" alt="Before" />
+          <img src="../src/img/dehohification-before-3.png" alt="Before" />
         </div>
         <!-- This div will be the back element -->
         <div>
           <span class="images-compare-label">After</span>
-          <img src="src/img/dehohification-after-3.png" alt="After" />
+          <img src="../src/img/dehohification-after-3.png" alt="After" />
         </div>
       </div>
       <!-- Installation Guide -->
@@ -116,7 +115,7 @@
         <img
           class="tutorial"
           width="720px"
-          src="src/img/tutorial.png"
+          src="../src/img/tutorial.png"
           alt="tutorial image"
         />
       </center>
@@ -125,7 +124,9 @@
         If you want more freedom and disable or modify some of the things this
         snippet does you probably already know how to do so. Copy the contents
         of
-        <code><a href="/files/dehohification.css">dehohification.css</a></code>
+        <code
+          ><a href="../files/dehohification.css">dehohification.css</a></code
+        >
         into your custom css box or a seperat file and get started.
       </p>
 
@@ -151,7 +152,10 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
     ></script>
-    <script type="text/javascript" src="src/jquery.images-compare.js"></script>
+    <script
+      type="text/javascript"
+      src="../src/jquery.images-compare.js"
+    ></script>
     <script>
       $("#myImageCompare").imagesCompare({
         initVisibleRatio: 0.5,
