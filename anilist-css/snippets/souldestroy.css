@@ -1,5 +1,5 @@
 /* 
-    SoulDestroy Snippet - version 1.0.0
+    SoulDestroy Snippet - version 1.1
       by https://anilist.co/user/Anzu/
       at https://github.com/AnzuFTNW
       for https://anilist.co/user/SoulDestroy/
@@ -9,6 +9,10 @@
     /* settings */
     --bio-size: 50%; 
     --max-size: 79.2vw;
+    
+    /* Custom Profile Badge */
+    --cpb-toggle: block;
+    --cpb-text: "Absolutely Lost";
 }
 
 /* code */
@@ -36,6 +40,32 @@
     margin-top: 20px;
 }
 
+/* Custom Profile Donator Badge */
+.actions {
+    display: flex;
+    align-items: center;
+}
+.nav-btn {
+    order: -1;
+}
+.banner-content > .actions:before {
+    content: var(--cpb-text);
+    background: rgba(var(--color-blue), .8);
+    border-radius: 4px;
+    color: rgb(var(--color-white));
+    margin-left: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: .4s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: rainbow;
+    animation-timing-function: ease-in-out;
+    order: 0;
+    display: var(--cpb-toggle);
+    position: absolute;
+}
+
 /* avatar + follow stuff redesign */
 .container > .banner-content {
     position: fixed;
@@ -47,12 +77,11 @@
     background: rgb(var(--color-foreground));
     transform: translate( calc(15.5vw - 150px - 40px) , calc(330px + 46px + 30px) ); 
 }
-.banner-content > .name, .actions > .dropdown {
+.banner-content > .name-wrapper > .name, .actions > .dropdown {
     display: none;
 }
 .banner-content > .avatar {
     border-radius: 0;
-    z-index: 1;
 }
 .banner-content > .follower-badge {
     position: absolute;
@@ -76,8 +105,9 @@
     background: rgba(var(--color-blue),1);
     transition: background 0.3s linear;
 }
-.actions > .donator-badge {
+.banner-content > .actions:before {
     top: 150px;
+    left: -10px;
     width: 150px;
     border-radius: 0 0 4px 4px;
 }
