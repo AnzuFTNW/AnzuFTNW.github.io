@@ -82,6 +82,7 @@
 }
 .banner-content > .avatar {
     border-radius: 0;
+    flex-shrink: 0;
 }
 .banner-content > .follower-badge {
     position: absolute;
