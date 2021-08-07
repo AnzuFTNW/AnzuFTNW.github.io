@@ -1,35 +1,25 @@
-/* 
-    SoulDestroy Snippet - version 1.1.1
-      by https://anilist.co/user/Anzu/
-      at https://github.com/AnzuFTNW
-      for https://anilist.co/user/SoulDestroy/
+/*
+  souldestroy.css - version 1.5
+    by https://github.com/AnzuFTNW
+    for https://anilist.co/user/SoulDestroy/
 */
 
+/* imports */
+@import url("https://anzuftnw.github.io/css-library/files/dehohification.css");
+@import url("https://anzuftnw.github.io/css-library/files/shadowless.css");
+
+/* settings */
 :root {
-    /* settings */
-    --bio-size: 50%; 
-    --max-size: 79.2vw;
-    
     /* Custom Profile Badge */
     --cpb-toggle: block;
     --cpb-text: "Absolutely Lost";
 }
 
 /* code */
-
+/* one row activitiys */
 /* activity feed 1 column */
 .activity-feed-wrap > .activity-feed {
     display: block;
-}
-
-/* bio width */
-.user .overview {
-    grid-template-columns: calc(var(--bio-size) - 40px) auto !important;
-}
-
-/* content size */
-.user > .container {
-    max-width: var(--max-size);
 }
 
 /* stats 1 column + spacing */
@@ -51,7 +41,6 @@
 .banner-content > .actions:before {
     content: var(--cpb-text);
     background: rgba(var(--color-blue), .8);
-    border-radius: 4px;
     color: rgb(var(--color-white));
     margin-left: 10px;
     padding: 10px 12px;
@@ -64,6 +53,10 @@
     order: 0;
     display: var(--cpb-toggle);
     position: absolute;
+    top: 150px;
+    left: -10px;
+    width: 150px;
+    border-radius: 0 0 4px 4px;
 }
 
 /* avatar + follow stuff redesign */
@@ -75,20 +68,22 @@
     height: 150px;
     border-radius: 4px 4px 0 0;
     background: rgb(var(--color-foreground));
-    transform: translate( calc(15.5vw - 150px - 40px) , calc(330px + 46px + 30px) ); 
+    transform: translate( calc(15.5vw - 150px - 40px), calc(330px + 46px + 30px));
 }
-.banner-content > .name-wrapper > .name, .actions > .dropdown {
+.banner-content > .name-wrapper > .name,
+.actions > .dropdown {
     display: none;
 }
 .banner-content > .avatar {
     border-radius: 0;
     flex-shrink: 0;
+    /* firefox fix? */
 }
 .banner-content > .follower-badge {
     position: absolute;
     top: 3px;
     left: 3px;
-    background: rgba(var(--color-blue),.2);
+    background: rgba(var(--color-blue), .2);
 }
 .actions > .nav-btn {
     position: absolute;
@@ -103,15 +98,9 @@
     width: 125px;
     padding: 4px 0px;
     border-radius: 4px;
-    background: rgba(var(--color-blue),1);
+    background: rgba(var(--color-blue), 1);
     transition: background 0.3s linear;
 }
-.banner-content > .actions:before {
-    top: 150px;
-    left: -10px;
-    width: 150px;
-    border-radius: 0 0 4px 4px;
-}
 .actions > .nav-btn:nth-child(1):hover {
-    background: rgba(var(--color-red),1);
+    background: rgba(var(--color-red), 1);
 }
