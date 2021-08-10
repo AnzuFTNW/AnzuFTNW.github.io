@@ -1,0 +1,64 @@
+/*
+  fullscreen-bg.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* snippets */
+@import url(https://anzuftnw.github.io/css-library/files/bg-fix.css);
+@import url(https://anzuftnw.github.io/css-library/files/simple-bg.css);
+
+/* settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  /* simple-bg settings */
+  --bg-img: url("https://i.imgur.com/APAHB7C.png");
+  --bg-scr: scroll;
+  --bg-pos: center;
+  --bg-rpt: repeat;
+  --bg-sze: auto;
+  
+  /* fullscren-bg settings */
+  --fullscreen-bg: rgb(var(--color-background));
+  --fullscreen-filter: none;
+}
+
+/* navbar*/
+.header-wrap .nav-wrap {
+  margin: 0 auto;
+  border-radius: 4px 4px 0 0;
+}
+@media (min-width: 1540px) {
+  .header-wrap .nav-wrap {
+    max-width: 1380px;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1540px) {
+  .header-wrap .nav-wrap {
+    max-width: 1100px;
+  }
+}
+
+/* content */
+@media (min-width: 1540px) {
+  .content.container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1540px) {
+  .content.container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* background */
+.content .overview {
+  margin-top: 0;
+  background: var(--fullscreen-bg);
+  padding: 30px;
+  border-radius: 0 0 4px 4px;
+  backdrop-filter: var(--fullscreen-filter);
+}
+.page-content > .user.user-page-unscoped {
+  padding-bottom: 30px;
+}
