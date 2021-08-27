@@ -1,5 +1,5 @@
 /*
-  fullscreen-bg.css - version 1.0
+  fullscreen-bg.css - version 1.1
     by https://github.com/AnzuFTNW
 */
 
@@ -52,7 +52,7 @@
 }
 
 /* background */
-.content .overview {
+.content .overview, .content > .medialist, .content > .favourites, .content > .stats, .content > .user-social, .content > .user-reviews, .content > .submissions {
   margin-top: 0;
   background: var(--fullscreen-bg);
   padding: 30px;
@@ -61,4 +61,37 @@
 }
 .page-content > .user.user-page-unscoped {
   padding-bottom: 30px;
+}
+
+/* anime/manga list */
+.medialist .list-wrap:last-child {
+    margin-bottom: 0px;
+}
+.medialist .actions {
+    top: 0;
+}
+
+/* favourites */
+.favourites .favourites {
+    margin-top: 0;
+}
+.favourites .favourites:last-child .favourites-wrap {
+    margin-bottom: 0;
+}
+.favourites .favourites .studios .favourite {
+    background-color: unset;
+}
+
+/* stats */
+.stats .stats-wrap .overview {
+    padding: 0px 30px 0px 30px;
+    
+}
+.stats .overview section:last-child {
+    margin-bottom: 0;
+}
+
+/* submissions */
+.content > .submissions {
+    max-width: unset;
 }
