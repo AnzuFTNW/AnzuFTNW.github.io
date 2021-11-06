@@ -1,0 +1,19 @@
+/*
+  stefankun.css - version 1.0
+    by https://github.com/AnzuFTNW
+    for https://anilist.co/user/StefanKun/
+*/
+
+.banner > .container {
+    margin: 0;
+    max-width: 100%;
+}
+.banner-content > .avatar, .banner-content > .name {
+    display: none;
+}
+.about > .content-wrap{
+  max-height: none !important;
+}
+.nav-unscoped.transparent { 
+    background: transparent !important; 
+}

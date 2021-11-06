@@ -1,0 +1,134 @@
+/*
+  baros.css - version 1.0.1
+    by https://github.com/AnzuFTNW
+    for https://anilist.co/user/Baros/
+*/
+
+:root,
+.site-theme-dark,
+.site-theme-contrast,
+.site-theme-dark .user-page-unscoped.gray {
+  --color-background: 0, 0, 0;
+  --color-foreground: 0, 0, 0;
+  --color-foreground-grey: 0, 0, 0;
+  --color-foreground-grey-dark: 0, 0, 0;
+  --color-text: 255, 255, 255;
+  --color-text-light: 255, 255, 255;
+  --color-text-lighter: 255, 255, 255;
+  --color-blue: 200, 200, 200;
+  --color-blue-dim: 125, 125, 125;
+  --color-background-100: 0, 0, 0;
+  --color-background-200: 0, 0, 0;
+  --color-gray-100: 0, 0, 0;
+  --color-gray-600: 255, 255, 255;
+  --color-gray-700: 255, 255, 255;
+  --color-gray-800: 255, 255, 255;
+  --color-gray-900: 255, 255, 255;
+
+  --border-width: 1px;
+  --border-style: solid;
+
+  --border-color: rgb(216, 120, 203);
+}
+
+#nav {
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+.nav-unscoped.transparent,
+.site-theme-dark .nav-unscoped.transparent,
+.site-theme-contrast .nav-unscoped.transparent {
+  background: rgba(var(--color-background), 0.4);
+}
+.nav-unscoped,
+.site-theme-dark .nav-unscoped,
+.site-theme-contrast .nav-unscoped,
+.nav-unscoped.transparent:hover,
+.site-theme-dark .nav-unscoped.transparent:hover,
+.site-theme-contrast .nav-unscoped.transparent:hover {
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+}
+
+.logo img {
+  content: url("https://cdn.discordapp.com/emojis/832295892278444082.png?v=1");
+  width: 50px !important;
+  height: 50px !important;
+  transition: 3s linear;
+  border-radius: 50px;
+}
+.logo img:hover {
+  transform: rotate(360deg);
+}
+.nav-wrap {
+  border-top: var(--border-width) var(--border-style) var(--border-color);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+.activity-entry > .wrap,
+.about > .content-wrap,
+.desktop > .content-wrap,
+.stats-wrap > .list-stats,
+.favourites-wrap,
+.reply,
+.el-textarea,
+.markdown-editor,
+.load-more {
+  border: var(--border-width) var(--border-style) var(--border-color);
+}
+.user .overview {
+  grid-template-columns: calc(45% - 40px) 55% !important;
+}
+.overview .favourites > .favourites-wrap {
+  background: rgb(var(--color-foreground)) !important;
+  display: grid !important;
+  grid-gap: 25px !important;
+  grid-template-columns: repeat(auto-fill, 85px) !important;
+  margin-bottom: 30px !important;
+  padding: 20px !important;
+  grid-template-rows: unset !important;
+  width: unset;
+}
+.overview .favourites > .favourites-wrap > div,
+.overview .favourites > .favourites-wrap > a {
+  margin-bottom: 20px !important;
+  margin-right: 21px !important;
+  column-gap: unset !important;
+}
+.favourites.preview .favourites-wrap {
+  display: block !important;
+  margin-bottom: 25px !important;
+  padding: 20px !important;
+  padding-bottom: 0 !important;
+  padding-right: 0 !important;
+}
+.overview .favourite.studio {
+  display: inline-flex;
+  max-width: 85px;
+  font-size: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+.site-theme-dark .overview .favourite.studio {
+  background-color: white !important;
+}
+
+.user-page-unscoped.pink .progress .bar {
+  background: linear-gradient(270deg, rgb(216,120,203), rgb(245,173,216));
+}
+
+.wrap > .footer {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-text));
+  border-top: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.about a:nth-child(3)::after {
+    content: "";
+    background-image: url("https://cdn.discordapp.com/attachments/729111494972932266/847246712539971594/Nino24.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

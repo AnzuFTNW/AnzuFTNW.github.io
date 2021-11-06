@@ -1,0 +1,106 @@
+/*
+  souldestroy.css - version 1.5
+    by https://github.com/AnzuFTNW
+    for https://anilist.co/user/SoulDestroy/
+*/
+
+/* imports */
+@import url("https://anzuftnw.github.io/files/dehohification.css");
+@import url("https://anzuftnw.github.io/files/shadowless.css");
+
+/* settings */
+:root {
+    /* Custom Profile Badge */
+    --cpb-toggle: block;
+    --cpb-text: "Absolutely Lost";
+}
+
+/* code */
+/* one row activitiys */
+/* activity feed 1 column */
+.activity-feed-wrap > .activity-feed {
+    display: block;
+}
+
+/* stats 1 column + spacing */
+.section > .stats-wrap {
+    display: block;
+}
+.list-stats:nth-child(2) {
+    margin-top: 20px;
+}
+
+/* Custom Profile Donator Badge */
+.actions {
+    display: flex;
+    align-items: center;
+}
+.nav-btn {
+    order: -1;
+}
+.banner-content > .actions:before {
+    content: var(--cpb-text);
+    background: rgba(var(--color-blue), .8);
+    color: rgb(var(--color-white));
+    margin-left: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: .4s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: rainbow;
+    animation-timing-function: ease-in-out;
+    order: 0;
+    display: var(--cpb-toggle);
+    position: absolute;
+    top: 150px;
+    left: -10px;
+    width: 150px;
+    border-radius: 0 0 4px 4px;
+}
+
+/* avatar + follow stuff redesign */
+.container > .banner-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 4px 4px 0 0;
+    background: rgb(var(--color-foreground));
+    transform: translate( calc(15.5vw - 150px - 40px), calc(330px + 46px + 30px));
+}
+.banner-content > .name-wrapper > .name,
+.actions > .dropdown {
+    display: none;
+}
+.banner-content > .avatar {
+    border-radius: 0;
+    flex-shrink: 0;
+    /* firefox fix? */
+}
+.banner-content > .follower-badge {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: rgba(var(--color-blue), .2);
+}
+.actions > .nav-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+}
+.actions > .nav-btn:nth-child(1) {
+    top: 195px;
+    left: 12.5px;
+    width: 125px;
+    padding: 4px 0px;
+    border-radius: 4px;
+    background: rgba(var(--color-blue), 1);
+    transition: background 0.3s linear;
+}
+.actions > .nav-btn:nth-child(1):hover {
+    background: rgba(var(--color-red), 1);
+}

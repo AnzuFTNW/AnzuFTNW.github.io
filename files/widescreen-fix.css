@@ -1,0 +1,28 @@
+/*
+  widescreen-fix.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* settings */
+:root {
+  --widescreen-banner: contain;
+  --widescreen-color: #242538;
+}
+
+/* container width */
+@media (min-width: 2000px) {
+  .container {
+    max-width: 2000px;
+  }
+}
+
+/* section size */
+.user .overview {
+  grid-template-columns: 550px auto !important;
+}
+
+/* banner size */
+.header-wrap > .banner {
+  background-size: var(--widescreen-banner);
+  background-color: var(--widescreen-color);
+}
