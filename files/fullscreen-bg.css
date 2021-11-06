@@ -1,11 +1,11 @@
 /*
-  fullscreen-bg.css - version 1.1
+  fullscreen-bg.css - version 1.2
     by https://github.com/AnzuFTNW
 */
 
 /* snippets */
-@import url(https://anzuftnw.github.io/css-library/files/bg-fix.css);
-@import url(https://anzuftnw.github.io/css-library/files/simple-bg.css);
+@import url("https://anzuftnw.github.io/files/shadowless-banner.css");
+@import url("https://anzuftnw.github.io/files/simple-bg.css");
 
 /* settings */
 :root, .site-theme-dark, .site-theme-contrast {
