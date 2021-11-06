@@ -1,5 +1,5 @@
 /*
-  simple-bg.css - version 1.0
+  simple-bg.css - version 1.1
     by https://github.com/AnzuFTNW
 */
 
@@ -9,16 +9,18 @@
 /* settings */
 :root {
   --bg-img: url("https://i.imgur.com/lUkm9Ze.jpeg");
+  --bg-clr: #000;
   --bg-scr: fixed;
   --bg-pos: center;
   --bg-rpt: no-repeat;
   --bg-sze: cover;
 }
 
-/* add bg */
+/* code */
 .page-content > .user {
   background-attachment: var(--bg-scr) !important;
   background-image: var(--bg-img) !important;
+  background-color: var(--bg-clr) !important;
   background-position: var(--bg-pos) !important;
   background-repeat: var(--bg-rpt) !important;
   background-size: var(--bg-sze) !important;

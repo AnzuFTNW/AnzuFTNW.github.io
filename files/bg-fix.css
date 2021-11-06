@@ -1,14 +1,14 @@
 /*
-  bg-fix.css - version 1.0
+  bg-fix.css - version 1.1
     by https://github.com/AnzuFTNW
 */
 
-/* bg-fix */
+/* code */
 .page-content > .user {
   padding-bottom: 60px;
 }
 
-.wrap > .footer,
-#app > .wrap {
+#app > .wrap,
+#app > .wrap > .footer {
   margin-top: unset;
 }

@@ -1,8 +1,9 @@
 /*
-  dehohification.css - version 1.0
+  dehohification.css - version 1.1
     by https://github.com/AnzuFTNW
 */
 
+/* code */
 /* force site layout back to standart */
 .user .overview {
   grid-template-columns: calc(45% - 40px) 55% !important;
@@ -72,7 +73,8 @@
 /* force disable activity stuff */
 .hohScore,
 .hohNoteSuffix,
-.hohRewatchSuffix {
+.hohRewatchSuffix,
+.hohPinned {
   display: none;
 }
 
