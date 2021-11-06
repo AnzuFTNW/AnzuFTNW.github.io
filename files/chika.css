@@ -287,7 +287,7 @@ a {
 	width: calc(100% - 35px);
 	margin: 0 auto;
 	filter: drop-shadow(var(--bs));
-	background-image: url("https://i.imgur.com/APAHB7C.png") !important; /* temp */
+	/* background-image: url("https://i.imgur.com/APAHB7C.png") !important; */
 	transform: rotate(.4deg);
 	transition: var(--htt);
 }
