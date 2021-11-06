@@ -20,6 +20,17 @@
   /* fullscren-bg settings */
   --fullscreen-bg: rgb(var(--color-background));
   --fullscreen-filter: none;
+  --fullscreen-banner: visible; 
+}
+
+/* code */
+/* banner */
+.banner {
+  visibility: var(--fullscreen-banner);
+}
+
+.banner > .container {
+  visibility: visible;
 }
 
 /* navbar*/
