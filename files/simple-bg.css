@@ -8,8 +8,8 @@
 
 /* settings */
 :root {
-  --bg-img: url("https://i.imgur.com/lUkm9Ze.jpeg");
-  --bg-clr: #000;
+  --bg-img: url("");
+  --bg-clr: unset;
   --bg-scr: fixed;
   --bg-pos: center;
   --bg-rpt: no-repeat;
