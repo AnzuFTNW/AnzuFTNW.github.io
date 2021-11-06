@@ -1,0 +1,517 @@
+/*
+    Hokaze Theme - Version 1.5.3
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
+
+    Special Thanks
+        to https://anilist.co/user/cakes/
+        for pointing out a few things and the hover effect on the navbar
+*/
+
+/* Settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  /* General Settings */
+  --hokaze-br: 10px; /* Global Border Radius */
+  --hokaze-pv: 30px; /* Vertical Content Padding */
+  --hokaze-ph: 30px; /* Horizontal Content Padding */
+  --hokaze-bt: 0.3;  /* Content Background Transparency*/
+  --hokaze-nr: 30px; /* Navbar Border Radius */
+  --hokaze-nl: 80%;  /* Navbar Length */
+  --hokaze-sb: 4px;  /* Scrollbar Width */
+  --hokaze-vo: 0.7;  /* Opacity For Various Elements */
+  --hokaze-vs: 0.975;  /* Scale For Various Elements */
+  --hokaze-vb: 2px;  /* Various Avatar Border Thickness */
+  --hokaze-sr: 4px;  /* Social Page Border Thickness */
+  --hokaze-fr: 30px; /* Footer Border Radius */
+  --hokaze-fl: 85%;  /* Footer Length */
+  --hokaze-bl: 4px;  /* Background 'Window' Blur Amount */
+  --hokaze-rs: 1.025; /* Scaling For Load More Button And Activity Input */
+  --hokaze-gs: var(--color-blue);    /* Stats Wrap Gradient Start Color */
+  --hokaze-ge: var(--color-blue-dim);    /* Stats Wrap Gradient End Color */
+  --hokaze-vt: all 0.5s ease-in-out; /* Transition For Various Elements */
+  --hokaze-li: initial; /* Anilist Logo Source */ 
+  --hokaze-lb: 0px;     /* Anilist Logo Border Thickness */
+  --hokaze-lr: 0px;     /* Anilist Logo Border Radius */
+  --hokaze-ls: 1.2;     /* Anilist Logo Hover Scaling */
+  --hokaze-bs: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px,
+               rgba(0, 0, 0, 0.07) 0px 4px 8px,
+               rgba(0, 0, 0, 0.07) 0px 8px 16px;
+  --hokaze-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow For Navbar */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px;
+  
+  /* Avatar Settings */
+  --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
+  --hokaze-ap: 50% 20%; /* Inner Avatar Position */
+  --hokaze-ai: 150%;
+  --hokaze-ab: 5px;   /* Avatar Border Thickness */
+  --hokaze-ar: 255px;  /* Avatar Border Radius */
+  --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
+  --hokaze-av: url("https://i.imgur.com/w6WVzJH.png"); /* Avatar Picture Link */
+  --hokaze-ah: 1.1; /* Avatar Hover Scale */
+  
+  /* Quick Maths - !DON'T TOUCH! */
+  --hokaze-brt: var(--hokaze-br) var(--hokaze-br) 0 0;
+  --hokaze-brb: 0 0 var(--hokaze-br) var(--hokaze-br);
+  --hokaze-bra: var(--hokaze-br) var(--hokaze-br) var(--hokaze-br) var(--hokaze-br);
+  --hokaze-pdh: var(--hokaze-pv) var(--hokaze-ph);
+  --hokaze-maw: calc(1520px - 2 * ( 100px - var(--hokaze-ph)));
+  --hokaze-abs: var(--hokaze-ab) solid rgb(var(--color-foreground));
+  --hokaze-nbr: 0 0 var(--hokaze-nr) var(--hokaze-nr);
+  --hokaze-nbl: calc((100% - var(--hokaze-nl)) / 2);
+  --hokaze-fbr: var(--hokaze-fr) var(--hokaze-fr) 0 0;
+  --hokaze-fbl: calc((100% - var(--hokaze-fl)) / 2);
+  --hokaze-bch: calc(330px - 75px);
+  --hokaze-bcc: calc(var(--hokaze-bch) / 2);
+  --hokaze-bctc: calc(var(--hokaze-bcc) - 36px / 2 );
+  --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));  
+  --hokaze-sab: var(--hokaze-sr) solid rgb(var(--color-background));
+  --hokaze-lob: var(--hokaze-lb) solid rgb(var(--color-blue));
+}
+
+/* Light Theme
+:root {
+    --color-background:             217,219,227;
+    --color-foreground:             230,232,240;
+    --color-foreground-grey:        225,227,235;
+    --color-foreground-grey-dark:   217,219,227;
+    --color-text:                   91,87,84;
+    --color-text-light:             106,102,99;
+    --color-text-lighter:           121,117,114;
+    --color-text-bright:            226, 233, 229;
+    --color-blue:                   169, 126, 73;
+    --color-blue-dim:               191,180,164;
+    --color-green:                  169, 126, 73;
+
+}
+
+Dark Theme
+.site-theme-dark {
+    --color-background:             15, 23, 25;
+    --color-foreground:             28, 36, 38;
+    --color-foreground-grey:        20, 28, 30;
+    --color-foreground-grey-dark:   15, 23, 25;
+    --color-text:                   141, 138, 134; 
+    --color-text-light:             156, 153, 149;
+    --color-text-lighter:           161, 168, 164;
+    --color-text-bright:            176, 183, 179;
+    --color-blue:                   169, 126, 73;
+    --color-blue-dim:               91, 75, 64;
+    --color-green:                  169, 126, 73;
+} */
+
+/* Code */
+/* Body */
+body {
+    background-image: url("https://i.imgur.com/eoMtR7h.jpg");
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Header */
+#nav {
+  background: rgb(var(--color-foreground)) !important;
+  color: rgb(var(--color-text-light)) !important;
+  border-radius: var(--hokaze-nbr);
+  left: var(--hokaze-nbl);
+  width: var(--hokaze-nl);
+  box-shadow: var(--hokaze-bs);
+}
+.hide, .nav.nav-unscoped {
+  top: -60px !important;
+}
+.nav.nav-unscoped.transparent, .nav:hover {
+  top: 0px !important;
+}
+.links > .link:hover {
+  color: rgb(var(--color-blue));
+}
+#app > .progress {
+    background-color: rgb(var(--color-blue));
+}
+.logo > img {
+    content: var(--hokaze-li);
+    border-radius: var(--hokaze-lr);
+    border: var(--hokaze-lob);
+    transition: var(--hokaze-vt);
+}
+.logo > img:hover {
+    transform: scale(var(--hokaze-ls));
+}
+
+/* Banner */
+.banner {
+  visibility: hidden;
+}
+.banner > .container {
+  visibility: visible;
+  justify-content: center;
+}
+.container > .banner-content {
+  height: var(--hokaze-bch);
+  width: 0;
+  align-items: center;
+  justify-content: center;
+}
+.banner-content > .avatar {
+  width: 0;
+  height: 0;
+  padding: var(--hokaze-as);
+  background: var(--hokaze-av);
+  background-size: var(--hokaze-ai);
+  background-repeat: no-repeat;
+  background-position: var(--hokaze-ap);
+  border-radius: var(--hokaze-ar);
+  border: var(--hokaze-abs);
+  box-shadow: var(--hokaze-bs);
+  transition: var(--hokaze-at);
+  z-index: 100;
+}
+.banner-content > .name {
+  position: absolute;
+  transition: var(--hokaze-vt);
+  transform: translateY(8vh);
+  z-index: 110;
+  opacity: 1;
+  pointer-events: none;
+}
+.banner-content > .mod-badge {
+  position: absolute;
+  bottom: var(--hokaze-bctc);
+  margin: 0;
+  padding: 11.5px 10px;
+  transition: var(--hokaze-at);
+}
+.banner-content > .mod-badge:hover {
+  background: rgba(var(--color-blue),1);
+}
+.banner-content > .actions {
+  position: absolute;
+  bottom: var(--hokaze-bctc);
+  margin: 0;
+  padding: 0;
+  transition: var(--hokaze-at);
+}
+.actions > .nav-btn {
+  width: 84.14px;
+  transition: var(--hokaze-at);
+}
+.banner-content:hover > .avatar {
+  border-color: rgb(var(--color-blue));
+  transform: scale(var(--hokaze-ah));
+}
+.banner-content:hover > .mod-badge {
+  transform: translateX(-170px);
+}
+.banner-content:hover > .actions {
+  transform: translateX(183px);
+}
+.banner-content:hover > .name {
+  opacity: 0;
+}
+
+/* Container */
+.header-wrap > .nav-wrap {
+  max-width: var(--hokaze-maw);
+  margin: 0 auto;
+  border-radius: var(--hokaze-brt);
+  box-shadow: var(--hokaze-ns);
+  position: relative;
+}
+.nav > .link {
+  position: relative;
+}
+.nav > .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: rgb(var(--color-blue));
+  transition: all 0.3s ease-in-out;
+}
+.nav > .router-link-active::after {
+  left: 0;
+  width: 100%;
+  background: rgb(var(--color-blue-dim));
+}
+.nav > .link:hover::after {
+  left: 0;
+  width: 100%;
+  background: rgb(var(--color-blue));
+}
+.content.container {
+  background: rgba(var(--color-foreground-grey-dark),var(--hokaze-bt));
+  max-width: var(--hokaze-maw);
+  padding: var(--hokaze-pdh);
+  border-radius: var(--hokaze-brb);
+  box-shadow: var(--hokaze-bs);
+  backdrop-filter: blur(var(--hokaze-bl));
+}
+
+/* Content - Overview */
+.content > .overview {
+  margin-top: 0;
+}
+.stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .favourites-wrap > .favourite, .scroller > .load-more, .user-page-unscoped .markdown-editor, .el-textarea__inner, .input {
+  border-radius: var(--hokaze-bra) !important;
+  box-shadow: var(--hokaze-bs);
+  transition: var(--hokaze-vt);
+}
+.history-day:hover {
+  transform: scale(1.2);
+}
+.list-stats:nth-child(1), .list-stats:nth-child(2) {
+  height: calc(121px - 45px);
+}
+.list-stats:nth-child(1):hover, .list-stats:nth-child(2):hover {
+  height: 121px;
+}
+.progress > .bar {
+    background: linear-gradient(270deg,rgb(var(--hokaze-gs)),rgb(var(--hokaze-ge))) !important;
+}
+.genre > .name, .favourite {
+  opacity: var(--hokaze-vo);
+  transform: scale(var(--hokaze-vs));
+  transition: var(--hokaze-vt);
+}
+.percentage {
+  opacity: var(--hokaze-vo);
+}
+.genre > .name:hover, .percentage:hover, .favourite:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.overview .content-wrap {
+  transform: scale(var(--hokaze-vs));
+}
+.overview .content-wrap:hover {
+  transform: scale(1);
+}
+.activity-entry > .wrap {
+  transition: var(--hokaze-vt);
+  max-height: none /*70px*/;
+}
+.activity-entry:hover .wrap {
+  transform: scale(1.025); 
+  max-height: none /*663px*/; /*  663 560px max height, 28px margin, 70px header, 5px idk? kek */
+}
+.wrap > .text {
+  padding-top: 15px;
+}
+.text > .activity-markdown > .markdown {
+  max-height: none;
+}
+.header > .avatar, .list > .cover {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+}
+.wrap:hover .cover {
+  opacity: 1;
+}
+.header > .avatar, .users > .user {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+  border-radius: var(--hokaze-ar) !important;
+  border: var(--hokaze-vab);
+}
+.wrap:hover .header > .avatar, .users > .user:hover, .reply:hover .header > .avatar {
+  opacity: 1;
+  border-color: rgb(var(--color-blue));
+}
+.header > .name {
+  transition: var(--hokaze-vt);
+}
+.wrap:hover .header > .name {
+  opacity: 1;
+  font-weight: bold;
+}
+.activity-entry, .input, svg:not(:root).svg-inline--fa {
+  transition: var(--hokaze-vt);
+}
+.list .title, .input .el-textarea__inner {
+  opacity: var(--hokaze-vo);
+  transition: var(--hokaze-vt);
+}
+.activity-manga_list:hover, .activity-anime_list:hover {
+  transform: scale(1.025);  
+}
+.activity-manga_list:hover .title, .activity-anime_list:hover .title {
+  opacity: 1;
+  font-weight: bold;
+}
+.input:hover {
+  transform: scale(var(--hokaze-rs));
+}
+.input:hover .el-textarea__inner {
+  opacity: 1;
+}
+svg:not(:root).svg-inline--fa:hover {
+  transform: scale(1.2);
+}
+.scroller > .load-more {
+  margin-top: 0;
+}
+.scroller > .load-more:hover {
+  color: rgb(var(--color-blue));
+  box-shadow: var(--hokaze-bs);
+  transform: scale(var(--hokaze-rs));
+}
+.activity-replies > .reply {
+  border-radius: var(--hokaze-br);
+}
+.reply:hover .header > .name {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* Content - Anime List / Manga List */
+.content > .medialist {
+  margin-top: 0;
+}
+.filter-group>span:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+.medialist.table .entry:hover .title a {
+  font-weight: bold;
+}
+
+/* Content - Favorites */
+.favourites {
+  margin-top: 0 !important;
+}
+
+/* Content - Stats */
+.content > .stats {
+  margin-top: 0;
+}
+.filter-group a:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+
+/* Content - Social */
+.content > .user-social {
+  margin-top: 0;
+}
+.filter-group span:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+.follow-card {
+  opacity: var(--hokaze-vo);
+  border-radius: var(--hokaze-ar);
+  transition: var(--hokaze-vt);
+}
+.follow-card > .avatar {
+  border: var(--hokaze-sab);
+  border-radius: var(--hokaze-ar) !important;
+  transition: var(--hokaze-vt);
+}
+.follow-card:hover, .follow-card > .avatar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: rgb(var(--color-blue));
+}
+.follow-card > .name {
+      background: rgba(var(--color-shadow),.4);
+}
+
+/* Content - Reviews */
+.content .review-wrap {
+  margin-top: 0;
+}
+
+/* Footer */
+.wrap > .footer {
+  position: relative;
+  background: rgb(var(--color-foreground));
+  border-radius: var(--hokaze-fbr);
+  left: var(--hokaze-fbl);
+  width: var(--hokaze-fl);
+  box-shadow: var(--hokaze-bs);
+}
+.footer > .container {
+    justify-content: space-between;
+}
+.theme-selector > .dark {
+  background: #000;
+}
+.theme-selector > h2 {
+  color: rgb(var(--color-blue));
+}
+a, a:visited {
+    color: rgb(var(--color-text));
+}
+
+/* Sorry Hoh */
+.hohColourPicker, .theme-selector > .contrast, .hohDismiss {
+  display: none;
+}
+.footer .links {
+    margin-left: 0;
+    transform: translate(0px,0px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: var(--hokaze-sb);
+height: var(--hokaze-sb);
+}
+::-webkit-scrollbar-thumb {
+background: rgba(var(--color-text-light),.5);
+border-radius: var(--hokaze-br);
+}
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
+background: rgb(var(--color-blue));
+}
+body::-webkit-scrollbar-track {
+background: rgb(var(--color-background));
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Dropdown Integration */
+:root, .site-theme-dark, .site-theme-contrast {
+    --color-background-100: var(--color-foreground);
+    --color-background-200: var(--color-background);
+    --color-gray-100: var(--color-foreground);
+    --color-gray-600: var(--color-text-light);
+    --color-gray-700: var(--color-text-light);
+    --color-gray-800: var(--color-blue);
+    --color-gray-900: var(--color-blue);
+}
+
+/* Fixes For Current Profile */
+.about > .content-wrap {
+  transform: scale(1) !important;
+  max-height: none !important;
+}
+.markdown img {
+  border-radius: 0px;
+}
+.banner-content > .mod-badge {
+  opacity: 0;
+}
+.banner-content > .actions {
+  opacity: 0;
+}
+.banner-content:hover > .mod-badge {
+  transform: translateX(-170px);
+  opacity: 1;
+}
+.banner-content:hover > .actions {
+  transform: translateX(183px);
+  opacity: 1;
+}
+
+/* about sectoin fixed cuz after effects sux */
+.about img[src="https://64.media.tumblr.com/570f4e11222d885f2a29aa03721a41d0/94677bcd5144bb29-54/s540x810/77d4a0d24784404e4017f3bd8bead673abb65e1c.gif"] {
+    border: 3px solid #f7bf63;
+    border-radius: 10px;
+    margin-top: 5px;
+}

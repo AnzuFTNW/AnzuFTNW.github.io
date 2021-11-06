@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anzu's Library - konpaku.css</title>
+    <link rel="stylesheet" href="../src/github-markdown.css" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/images-compare.css" />
+  </head>
+  <body>
+    <a href="../index.html" class="back">🠔</a>
+    <article class="markdown-body">
+      <!-- Title -->
+      <h1>
+        <code>V2.0</code>
+        <a href="../files/konpaku.css">konpaku.css</a>
+      </h1>
+      <!-- Description -->
+      <h2>Description</h2>
+      <p>
+        My very first fully fledged CSS Theme for Anilist.
+      </p>
+      <!-- Feature List -->
+      <h2>Features</h2>
+      <ul>
+        <li>Complete revamp</li>
+      </ul>
+      <!-- Screenshots & Comparsion -->
+      <h2>Sceenshots</h2>
+      <p>
+        <code>Screenshot</code> - Preview
+      </p>
+      <!-- Main div container -->
+      <div id="myImageCompare" class="comparsion">
+        <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
+        <div style="display: none">
+          <span class="images-compare-label">Before</span>
+          <img src="../src/img/konpaku-before.png" alt="Before" />
+        </div>
+        <!-- This div will be the back element -->
+        <div>
+          <span class="images-compare-label">After</span>
+          <img src="../src/img/konpaku-after.gif" alt="After" />
+        </div>
+      </div>
+      <!-- Installation Guide -->
+      <h2>Installation</h2>
+      <h3>Quick Setup</h3>
+      <p>
+        Add
+        <code
+          >@import
+          url("https://anzuftnw.github.io/files/konpaku.css");</code
+        >
+        into the custom css box inside your app settings and press submit.
+      </p>
+      <center>
+        <img
+          class="tutorial"
+          width="720px"
+          src="../src/img/tutorial.png"
+          alt="tutorial image"
+        />
+      </center>
+      <p>
+        Then add the following code below it, change the options to your liking
+        and press submit:
+      </p>
+      <pre><code
+        >/* settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  --konpaku-navbar-height: 46px;
+  --konpaku-border-size: 4px;
+  --konpaku-shadow: 0 0 36px rgba(0, 0, 0, 0.5);
+  --konpaku-content-width: 925px;
+  --konpaku-scrollbar-width: 7px;
+  --konpaku-color-gray: 106, 99, 104;
+  --konpaku-color-pink: 255, 164, 181;
+  --konpaku-color-green: 124, 173, 156;
+  --konpaku-color-hair: 210, 208, 226;
+  --konpaku-background-image: url("https://i.imgur.com/3dXf8eK.gif");
+  --konpaku-render-image: url("https://s8.gifyu.com/images/konpaku-gif-tt7c99b3c72790f9d8.gif");
+  --konpaku-logo-image: url("https://i.imgur.com/Qc21ypw.png");
+}</code
+      ></pre>
+      <center>
+        <img
+          class="tutorial"
+          width="720px"
+          src="../src/img/tutorial-2.png"
+          alt="tutorial image"
+        />
+      </center>
+      <h3>Customize</h3>
+      <p>
+        If you want more freedom and disable or modify some of the things this
+        code snippet does you probably already know how to do so. Copy the contents
+        of
+        <code
+          ><a href="../files/konpaku.css">konpaku.css</a></code
+        >
+        into your custom css box or a seperat file and get started.
+      </p>
+
+      <!-- Changelog -->
+      <h2>Changelog</h2>
+      <blockquote>
+        <ul>
+          <li>
+            <code><b>2021/04/27</b></code> - <i>Version 2.0</i>
+            <ul>
+              <li>2.0 release</li>
+              <li>Rewritten from sratch</li>
+              <li>Integrated dropdown menus</li>
+              <li>Removed all data tags</li>
+              <li>Added and fixed a lot of minor things</li>
+              <li>Added a few settings for easier theme customization</li>
+              <li>Fixed a fucking typo in file name, finally after all this time.. [kopaku -> konpaku]</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2020/11/07</b></code> - <i>Version 1.4</i>
+            <ul>
+              <li>Final version</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2020/10/22</b></code> - <i>Version 1.3</i>
+            <ul>
+              <li>Fixed light and contrast mode</li>
+              <li>Changed konpaku gif to resize itself depending on the users resolution (hopefully)</li>
+              <li>Fixed forum comments section</li>
+              <li>Fixed a variable in the color section</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2020/10/17</b></code> - <i>Version 1.2</i>
+            <ul>
+              <li>Fixed hoh filters and buttons under the social tab</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2020/10/14</b></code> - <i>Version 1.1</i>
+            <ul>
+              <li>Markdown video border added</li>
+              <li>Increased border size from 2px to 4px</li>
+              <li>Adapted logo and social avatar size to bigger borders</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2020/10/13</b></code> - <i>Version 1.0</i>
+            <ul>
+              <li>Initial release</li>
+            </ul>
+          </li>
+        </ul>
+      </blockquote>
+    </article>
+    <!-- Scripts -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../src/jquery.images-compare.js"
+    ></script>
+    <script>
+      $("#myImageCompare").imagesCompare({
+        initVisibleRatio: 0.5,
+        interactionMode: "drag",
+        addSeparator: true,
+        addDragHandle: true,
+        animationDuration: 400,
+        animationEasing: "swing",
+        precision: 4,
+      });
+    </script>
+  </body>
+</html>

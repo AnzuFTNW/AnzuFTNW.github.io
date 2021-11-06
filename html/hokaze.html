@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anzu's Library - hokaze.css</title>
+    <link rel="stylesheet" href="../src/github-markdown.css" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/images-compare.css" />
+  </head>
+  <body>
+    <a href="../index.html" class="back">🠔</a>
+    <article class="markdown-body">
+      <!-- Title -->
+      <h1>
+        <code>V1.5.2</code>
+        <a href="../files/hokaze.css">hokaze.css</a>
+      </h1>
+      <!-- Description -->
+      <h2>Description</h2>
+      <p>
+        My third anilist theme and probably my most popular one. <br>
+        It's not very optimized or userfriendly documented.<br>
+        There are a lot of forked version flying around, maybe one of those is easier to understand.<br>
+      </p>
+      <!-- Feature List -->
+      <h2>Features</h2>
+      <ul>
+        <li>Complete revamp</li>
+      </ul>
+      <!-- Screenshots & Comparsion -->
+      <h2>Sceenshots</h2>
+      <p>
+        <code>Screenshot</code> - Preview
+      </p>
+      <!-- Main div container -->
+      <div id="myImageCompare" class="comparsion">
+        <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
+        <div style="display: none">
+          <span class="images-compare-label">Before</span>
+          <img src="../src/img/hokaze-before.png" alt="Before" />
+        </div>
+        <!-- This div will be the back element -->
+        <div>
+          <span class="images-compare-label">After</span>
+          <img src="../src/img/hokaze-after.png" alt="After" />
+        </div>
+      </div>
+      <!-- Installation Guide -->
+      <h2>Installation</h2>
+      <h3>Quick Setup</h3>
+      <p>
+        Add
+        <code
+          >@import
+          url("https://anzuftnw.github.io/files/hokaze.css");</code
+        >
+        into the custom css box inside your app settings and press submit.
+      </p>
+      <center>
+        <img
+          class="tutorial"
+          width="720px"
+          src="../src/img/tutorial.png"
+          alt="tutorial image"
+        />
+      </center>
+      <p>
+        Then add the following code below it, change the options to your liking
+        and press submit:
+      </p>
+      <pre><code
+        >/* Settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  /* General Settings */
+  --hokaze-br: 10px; /* Global Border Radius */
+  --hokaze-pv: 30px; /* Vertical Content Padding */
+  --hokaze-ph: 30px; /* Horizontal Content Padding */
+  --hokaze-bt: 0.3;  /* Content Background Transparency*/
+  --hokaze-nr: 30px; /* Navbar Border Radius */
+  --hokaze-nl: 80%;  /* Navbar Length */
+  --hokaze-sb: 4px;  /* Scrollbar Width */
+  --hokaze-vo: 0.7;  /* Opacity For Various Elements */
+  --hokaze-vs: 0.975;  /* Scale For Various Elements */
+  --hokaze-vb: 2px;  /* Various Avatar Border Thickness */
+  --hokaze-sr: 4px;  /* Social Page Border Thickness */
+  --hokaze-fr: 30px; /* Footer Border Radius */
+  --hokaze-fl: 85%;  /* Footer Length */
+  --hokaze-bl: 4px;  /* Background 'Window' Blur Amount */
+  --hokaze-rs: 1.025; /* Scaling For Load More Button And Activity Input */
+  --hokaze-gs: var(--color-blue);    /* Stats Wrap Gradient Start Color */
+  --hokaze-ge: var(--color-blue-dim);    /* Stats Wrap Gradient End Color */
+  --hokaze-vt: all 0.5s ease-in-out; /* Transition For Various Elements */
+  --hokaze-li: initial; /* Anilist Logo Source */ 
+  --hokaze-lb: 0px;     /* Anilist Logo Border Thickness */
+  --hokaze-lr: 0px;     /* Anilist Logo Border Radius */
+  --hokaze-ls: 1.2;     /* Anilist Logo Hover Scaling */
+  --hokaze-bs: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px,
+               rgba(0, 0, 0, 0.07) 0px 4px 8px,
+               rgba(0, 0, 0, 0.07) 0px 8px 16px;
+  --hokaze-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow For Navbar */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px;
+  
+  /* Avatar Settings */
+  --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
+  --hokaze-ap: 50% 20%; /* Inner Avatar Position */
+  --hokaze-ai: 150%;
+  --hokaze-ab: 5px;   /* Avatar Border Thickness */
+  --hokaze-ar: 255px;  /* Avatar Border Radius */
+  --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
+  --hokaze-av: url("https://i.imgur.com/w6WVzJH.png"); /* Avatar Picture Link */
+  --hokaze-ah: 1.1; /* Avatar Hover Scale */
+
+/* Light Theme
+:root {
+    --color-background:             217,219,227;
+    --color-foreground:             230,232,240;
+    --color-foreground-grey:        225,227,235;
+    --color-foreground-grey-dark:   217,219,227;
+    --color-text:                   91,87,84;
+    --color-text-light:             106,102,99;
+    --color-text-lighter:           121,117,114;
+    --color-text-bright:            226, 233, 229;
+    --color-blue:                   169, 126, 73;
+    --color-blue-dim:               191,180,164;
+    --color-green:                  169, 126, 73;
+
+}
+
+Dark Theme
+.site-theme-dark {
+    --color-background:             15, 23, 25;
+    --color-foreground:             28, 36, 38;
+    --color-foreground-grey:        20, 28, 30;
+    --color-foreground-grey-dark:   15, 23, 25;
+    --color-text:                   141, 138, 134; 
+    --color-text-light:             156, 153, 149;
+    --color-text-lighter:           161, 168, 164;
+    --color-text-bright:            176, 183, 179;
+    --color-blue:                   169, 126, 73;
+    --color-blue-dim:               91, 75, 64;
+    --color-green:                  169, 126, 73;
+} */</code
+      ></pre>
+      <center>
+        <img
+          class="tutorial"
+          width="720px"
+          src="../src/img/tutorial-2.png"
+          alt="tutorial image"
+        />
+      </center>
+      <h3>Customize</h3>
+      <p>
+        If you want more freedom and disable or modify some of the things this
+        code snippet does you probably already know how to do so. Copy the contents
+        of
+        <code
+          ><a href="../files/hokaze.css">hokaze.css</a></code
+        >
+        into your custom css box or a seperat file and get started.
+      </p>
+
+      <!-- Changelog -->
+      <h2>Changelog</h2>
+      <blockquote>
+        <ul>
+          <li>
+            <code><b>2021/04/29</b></code> - <i>Version 1.5.2</i>
+            <ul>
+              <li>Removed scrollbar track properties for everything but the body element</li>
+              <li>Changed footer content spacing</li>
+              <li>Changed css comments again</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2021/04/27</b></code> - <i>Version 1.5</i>
+            <ul>
+              <li>Redid css comments</li>
+              <li>Cleaned up the code a bit</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2021/03/03</b></code> - <i>Version 1.4</i>
+            <ul>
+              <li>Added following changes for the current profile only:</li>
+              <li>Removed bio hover scaling</li>
+              <li>Removed bio max height</li>
+              <li>Removed markdown image border radius</li>
+              <li>Added opacity 0 to follower badge and actions button (opacity 1 on hover)</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2021/02/25</b></code> - <i>Version 1.3</i>
+            <ul>
+              <li>Changed value for scaling for various elements</li>
+              <li>Changed value for global border radius</li>
+              <li>Changed value for scaling for load more button and iactivity input</li>
+              <li>Changed scaling for activity history days on hover</li>
+              <li>Disabled collapsing text activity entrys</li>
+              <li>Changed scaling for manga and anime activity entrys</li>
+              <li>Added scaling for text activity entrys</li>
+              <li>Changed value for avatar border thickness</li>
+              <li>Reverted color pallette in dark & light mode</li>
+              <li>Removed max-height for text activity entrys</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2021/01/13</b></code> - <i>Version 1.2</i>
+            <ul>
+              <li>Disabled pointer events on the name element (ty @cakes \<\3\)</li>
+              <li>Replaced all data tags with element indicators (or whatever theyre called, these things: > + ~)</li>
+              <li>Added avatar zoom level (for bigger images)</li>
+              <li>Added background, not yet integrated into the variable mess</li>
+              <li>Added customizable dark and light mode</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2021/01/07</b></code> - <i>Version 1.1</i>
+            <ul>
+              <li>Added customizable logo</li>
+              <li>Added blur filter to content background</li>
+              <li>Added user badge template</li>
+              <li>Disabled hoh's dismiss notifications feature</li>
+              <li>Changed activity input and load more button scaling</li>
+              <li>Changed statswrap gradient progression bar</li>
+              <li>Changed progress bar / loading bar</li>
+              <li>Changed theme selector header color</li>
+              <li>Changed footer text color</li>
+              <li>Changed scrollbar height</li>
+              <li>Changed scrollbar corner</li>
+              <li>Integrated dropdown menu values</li>
+              <li>Reverted activity username opacity</li>
+            </ul>
+          </li>
+          <li>
+            <code><b>2021/01/05</b></code> - <i>Version 1.0</i>
+            <ul>
+              <li>Initial release</li>
+            </ul>
+          </li>
+        </ul>
+      </blockquote>
+    </article>
+    <!-- Scripts -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../src/jquery.images-compare.js"
+    ></script>
+    <script>
+      $("#myImageCompare").imagesCompare({
+        initVisibleRatio: 0.5,
+        interactionMode: "drag",
+        addSeparator: true,
+        addDragHandle: true,
+        animationDuration: 400,
+        animationEasing: "swing",
+        precision: 4,
+      });
+    </script>
+  </body>
+</html>
