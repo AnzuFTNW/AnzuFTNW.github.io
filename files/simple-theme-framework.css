@@ -1,0 +1,299 @@
+/*
+  simple-theme-framework.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+/* settings */
+/* global values */
+:root {
+  --color-nav-text-hover: 211, 213, 243; /* top navbar text on hover */
+  --color-nav-transparent-background: 35, 38, 67, 0.5; /* top navbar background in transparent state */
+  --color-nav-transparent-text: 229, 231, 234; /* top navbar text in transparent state */
+  --color-background-blue-dark: 31, 35, 45; /* noscript background */
+  --color-overlay: 31, 38, 49; /* favourites and activity history hover display, activity little arrow menu */
+  --color-shadow: 49, 54, 68; /* social avatar hover */
+  --color-shadow-blue: 103, 132, 187; /* popup/dropdown menu shadow */
+  --color-text-bright: 237, 241, 245; /* username, noscript text */
+  --color-blue: 61, 180, 242; /* links, link hover, statswrap amount numbers, activity history entrys */
+  --color-blue-dim: 141, 178, 219; /* activity history entrys, heart and reply icons */
+  --color-white: 255, 255, 255; /* to much stuff bust mostly text and icon related */
+  --color-black: 0, 0, 0;
+  --color-red: 232, 93, 117; /* heart liked, favourite entry remove icon background, submission rejected */
+  --color-peach: 250, 122, 122; /* list entry red dot */
+  --color-orange: 247, 154, 99;
+  --color-yellow: 247, 191, 99; /* submission partially accepted */
+  --color-green: 123, 213, 85; /* hoh link text, activity subscription bell active, list entry green dot */
+  --color-footer-background: 17, 22, 29; /* footer background color */
+  --color-footer-text: 160, 177, 197; /* footer text color */
+  --theme-border: 70, 84, 107; /* theme preview border color */
+  --theme-light-background: 237, 241, 245; /* light theme preview background color */
+  --theme-light-text: 46, 60, 72; /* light theme preview text color */
+  --theme-dark-background: 17, 22, 29; /* dark theme preview background color */
+  --theme-dark-text: 160, 177, 197; /* dark theme preview text color */
+  --theme-contrast-background: 255, 255, 255; /* contrast theme preview background color */
+  --theme-contrast-text: 0, 0, 0; /* contrast theme preview text color */
+  --genre-green: 104, 214, 57; /* genre overview color 1 */
+  --genre-blue: 2, 169, 255; /* genre overview color 2 */
+  --genre-purple: 146, 86, 243; /* genre overview color 3 */
+  --genre-pink: 247, 121, 164; /* genre overview color 4 */
+  --genre-red: 232, 93, 117; /* genre overview color 5 */
+  --genre-orange: 247, 154, 99; /* genre overview color 6 */
+}
+
+/* light mode */
+:root {
+  --color-nav-background: 43, 45, 66; /* top navbar background */
+  --color-nav-text: 188, 190, 220; /* top navbar text */
+  --color-background: 237, 241, 245; /* background */
+  --color-foreground: 250, 250, 250; /* foreground */
+  --color-foreground-grey: 245, 246, 246; /* statswrap footer background */
+  --color-foreground-grey-dark: 234, 236, 237; /* statswrap progress bar background, activity history empty field background */
+  --color-text: 92, 114, 138; /* plain text, header, statswrap progressbar number indicators */
+  --color-text-light: 122, 133, 143; /* genre and statswrap text, secondary navbar links */
+  --color-text-lighter: 146, 153, 161; /* filter text, time stamp text and icons */
+  --color-background-300: 221, 230, 238; /* statspage graph footer background */
+  --color-background-200: 237, 241, 245; /* navdropdown footer background */
+  --color-background-100: 251, 251, 251; /* navdropdown background */
+  --color-gray-900: 81, 97, 112; /* navdropdown footer text and icon hover */
+  --color-gray-800: 100, 115, 128; /* navdropdown primary text, text and icon hover */
+  --color-gray-700: 116, 136, 153; /* navdropdown footer text and icons */
+  --color-gray-600: 139, 160, 178; /* navdropdown secondary text and icons */
+  --color-gray-300: 221, 230, 238; /* statspage curved graph fill color */
+  --color-gray-100: 251, 251, 251; /* navdropdown little arrow thing */
+}
+
+/* dark mode */
+.site-theme-dark {
+  --color-nav-background: 21, 34, 50; /* top navbar background */
+  --color-nav-text: 160, 177, 197; /* top navbar text */
+  --color-background: 11, 22, 34; /* background */
+  --color-foreground: 21, 31, 46; /* foreground */
+  --color-foreground-grey: 15, 22, 31; /* statswrap footer background */
+  --color-foreground-grey-dark: 6, 12, 19; /* statswrap progress bar background, activity history empty field background */
+  --color-text: 159, 173, 189; /* plain text, header, statswrap progressbar number indicators */
+  --color-text-light: 114, 138, 161; /* genre and statswrap text, secondary navbar links */
+  --color-text-lighter: 133, 150, 165; /* filter text, time stamp text and icons */
+  --color-shadow-blue: 0, 5, 15; /* popup/dropdown menu shadow */
+  --color-background-300: 30, 42, 56; /* statspage graph footer background */
+  --color-background-200: 11, 22, 34; /* navdropdown footer background */
+  --color-background-100: 21, 31, 46; /* navdropdown background */
+  --color-gray-900: 201, 215, 227; /* navdropdown footer text and icon hover */
+  --color-gray-800: 173, 192, 210; /* navdropdown primary text, text and icon hover */
+  --color-gray-700: 139, 160, 178; /* navdropdown footer text and icons */
+  --color-gray-600: 116, 136, 153; /* navdropdown secondary text and icons */
+  --color-gray-300: 30, 42, 56; /* statspage curved graph fill color */
+  --color-gray-100: 21, 31, 46; /* navdropdown little arrow thing */
+}
+
+/* contrast mode */
+.site-theme-contrast {
+  --color-background: 229, 235, 241; /* background */
+  --color-foreground: 251, 251, 251; /* foreground */
+  --color-foreground-grey: 229, 233, 245; /* statswrap footer background */
+  --color-foreground-grey-dark: 221, 225, 239; /* statswrap progress bar background, activity history empty field background */
+  --color-text: 38, 52, 63; /* plain text, header, statswrap progressbar number indicators */
+  --color-text-light: 64, 78, 92; /* genre and statswrap text, secondary navbar links */
+  --color-text-lighter: 81, 97, 112; /* filter text, time stamp text and icons */
+  --color-shadow: 37, 41, 51; /* social avatar hover */
+  --color-blue: 18, 172, 253; /* links, link hover, statswrap amount numbers, activity history entrys */
+  --color-blue-dim: 85, 144, 208; /* activity history entrys, heart and reply icons */
+  --color-background-300: 173, 192, 210; /* statspage graph footer background */
+  --color-background-200: 229, 235, 241; /* navdropdown footer background */
+  --color-background-100: 251, 251, 251; /* navdropdown background */
+  --color-gray-900: 38, 52, 63; /* navdropdown footer text and icon hover */
+  --color-gray-800: 64, 78, 92; /* navdropdown primary text, text and icon hover */
+  --color-gray-700: 64, 78, 92; /* navdropdown footer text and icons */
+  --color-gray-600: 100, 115, 128; /* navdropdown secondary text and icons */
+  --color-gray-300: 173, 192, 210; /* statspage curved graph fill color */
+  --color-gray-100: 251, 251, 251; /* navdropdown little arrow thing */
+}
+
+/* code */
+.user.user-page-unscoped .progress .bar {
+  background: rgb(var(--color-blue)) !important;
+  overflow: hidden;
+  position: relative;
+}
+.user.user-page-unscoped .progress .bar:after {
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0.2),
+    hsla(0, 0%, 0%, 0)
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* navbar [light and contrast mode default color] */
+#app > .nav,
+#app > .solid,
+#app > .transparent:hover {
+  background: rgb(var(--color-nav-background));
+  color: rgb(var(--color-nav-text));
+}
+/* navbar [dark mode default color] */
+.site-theme-dark > #app > .nav-unscoped,
+.site-theme-dark > #app > .nav-unscoped.transparent:hover {
+  background: rgb(var(--color-nav-background));
+  color: rgb(var(--color-nav-text));
+}
+/* navbar transparent [light, dark and contrast mode] */
+#app > .transparent,
+.site-theme-dark > #app > .nav-unscoped.transparent {
+  background: rgba(var(--color-nav-transparent-background));
+  color: rgb(var(--color-nav-transparent-text));
+}
+/* navbar link hover */
+#app > div > div > div > .link:hover {
+  color: rgb(var(--color-nav-text-hover));
+}
+/* footer */
+#app > div > .footer {
+  background: rgb(var(--color-footer-background));
+  color: rgb(var(--color-footer-text));
+}
+/* theme selector header */
+#app > div > div > div > .theme-selector > h2 {
+  color: rgb(var(--color-blue));
+}
+/* theme selector preview border */
+#app > div > div > div > .theme-selector > .theme-preview {
+  border-color: rgb(var(--theme-border));
+}
+/* theme selector light mode preview */
+#app > div > div > div > .theme-selector > .default {
+  background: rgb(var(--theme-light-background));
+  color: rgb(var(--theme-light-text));
+}
+/* theme selector light mode preview */
+#app > div > div > div > .theme-selector > .dark {
+  background: rgb(var(--theme-dark-background));
+  color: rgb(var(--theme-dark-text));
+}
+/* theme selector contrast mode preview */
+#app > div > div > div > .theme-selector > .contrast {
+  background: rgb(var(--theme-contrast-background));
+  color: rgb(var(--theme-contrast-text));
+}
+/* genre overview color manipulation */
+.genre-overview > .genres > .genre:nth-child(1) > .name {
+  background: rgb(var(--genre-green)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(1) > .amount {
+  color: rgb(var(--genre-green)) !important;
+}
+.genre-overview > .percentage-bar > .percentage:nth-child(1) {
+  background: rgb(var(--genre-green)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(2) > .name {
+  background: rgb(var(--genre-blue)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(2) > .amount {
+  color: rgb(var(--genre-blue)) !important;
+}
+.genre-overview > .percentage-bar > .percentage:nth-child(2) {
+  background: rgb(var(--genre-blue)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(3) > .name {
+  background: rgb(var(--genre-purple)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(3) > .amount {
+  color: rgb(var(--genre-purple)) !important;
+}
+.genre-overview > .percentage-bar > .percentage:nth-child(3) {
+  background: rgb(var(--genre-purple)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(4) > .name {
+  background: rgb(var(--genre-pink)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(4) > .amount {
+  color: rgb(var(--genre-pink)) !important;
+}
+.genre-overview > .percentage-bar > .percentage:nth-child(4) {
+  background: rgb(var(--genre-pink)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(5) > .name {
+  background: rgb(var(--genre-red)) !important;
+}
+.genre-overview > .genres > .genre:nth-child(5) > .amount {
+  color: rgb(var(--genre-red)) !important;
+}
+.genre-overview > .percentage-bar > .percentage:nth-child(5) {
+  background: rgb(var(--genre-red)) !important;
+}
+.genre-overview > .percentage-bar > .percentage:nth-child(6) {
+  background: rgb(var(--genre-orange)) !important;
+}
+
+/* random stuff [mostly darkmode] */ /*
+.site-theme-dark .quick-search.el-select .el-input.el-input__inner,
+.site-theme-dark .quick-search .el-select .el-input.is-focus .el-input__inner,
+.site-theme-dark .el-select-dropdown,
+.site-theme-dark .el-dropdown-menu,
+.site-theme-dark .el-dropdown-menu__item--divided::before {
+    background: rgba(17, 22, 29);
+}
+.el-dropdown-menu__item--divided {
+    border-color: #ebeef5;
+}
+.site-theme-dark .el-popper[x-placement^="top"] .popper__arrow,
+.site-theme-dark .el-popper[x-placement^="top"] .popper__arrow::after {
+    border-top-color: rgba(17, 22, 29);
+}
+.site-theme-dark .el-popper[x-placement^="bottom"] .popper__arrow,
+.site-theme-dark .el-popper[x-placement^="bottom"] .popper__arrow::after {
+    border-bottom-color: rgba(17, 22, 29);
+}
+.el-dropdown-menu {
+    box-shadow: 0 1px 10px 0 rgb(49 54 68 / 15%);
+}
+.el-input.is-focus,
+.el-input__inner:focus,
+.el-textarea__inner:focus,
+.input-shadow .el-input__inner {
+    box-shadow: 0 1px 10px 0 rgb(49 54 68 / 15%);
+}
+.button[data-v-c574a71c]:hover {
+    box-shadow: 0 1px 10px 0 rgb(49 54 68 / 15%);
+}
+.milestones .milestone[data-v-815ccddc]:after {
+    color: #c6d5d5;
+}
+.banner-content h1.name {
+    filter: drop-shadow(0px 0px 6px black);
+}
+.el-select-dropdown {
+    box-shadow: 0 1px 10px 0 rgb(49 54 68 / 15%);
+}
+.medialist.table .list-section {
+    box-shadow: 0 2px 20px rgb(49 54 68 / 9%);
+}
+.list-editor-wrap .list-editor {
+    box-shadow: 0 2px 33px rgb(0 0 0 / 48%);
+}
+.el-input__prefix {
+    color: #c0c4cc;
+}
+.el-select .el-input .el-select__caret {
+    color: #c0c4cc;
+}
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+    background-color: #f5f7fa;
+}
+.random-btn[data-v-170179fc] {
+    color: #fff;
+}
+.el-dialog__headerbtn:focus .el-dialog__close,
+.el-dialog__headerbtn:hover .el-dialog__close {
+    color: #409eff;
+}
+.el-tooltip__popper.is-dark {
+    background: #303133;
+    color: #fff;
+}
+[data-v-bcbe965e] .result .open-list-editor {
+    background: hsla(0, 0%, 100%, .45);
+    color: #1f81b2;
+} */
