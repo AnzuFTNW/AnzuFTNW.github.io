@@ -1,0 +1,123 @@
+/*
+  rei.css - version 1.0
+    by https://github.com/AnzuFTNW
+*/
+
+@import url("https://anzuftnw.github.io/files/dehohification.css");
+@import url("https://anzuftnw.github.io/files/simple-theme-framework.css");
+@import url("https://anzuftnw.github.io/files/fullscreen-bg.css");
+
+/* settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  /* simple-bg settings */
+  --bg-img: url("https://files.catbox.moe/5n84ak.png");
+  --bg-clr: unset;
+  --bg-scr: fixed;
+  --bg-pos: center;
+  --bg-rpt: no-repeat;
+  --bg-sze: cover;
+  
+  /* fullscren-bg settings */
+  --fullscreen-bg: rgb(var(--color-foreground),.3);
+  --fullscreen-filter: blur(3px);
+  --fullscreen-banner: hidden;
+  
+  /* simple-theme-framework settings */
+  --color-nav-transparent-background: var(--color-foreground),.0;
+  --color-nav-transparent-text: var(--color-text);
+  --color-overlay: var(--color-foreground);
+  --color-shadow: var(--color-foreground);
+  --color-text-bright: var(--color-white);
+  --color-blue: 140, 157, 210;
+  --color-blue-dim: 80, 92, 148;
+  --color-red: 121, 37, 71;
+  --color-green: 62, 141, 138;
+  --color-footer-background: var(--color-background);
+  --color-footer-text: var(--color-text);
+  --genre-green: var(--color-green);
+  --genre-blue: var(--color-blue);
+  --genre-purple: var(--color-text-lighter);
+  --genre-pink: 172, 54, 109;
+  --genre-red: var(--color-red);
+  --genre-orange: 186, 185, 216;
+  --color-nav-background: var(--color-foreground);
+  --color-nav-text: var(--color-text);
+  --color-background: 17, 17, 17;
+  --color-foreground: 27, 27, 27;
+  --color-foreground-grey: 22, 22, 22;
+  --color-foreground-grey-dark: var(--color-background);
+  --color-text: 112, 116, 151;
+  --color-text-light: 89, 91, 115;
+  --color-text-lighter: 69, 71, 95;
+  --color-background-300: var(--color-background);
+  --color-background-200: var(--color-background); 
+  --color-background-100: var(--color-foreground); 
+  --color-gray-900: var(--color-red);
+  --color-gray-800: var(--color-red);
+  --color-gray-700: var(--color-text);
+  --color-gray-600: var(--color-text);
+  --color-gray-300: var(--color-background); 
+  --color-gray-100: var(--color-foreground); 
+}
+
+rei {
+/* hair */
+color:rgb(204, 218, 253);
+color:rgb(140, 157, 210);
+color:rgb(80, 92, 148);
+/* red accents */
+color:rgb(121, 37, 71);
+color:rgb(242, 124, 179);
+/* green accents */
+color:rgb(62, 141, 138);
+color:rgb(143, 227, 214);
+/* suit main */
+color:rgb(20, 21, 39);
+color:rgb(39, 41, 65);
+color:rgb(112, 116, 151);
+/* suit light */
+color:rgb(200, 201, 220);
+/* suit accents */
+color:rgb(75, 79, 125);
+color:rgb(117, 124, 176);
+}
+
+/* code */
+#app a:hover
+{
+  color: rgb(var(--color-red)) !important;
+}
+#app .user-follow a:hover {
+  color: rgb(var(--color-white)) !important;
+}
+.theme-selector {
+  display: none;
+}
+.site-theme-dark .quick-search.el-select .el-input.el-input__inner,
+.site-theme-dark .quick-search .el-select .el-input.is-focus .el-input__inner,
+.site-theme-dark .el-select-dropdown,
+.site-theme-dark .el-dropdown-menu,
+.site-theme-dark .el-dropdown-menu__item--divided::before {
+    background: rgb(var(--color-foreground));
+}
+.popper__arrow {
+  border-top-color: rgb(var(--color-foreground));
+  border-bottom-color: rgb(var(--color-foreground));
+}
+#nav {
+  width: 72%;
+  left: 14%;
+  border-radius: 0 0 4px 4px;
+}
+.history-day {
+  transition: all 0.1s ease;
+}
+.history-day:hover {
+  background: rgb(var(--color-red)) !important;
+  transform: scale(1.25);
+}
+/* fullscreen-bg fix - hab to fix this sometime.. */
+.stats-wrap > .overview {
+  background: unset !important;
+  backdrop-filter: unset !important;
+}
