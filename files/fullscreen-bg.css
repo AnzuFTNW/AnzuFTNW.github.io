@@ -8,7 +8,7 @@
 @import url("https://anzuftnw.github.io/files/simple-bg.css");
 
 /* settings */
-:root, .site-theme-dark, .site-theme-contrast {
+:root {
   /* simple-bg settings */
   --bg-img: url("");
   --bg-clr: unset;
