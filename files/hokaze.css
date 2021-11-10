@@ -168,23 +168,32 @@ body {
   transition: var(--hokaze-at);
   z-index: 100;
 }
-.banner-content > .name {
+.banner-content > .name-wrapper {
+  padding: 0;
+}
+.banner-content > .name-wrapper > .name {
   position: absolute;
   transition: var(--hokaze-vt);
-  transform: translateY(8vh);
+  transform: translate(-30vh, 12vh); /* u can play around with these numbers */
   z-index: 110;
   opacity: 1;
   pointer-events: none;
 }
-.banner-content > .mod-badge {
+.banner-content > .follower-badge {
   position: absolute;
   bottom: var(--hokaze-bctc);
   margin: 0;
   padding: 11.5px 10px;
   transition: var(--hokaze-at);
 }
-.banner-content > .mod-badge:hover {
+.banner-content > .follower-badge:hover {
   background: rgba(var(--color-blue),1);
+}
+.banner-content:hover > .follower-badge {
+  transform: translateX(-170px);
+}
+.banner-content:hover > .name-wrapper > .name {
+  opacity: 0;
 }
 .banner-content > .actions {
   position: absolute;
@@ -201,15 +210,10 @@ body {
   border-color: rgb(var(--color-blue));
   transform: scale(var(--hokaze-ah));
 }
-.banner-content:hover > .mod-badge {
-  transform: translateX(-170px);
-}
 .banner-content:hover > .actions {
   transform: translateX(183px);
 }
-.banner-content:hover > .name {
-  opacity: 0;
-}
+
 
 /* Container */
 .header-wrap > .nav-wrap {
