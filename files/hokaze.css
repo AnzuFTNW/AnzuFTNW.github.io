@@ -169,15 +169,14 @@ body {
   z-index: 100;
 }
 .banner-content > .name-wrapper {
-  padding: 0;
-}
-.banner-content > .name-wrapper > .name {
   position: absolute;
-  transition: var(--hokaze-vt);
-  transform: translate(-30vh, 12vh); /* u can play around with these numbers */
+  transform: translateY(8vh);
   z-index: 110;
   opacity: 1;
   pointer-events: none;
+}
+.banner-content > .name-wrapper > .name {
+  transition: var(--hokaze-vt);
 }
 .banner-content > .follower-badge {
   position: absolute;
@@ -488,34 +487,4 @@ background: rgb(var(--color-background));
     --color-gray-700: var(--color-text-light);
     --color-gray-800: var(--color-blue);
     --color-gray-900: var(--color-blue);
-}
-
-/* Fixes For Current Profile */
-.about > .content-wrap {
-  transform: scale(1) !important;
-  max-height: none !important;
-}
-.markdown img {
-  border-radius: 0px;
-}
-.banner-content > .mod-badge {
-  opacity: 0;
-}
-.banner-content > .actions {
-  opacity: 0;
-}
-.banner-content:hover > .mod-badge {
-  transform: translateX(-170px);
-  opacity: 1;
-}
-.banner-content:hover > .actions {
-  transform: translateX(183px);
-  opacity: 1;
-}
-
-/* about sectoin fixed cuz after effects sux */
-.about img[src="https://64.media.tumblr.com/570f4e11222d885f2a29aa03721a41d0/94677bcd5144bb29-54/s540x810/77d4a0d24784404e4017f3bd8bead673abb65e1c.gif"] {
-    border: 3px solid #f7bf63;
-    border-radius: 10px;
-    margin-top: 5px;
 }
