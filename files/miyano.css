@@ -5,6 +5,7 @@
 */
 
 @import url("https://anzuftnw.github.io/files/custom-profile-color.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 /* settings */
 :root {
@@ -16,7 +17,8 @@
   --miya-logo: url("https://i.imgur.com/jcswLg4.png");
   --miya-logo-rounding: 0px;
   --miya-logo-scale: 1.25;
-  --miya-logo-hover: scale(1.5) rotate(5deg)
+  --miya-logo-hover: scale(1.5) rotate(5deg);
+  --miya-font: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 /* code */
@@ -31,4 +33,66 @@
 }
 .overview > div > .about > .content-wrap {
   max-height: unset;
+}
+#app,
+#app .links,
+#app .header-wrap,
+#app .section-header,
+#app .load-more,
+#app .list-stats,
+#app textarea,
+#app .dropdown,
+#app .button{
+  font-family: var(--miya-font);
+}
+.milestone {
+  font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+.overview > div > div > .section-header {
+  font-weight: 700;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(var(--cp-accent-color));
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgb(var(--cp-accent-color-dim));
+}
+#nav .links {
+  font-size: 0;
+  font-family: "FontAwesome";
+/*   color: rgb(var(--color-white),); */
+}
+#nav .link {
+  padding: 0 50px;
+  font-weight: 100;
+  transition: color 1s ease;
+}
+#nav .link:hover {
+  color: rgb(var(--cp-accent-color)) !important;
+}
+#nav .link::after {
+  font-size: 30px;
+}
+#nav .link:nth-child(1)::after {
+  content: "\f015";
+  font-size: 33px !important;
+}
+#nav .link:nth-child(2)::after {
+  content: "\f007";
+}
+#nav .link:nth-child(3)::after {
+  content: "\f03d";
+}
+#nav .link:nth-child(4)::after {
+  content: "\f02d";
+}
+#nav .link:nth-child(6)::after {
+  content: "\f086";
+}
+#nav .browse-wrap {
+  display: none;
 }
