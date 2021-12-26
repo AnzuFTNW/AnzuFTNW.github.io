@@ -1,0 +1,34 @@
+/*
+  miyano.css - version 1.0
+    by https://github.com/AnzuFTNW
+    for https://anilist.co/user/Miyano/
+*/
+
+@import url("https://anzuftnw.github.io/files/custom-profile-color.css");
+
+/* settings */
+:root {
+  /* custom-profile-color.css */
+  --cp-accent-color: 244, 172, 177;
+  --cp-accent-color-dim: 204, 132, 137;
+  
+  /* miyano.css */
+  --miya-logo: url("https://i.imgur.com/jcswLg4.png");
+  --miya-logo-rounding: 0px;
+  --miya-logo-scale: 1.25;
+  --miya-logo-hover: scale(1.5) rotate(5deg)
+}
+
+/* code */
+.logo img {
+  content: var(--miya-logo);
+  border-radius: var(--miya-logo-rounding);
+  transform: scale(var(--miya-logo-scale));
+  transition: transform .5s ease;
+}
+.logo img:hover {
+  transform: var(--miya-logo-hover);
+}
+.overview > div > .about > .content-wrap {
+  max-height: unset;
+}
