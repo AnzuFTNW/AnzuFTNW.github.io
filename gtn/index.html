@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuessTheNumber</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/game.js" defer></script>
+  </head>
+  <body>
+    <div class="gameInfo">
+      <h1 class="title">Guess The Number</h1>
+      <p class="description">
+        Guess a random number between 1 and 100.<br />
+        You have 10 trys per turn.
+      </p>
+    </div>
+    <div class="game">
+      <input
+        type="text"
+        id="guessField"
+        class="guessField"
+        placeholder="Enter a number..."
+      />
+      <input type="submit" value="Submit" class="guessSubmit" />
+    </div>
+    <div class="status">
+      <p class="result"></p>
+      <p class="guesses"></p>
+    </div>
+    <div class="stats">
+      <p class="winStreak"></p>
+      <p class="totalScore">Enjoy playing!</p>
+      <p class="winRate"></p>
+      <p class="bestGame"></p>
+      <p class="highestWinStreak"></p>
+    </div>
+  </body>
+</html>
