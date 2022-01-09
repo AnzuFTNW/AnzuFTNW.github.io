@@ -27,7 +27,6 @@ let hax = false;
 // functions
 function runGame() {
   const userGuess = Number(guessField.value);
-  console.log(gameState);
   if (gameState === 1) {
     guesses.textContent = "Previous guesses: ";
     guesses.style = "margin: 4px 0 4px 0;";
@@ -138,7 +137,11 @@ function printStats() {
     } else {
       x = "";
     }
-    winStreakStats.textContent = `You won ${winStreak} game${x} in a row!`;
+    if (winStreak > 0) {
+      winStreakStats.textContent = `You won ${winStreak} game${x} in a row!`;
+    } else {
+      winStreakStats.textContent = "";
+    }
     if (bestGame !== 1) {
       x = "s";
     } else {
