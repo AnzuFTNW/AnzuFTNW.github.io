@@ -132,7 +132,7 @@ function resetGame() {
 function printStats() {
   let x;
 
-  if (winStreak > 0) {
+  if (highestWinStreak > 0) {
     if (winStreak !== 1) {
       x = "s";
     } else {

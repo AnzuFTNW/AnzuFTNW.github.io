@@ -1,5 +1,5 @@
 /*
-  rei.css - version 1.0
+  rei.css - version 1.1
     by https://github.com/AnzuFTNW
 */
 
@@ -8,7 +8,9 @@
 @import url("https://anzuftnw.github.io/files/fullscreen-bg.css");
 
 /* settings */
-:root, .site-theme-dark, .site-theme-contrast {
+:root,
+.site-theme-dark,
+.site-theme-contrast {
   /* simple-bg settings */
   --bg-img: url("https://files.catbox.moe/5n84ak.png");
   --bg-clr: unset;
@@ -16,14 +18,14 @@
   --bg-pos: center;
   --bg-rpt: no-repeat;
   --bg-sze: cover;
-  
+
   /* fullscren-bg settings */
-  --fullscreen-bg: rgb(var(--color-foreground),.3);
+  --fullscreen-bg: rgb(var(--color-foreground), 0.3);
   --fullscreen-filter: blur(3px);
   --fullscreen-banner: hidden;
-  
+
   /* simple-theme-framework settings */
-  --color-nav-transparent-background: var(--color-foreground),.0;
+  --color-nav-transparent-background: var(--color-foreground), 0;
   --color-nav-transparent-text: var(--color-text);
   --color-overlay: var(--color-foreground);
   --color-shadow: var(--color-foreground);
@@ -50,41 +52,40 @@
   --color-text-light: 89, 91, 115;
   --color-text-lighter: 69, 71, 95;
   --color-background-300: var(--color-background);
-  --color-background-200: var(--color-background); 
-  --color-background-100: var(--color-foreground); 
+  --color-background-200: var(--color-background);
+  --color-background-100: var(--color-foreground);
   --color-gray-900: var(--color-red);
   --color-gray-800: var(--color-red);
   --color-gray-700: var(--color-text);
   --color-gray-600: var(--color-text);
-  --color-gray-300: var(--color-background); 
-  --color-gray-100: var(--color-foreground); 
+  --color-gray-300: var(--color-background);
+  --color-gray-100: var(--color-foreground);
 }
 
 rei {
-/* hair */
-color:rgb(204, 218, 253);
-color:rgb(140, 157, 210);
-color:rgb(80, 92, 148);
-/* red accents */
-color:rgb(121, 37, 71);
-color:rgb(242, 124, 179);
-/* green accents */
-color:rgb(62, 141, 138);
-color:rgb(143, 227, 214);
-/* suit main */
-color:rgb(20, 21, 39);
-color:rgb(39, 41, 65);
-color:rgb(112, 116, 151);
-/* suit light */
-color:rgb(200, 201, 220);
-/* suit accents */
-color:rgb(75, 79, 125);
-color:rgb(117, 124, 176);
+  /* hair */
+  color: rgb(204, 218, 253);
+  color: rgb(140, 157, 210);
+  color: rgb(80, 92, 148);
+  /* red accents */
+  color: rgb(121, 37, 71);
+  color: rgb(242, 124, 179);
+  /* green accents */
+  color: rgb(62, 141, 138);
+  color: rgb(143, 227, 214);
+  /* suit main */
+  color: rgb(20, 21, 39);
+  color: rgb(39, 41, 65);
+  color: rgb(112, 116, 151);
+  /* suit light */
+  color: rgb(200, 201, 220);
+  /* suit accents */
+  color: rgb(75, 79, 125);
+  color: rgb(117, 124, 176);
 }
 
 /* code */
-#app a:hover
-{
+#app a:hover {
   color: rgb(var(--color-red)) !important;
 }
 #app .user-follow a:hover {
@@ -98,7 +99,7 @@ color:rgb(117, 124, 176);
 .site-theme-dark .el-select-dropdown,
 .site-theme-dark .el-dropdown-menu,
 .site-theme-dark .el-dropdown-menu__item--divided::before {
-    background: rgb(var(--color-foreground));
+  background: rgb(var(--color-foreground));
 }
 .popper__arrow {
   border-top-color: rgb(var(--color-foreground));
@@ -120,4 +121,15 @@ color:rgb(117, 124, 176);
 .stats-wrap > .overview {
   background: unset !important;
   backdrop-filter: unset !important;
+}
+/* hax */
+#hohNotifications::before {
+  content: "Hope you have an amazing day. ヽ(´･ᴗ･ ` )";
+  display: block;
+  margin-bottom: 10px;
+  background: rgb(var(--color-foreground));
+  border-radius: 4px;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
 }
