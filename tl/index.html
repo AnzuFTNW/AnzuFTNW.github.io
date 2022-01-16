@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TierList</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/script.js" defer></script>
+    <script src="src/html2canvas.min.js"></script>
+    <script src="src/screenshot.js"></script>
+  </head>
+  <body>
+    <nav id="nav">
+      <select id="qSelect" disabled>
+        <option value="">Character</option>
+        <option value="">Animanga</option>
+      </select>
+      <input type="search" id="qSearch" placeholder="Aki Adagaki" />
+      <input type="submit" id="qSubmit" value="Search" />
+      <button onclick="doScreenShot()">Screenshot</button>
+    </nav>
+    <main id="content">
+      <section id="tierlist">
+        <div class="row">
+          <header class="rank-wrap"><h1 class="rank">S</h1></header>
+          <div class="card-box"></div>
+        </div>
+        <div class="row">
+          <header class="rank-wrap"><h1 class="rank">A</h1></header>
+          <div class="card-box"></div>
+        </div>
+        <div class="row">
+          <header class="rank-wrap"><h1 class="rank">B</h1></header>
+          <div class="card-box"></div>
+        </div>
+        <div class="row">
+          <header class="rank-wrap"><h1 class="rank">C</h1></header>
+          <div class="card-box"></div>
+        </div>
+        <div class="row">
+          <header class="rank-wrap"><h1 class="rank">D</h1></header>
+          <div class="card-box"></div>
+        </div>
+      </section>
+      <section id="output" style="display: none">
+        <nav id="screenshotInfo">
+          <p id="infoText">Rightclick -> Save Image As...</p>
+          <button onclick="saveScreenshot()" id="saveButton" disabled>
+            Save
+          </button>
+          <button onclick="closeWindow()" id="closeButton">Close</button>
+        </nav>
+      </section>
+      <aside class="drawer" id="card-pool">
+        <h1 class="title">Card Pool</h1>
+        <div id="qResult" class="card-box"></div>
+      </aside>
+      <aside class="drawer" id="card-storage">
+        <h1 class="title">Card Storage</h1>
+        <div class="card-box"></div>
+        <div class="card-box trash"></div>
+      </aside>
+    </main>
+  </body>
+</html>
