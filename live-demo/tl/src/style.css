@@ -55,7 +55,7 @@ body {
 .rank-wrap {
   align-items: center;
   border-radius: 8px;
-  display: flex;
+  display: inline-flex;
   font-family: Helvetica, sans-serif;
   font-size: 128px;
   font-weight: bold;
@@ -153,7 +153,11 @@ body {
   color: transparent;
   width: 90%;
 }
-.menu > input[type="color"]::-webkit-color-swatch {
+.menu > input::-webkit-color-swatch {
+  border: 2px solid var(--color-background-transparent);
+  border-radius: 8px;
+}
+.menu > input::-moz-color-swatch {
   border: 2px solid var(--color-background-transparent);
   border-radius: 8px;
 }
@@ -204,7 +208,7 @@ body {
   right: 0;
   top: 0;
   transform: translateX(96%);
-  transition: transform 500ms 1s ease-out;
+  transition: transform 500ms 750ms ease-out;
   width: 25%;
   z-index: 700;
 }
@@ -265,6 +269,9 @@ body {
 
 /* scrollbar */
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
+}
+* {
+  scrollbar-width: none;
 }

@@ -33,10 +33,13 @@ const letterPool = [
 let letterIndex = 0;
 const colorPool = ["#ff7f7f", "#ffff7f", "#7fff7f", "#7fffff", "#7f7fff"];
 let colorIndex = 0;
-const textColor = "#000";
+const textColor = "#22222c";
 
 function openRowMenu(row) {
-  const currentRow = row.path[1];
+  const path = row.composedPath();
+  const currentRow = path[1];
+
+  console.log(currentRow);
 
   const currentMenu = currentRow.querySelector(".menu");
   const currentMenuIcon = currentRow.querySelector(".icon");
@@ -168,14 +171,16 @@ function addRow(nextRow) {
 }
 
 function getNextRow(row) {
-  const currentRow = row.path[2];
+  const path = row.composedPath();
+  const currentRow = path[2];
   const nextRow = currentRow.nextSibling;
   addRow(nextRow);
 }
 
 function removeRow(row) {
-  const currentRow = row.path[2];
-  const tierList = row.path[3];
+  const path = row.composedPath();
+  const currentRow = path[2];
+  const tierList = path[3];
   const childrenList = tierList.children;
 
   if (childrenList.length > 1) {

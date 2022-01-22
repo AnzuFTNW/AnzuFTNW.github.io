@@ -83,6 +83,9 @@ function requestQuery() {
   };
 
   fetch(url, options).then(handleResponse).then(handleData).catch(handleError);
+
+  const cardPool = document.getElementById("card-pool");
+  cardPool.classList.add("out");
 }
 
 function handleResponse(response) {
@@ -177,6 +180,13 @@ function handleError(error) {
 
 function initializeQuery() {
   qSubmit.addEventListener("click", requestQuery);
+
+  qSearch.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      requestQuery();
+    }
+  });
+
   qSelect.addEventListener("change", function () {
     console.log("You selected: ", this.value);
     selectQuery();
