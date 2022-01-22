@@ -6,8 +6,7 @@
 
 ---
 
-[GuessTheNumber](https://anzuftnw.github.io/live-demo/
-guess-the-number)
+[GuessTheNumber](https://anzuftnw.github.io/live-demo/guess-the-number)
 
 - Text-based minigame
 
