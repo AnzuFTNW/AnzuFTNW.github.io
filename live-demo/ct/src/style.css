@@ -1,0 +1,500 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(240, 10%, 10%);
+}
+
+body {
+  margin: 0 auto;
+  width: 50%;
+  text-align: justify;
+  border: 1px solid black;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: hsl(240, 10%, 20%);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+header,
+section,
+h1,
+h2,
+h3 {
+  border-radius: 10px;
+}
+
+p {
+  text-align: left;
+  padding: 0 10%;
+}
+
+ul,
+ol {
+  font-size: 14px;
+  text-align: left;
+  padding: 0 10%;
+  list-style: disc;
+}
+
+a {
+  color: hsl(240, 100%, 20%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(240, 100%, 40%);
+}
+
+nav > ol > li {
+  text-decoration: underline;
+}
+
+h1 {
+  background-color: hsl(0, 50%, 70%);
+  padding: 10px;
+}
+h2 {
+  background-color: hsl(120, 50%, 70%);
+  padding: 10px;
+}
+h3 {
+  background-color: hsl(240, 50%, 70%);
+  padding: 10px;
+}
+
+main > header {
+  background-color: hsl(0, 50%, 90%);
+  padding-bottom: 20px;
+}
+
+section > header {
+  background-color: hsl(120, 50%, 90%);
+  padding-bottom: 20px;
+}
+
+section > section {
+  background-color: hsl(240, 50%, 90%);
+  padding-bottom: 20px;
+}
+
+hr {
+  width: 90%;
+}
+
+section > hr {
+  width: 60%;
+}
+
+h1,
+h2,
+h3,
+hr {
+  margin: 20px auto;
+}
+
+table {
+  margin: 10px auto;
+}
+
+p {
+  margin: 0;
+}
+
+th,
+td {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  background: hsl(0, 0%, 80%);
+}
+
+td > div {
+  margin: 0 auto;
+}
+
+.color-wheel {
+  --num-colors: 12;
+  --color-size: calc(100% / var(--num-colors));
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+  transform: rotate(calc(-180deg / var(--num-colors)));
+}
+
+.smooth-wheel {
+  --num-colors: 12;
+  --color-size: calc(100% / var(--num-colors));
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.color-wheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: hsl(0, 0%, 80%);
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.smooth-wheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: hsl(0, 0%, 80%);
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ryb.color-wheel.three {
+  --num-colors: 3;
+  background: conic-gradient(
+    #fe2712 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #fefe33 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #0247fe calc(2 * var(--color-size)) calc(3 * var(--color-size))
+  );
+}
+
+.ryb.color-wheel.six {
+  --num-colors: 6;
+  background: conic-gradient(
+    #fe2712 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #fb9902 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #fefe33 calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #66b032 calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    #0247fe calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    #8601af calc(5 * var(--color-size)) calc(6 * var(--color-size))
+  );
+}
+
+.ryb.color-wheel.twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    #fe2712 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #fd5308 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #fb9902 calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #fabc02 calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    #fefe33 calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    #d0ea2b calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    #66b032 calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    #0392ce calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    #0247fe calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    #3d01a4 calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    #8601af calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    #a7194b calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.three {
+  --num-colors: 3;
+  background: conic-gradient(
+    #ff0000 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #00ff00 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #0000ff calc(2 * var(--color-size)) calc(3 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.six {
+  --num-colors: 6;
+  background: conic-gradient(
+    #ff0000 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #ffff00 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #00ff00 calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #00ffff calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    #0000ff calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    #ff00ff calc(5 * var(--color-size)) calc(6 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    #ff0000 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #ff7f00 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #ffff00 calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #7fff00 calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    #00ff00 calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    #00ff7f calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    #00ffff calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    #007fff calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    #0000ff calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    #7f00ff calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    #ff00ff calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    #ff007f calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}
+
+.cymk.color-wheel.three {
+  --num-colors: 3;
+  background: conic-gradient(
+    #00ffff calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #ffff00 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #ff00ff calc(2 * var(--color-size)) calc(3 * var(--color-size))
+  );
+}
+
+.cymk.color-wheel.six {
+  --num-colors: 6;
+  background: conic-gradient(
+    #00ffff calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #0000ff calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #ff00ff calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #ff0000 calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    #ffff00 calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    #00ff00 calc(5 * var(--color-size)) calc(6 * var(--color-size))
+  );
+}
+
+.cymk.color-wheel.twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    #00ffff calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #007fff calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #0000ff calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #7f00ff calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    #ff00ff calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    #ff007f calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    #ff0000 calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    #ff7f00 calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    #ffff00 calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    #7fff00 calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    #00ff00 calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    #00ff7f calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}
+
+.cymk.color-wheel::after {
+  background: black;
+}
+
+.hsl.smooth-wheel.hue {
+  --num-colors: 12;
+  background: conic-gradient(
+    #ff0000 calc(0 * var(--color-size)) calc(0 * var(--color-size)),
+    #ff7f00 calc(1 * var(--color-size)) calc(0 * var(--color-size)),
+    #ffff00 calc(2 * var(--color-size)) calc(0 * var(--color-size)),
+    #7fff00 calc(3 * var(--color-size)) calc(0 * var(--color-size)),
+    #00ff00 calc(4 * var(--color-size)) calc(0 * var(--color-size)),
+    #00ff7f calc(5 * var(--color-size)) calc(0 * var(--color-size)),
+    #00ffff calc(6 * var(--color-size)) calc(0 * var(--color-size)),
+    #007fff calc(7 * var(--color-size)) calc(0 * var(--color-size)),
+    #0000ff calc(8 * var(--color-size)) calc(0 * var(--color-size)),
+    #7f00ff calc(9 * var(--color-size)) calc(0 * var(--color-size)),
+    #ff00ff calc(10 * var(--color-size)) calc(0 * var(--color-size)),
+    #ff007f calc(11 * var(--color-size)) calc(0 * var(--color-size)),
+    #ff0000 calc(12 * var(--color-size)) calc(0 * var(--color-size))
+  );
+}
+
+.hsl.smooth-wheel.saturation {
+  --num-colors: 11;
+  background: conic-gradient(
+    hsl(0, 100%, 50%) calc(0 * var(--color-size)),
+    hsl(0, 90%, 50%) calc(1 * var(--color-size)),
+    hsl(0, 80%, 50%) calc(2 * var(--color-size)),
+    hsl(0, 70%, 50%) calc(3 * var(--color-size)),
+    hsl(0, 60%, 50%) calc(4 * var(--color-size)),
+    hsl(0, 50%, 50%) calc(5 * var(--color-size)),
+    hsl(0, 40%, 50%) calc(6 * var(--color-size)),
+    hsl(0, 30%, 50%) calc(7 * var(--color-size)),
+    hsl(0, 20%, 50%) calc(8 * var(--color-size)),
+    hsl(0, 10%, 50%) calc(9 * var(--color-size)),
+    hsl(0, 0%, 50%) calc(10 * var(--color-size))
+  );
+}
+
+.hsl.smooth-wheel.lightness {
+  --num-colors: 10;
+  background: conic-gradient(
+    hsl(0, 100%, 100%) calc(0 * var(--color-size)),
+    hsl(0, 100%, 90%) calc(1 * var(--color-size)),
+    hsl(0, 100%, 80%) calc(2 * var(--color-size)),
+    hsl(0, 100%, 70%) calc(3 * var(--color-size)),
+    hsl(0, 100%, 60%) calc(4 * var(--color-size)),
+    hsl(0, 100%, 50%) calc(5 * var(--color-size)),
+    hsl(0, 100%, 40%) calc(6 * var(--color-size)),
+    hsl(0, 100%, 30%) calc(7 * var(--color-size)),
+    hsl(0, 100%, 20%) calc(8 * var(--color-size)),
+    hsl(0, 100%, 10%) calc(9 * var(--color-size)),
+    hsl(0, 100%, 0%) calc(10 * var(--color-size))
+  );
+  transform: rotate(180deg);
+}
+
+.rgb.color-wheel.mono {
+  --num-colors: 1;
+  background: conic-gradient(
+    hsl(210, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.mono-twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    hsl(210, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(210, 100%, 70%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(210, 80%, 90%) calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    hsl(210, 80%, 70%) calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    hsl(210, 60%, 50%) calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    hsl(210, 60%, 30%) calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    hsl(210, 40%, 10%) calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    hsl(210, 40%, 30%) calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    hsl(210, 20%, 50%) calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    hsl(210, 20%, 70%) calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    hsl(210, 10%, 90%) calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    hsl(210, 100%, 70%) calc(11 * var(--color-size))
+      calc(12 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.analogous {
+  --num-colors: 3;
+  background: conic-gradient(
+    hsl(300, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(330, 100%, 50%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(270, 100%, 50%) calc(2 * var(--color-size)) calc(3 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.analogous-twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    hsl(300, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(300, 100%, 60%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(300, 100%, 70%) calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    hsl(330, 100%, 80%) calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    hsl(330, 100%, 90%) calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    hsl(330, 100%, 80%) calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    hsl(330, 100%, 70%) calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    hsl(270, 100%, 6%) calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    hsl(270, 100%, 50%) calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    hsl(270, 100%, 40%) calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    hsl(270, 100%, 30%) calc(10 * var(--color-size))
+      calc(11 * var(--color-size)),
+    hsl(300, 100%, 20%) calc(11 * var(--color-size))
+      calc(12 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.complementary {
+  --num-colors: 2;
+  background: conic-gradient(
+    #ff7f00 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #007fff calc(1 * var(--color-size)) calc(2 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.complementary-twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    hsl(30, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(30, 95%, 55%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(30, 90%, 60%) calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    hsl(30, 85%, 65%) calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    hsl(30, 80%, 70%) calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    hsl(30, 75%, 75%) calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    hsl(210, 100%, 50%) calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    hsl(210, 95%, 45%) calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    hsl(210, 90%, 40%) calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    hsl(210, 85%, 35%) calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    hsl(210, 80%, 30%) calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    hsl(210, 75%, 25%) calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.split-complementary {
+  --num-colors: 3;
+  background: conic-gradient(
+    rgb(255, 127, 0) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #00ffff calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #0000ff calc(2 * var(--color-size)) calc(3 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.split-complementary-twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    hsl(30, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(30, 90%, 45%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(30, 80%, 40%) calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    hsl(30, 70%, 35%) calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    hsl(180, 70%, 35%) calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    hsl(180, 80%, 40%) calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    hsl(180, 90%, 45%) calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    hsl(180, 100%, 50%) calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    hsl(240, 90%, 55%) calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    hsl(240, 80%, 60%) calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    hsl(240, 70%, 60%) calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    hsl(240, 60%, 55%) calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.triadic {
+  --num-colors: 3;
+  background: conic-gradient(
+    #ff0000 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #00ff00 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #0000ff calc(2 * var(--color-size)) calc(3 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.triadic-twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    hsl(0, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(0, 90%, 45%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(0, 80%, 40%) calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    hsl(0, 70%, 35%) calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    hsl(120, 70%, 35%) calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    hsl(120, 80%, 40%) calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    hsl(120, 90%, 45%) calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    hsl(120, 100%, 50%) calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    hsl(240, 90%, 55%) calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    hsl(240, 80%, 60%) calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    hsl(240, 70%, 60%) calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    hsl(240, 60%, 55%) calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.tetradic {
+  --num-colors: 4;
+  background: conic-gradient(
+    #ffff00 calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    #00ff00 calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    #0000ff calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    #ff00ff calc(3 * var(--color-size)) calc(4 * var(--color-size))
+  );
+}
+
+.rgb.color-wheel.tetradic-twelve {
+  --num-colors: 12;
+  background: conic-gradient(
+    hsl(60, 100%, 50%) calc(0 * var(--color-size)) calc(1 * var(--color-size)),
+    hsl(60, 90%, 45%) calc(1 * var(--color-size)) calc(2 * var(--color-size)),
+    hsl(120, 80%, 40%) calc(2 * var(--color-size)) calc(3 * var(--color-size)),
+    hsl(120, 50%, 35%) calc(3 * var(--color-size)) calc(4 * var(--color-size)),
+    hsl(120, 70%, 35%) calc(4 * var(--color-size)) calc(5 * var(--color-size)),
+    hsl(240, 80%, 40%) calc(5 * var(--color-size)) calc(6 * var(--color-size)),
+    hsl(240, 90%, 45%) calc(6 * var(--color-size)) calc(7 * var(--color-size)),
+    hsl(240, 100%, 50%) calc(7 * var(--color-size)) calc(8 * var(--color-size)),
+    hsl(300, 90%, 55%) calc(8 * var(--color-size)) calc(9 * var(--color-size)),
+    hsl(300, 80%, 60%) calc(9 * var(--color-size)) calc(10 * var(--color-size)),
+    hsl(300, 70%, 60%) calc(10 * var(--color-size)) calc(11 * var(--color-size)),
+    hsl(60, 60%, 55%) calc(11 * var(--color-size)) calc(12 * var(--color-size))
+  );
+}

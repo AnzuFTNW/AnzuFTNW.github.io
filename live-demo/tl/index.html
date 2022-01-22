@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TierList</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <!-- drag and drop -->
+    <script src="src/dnd.js" defer></script>
+    <!-- query -->
+    <script src="src/query.js" defer></script>
+    <!-- tierlist -->
+    <script src="src/tierlist.js" defer></script>
+    <!-- screenshot -->
+    <script src="src/html2canvas.js" defer></script>
+    <script src="src/screenshot.js" defer></script>
+    <!-- initialize -->
+    <script src="src/initialize.js" defer></script>
+  </head>
+  <body>
+    <!-- navigation / query -->
+    <nav id="nav">
+      <select id="qSelect">
+        <option value="character">Character</option>
+        <option value="animanga">Animanga</option>
+      </select>
+      <input type="search" id="qSearch" placeholder="Aki Adagaki" />
+      <input type="submit" id="qSubmit" value="Search" />
+      <button onclick="doScreenShot()">Screenshot</button>
+    </nav>
+    <main id="content">
+      <!-- tierlist -->
+      <section id="tierlist"></section>
+      <!-- screenshot -->
+      <section id="output" style="display: none">
+        <nav id="screenshotInfo">
+          <p id="infoText">Rightclick -> Save Image As...</p>
+          <button onclick="saveScreenshot()" id="saveButton" disabled>
+            Save
+          </button>
+          <button onclick="closeWindow()" id="closeButton">Close</button>
+        </nav>
+      </section>
+      <!-- card pool -->
+      <aside id="card-pool">
+        <h1 id="title">Card Pool</h1>
+        <div id="qResult" class="card-box"></div>
+        <div class="card-box trash"></div>
+      </aside>
+    </main>
+  </body>
+</html>

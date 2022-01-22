@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "haxrcorp";
+  src: url("haxrcorp.ttf");
+}
+@font-face {
+  font-family: "alagard";
+  src: url("alagard.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "haxrcorp", monospace;
+  background: rgb(17, 17, 22);
+  font-size: 16px;
+}
+
+input,
+button {
+  font-family: "haxrcorp" !important;
+  font-size: 24px;
+}
+
+body {
+  max-width: 400px;
+  border: solid 2px #111;
+  margin: auto;
+  padding: 25px 20px 10px 20px;
+  margin-top: 15vh;
+  background: rgb(24, 24, 29);
+  color: rgb(224, 224, 224);
+  border-radius: 6px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.39);
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.gameInfo {
+  text-align: center;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: solid 2px #111;
+}
+
+.title {
+  font-family: "alagard", monospace;
+  background-image: repeating-linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow_animation 60s ease-in-out infinite;
+  background-size: 1000% 100%;
+  font-size: 39px;
+  filter: drop-shadow(2px 2px 5px black);
+}
+
+.description {
+  font-size: 24px;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+}
+
+.guessSubmit,
+button {
+  margin-left: 5px;
+  color: rgb(224, 224, 224);
+  background-color: rgb(24, 24, 29);
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 2px rgb(34, 34, 39);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guessSubmit:active,
+button:active {
+  border-color: rgb(17, 17, 22);
+  background-color: rgb(17, 17, 22);
+  color: rgb(124, 124, 124) !important;
+}
+
+.guessSubmit:disabled,
+button:disabled {
+  color: rgb(124, 124, 124) !important;
+  border-color: rgb(17, 17, 22);
+}
+
+.guessField {
+  background-color: rgb(34, 34, 39);
+  color: rgb(224, 224, 224);
+  border: solid 1px rgb(24, 24, 29);
+  border-radius: 50px;
+  padding: 0 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 60%;
+}
+
+.guessField:disabled {
+  background-color: rgb(17, 17, 22);
+}
+
+.status {
+  margin-top: 8px;
+}
+
+.result {
+  text-align: center;
+  font-size: 24px;
+  border-radius: 50px;
+  padding-bottom: 2px;
+}
+.stats {
+  border-top: solid 2px #111;
+  color: rgb(124, 124, 124);
+  padding-top: 2px;
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}

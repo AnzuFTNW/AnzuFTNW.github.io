@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Dissecting Colors with Anzu</h1>
+        <p>
+          In this document I'll try to simply explain the basic
+          <em>color-theory.</em>
+          This includes the most common
+          <strong>color-models, -types, -formats</strong> and
+          <strong>schemes</strong>
+          as used in <em>(web-)design</em> as well as <em>art</em> and
+          <em>painting</em>.
+        </p>
+        <nav>
+          <ol>
+            <li><a href="#ch1">Chapter 1: Color Types</a></li>
+            <ol>
+              <li><a href="#ch11">Chapter 1.1: Primary Colors</a></li>
+              <li><a href="#ch12">Chapter 1.2: Secondary Colors</a></li>
+              <li><a href="#ch13">Chapter 1.3: Tertiary Colors</a></li>
+              <li><a href="#ch14">Chapter 1.4: Further Color Types</a></li>
+            </ol>
+            <li><a href="#ch2">Chapter 2: Color Models</a></li>
+            <ol>
+              <li><a href="#ch21">Chapter 2.1: RYB Color Model</a></li>
+              <li><a href="#ch22">Chapter 2.2: RGB Color Model</a></li>
+              <li><a href="#ch23">Chapter 2.3: CYMK Color Model</a></li>
+              <li><a href="#ch24">Chapter 2.4: HSL & HSV Color Models</a></li>
+            </ol>
+            <li><a href="#ch3">Chapter 3: Color Formats</a></li>
+            <ol>
+              <li><a href="#ch31">Chapter 3.1: RGB Color Format</a></li>
+              <li><a href="#ch32">Chapter 3.2: HEX Color Format</a></li>
+              <li><a href="#ch33">Chapter 3.3: HSL Color Format</a></li>
+              <li><a href="#ch34">Chapter 3.4: Color Examples</a></li>
+              <li><a href="#ch35">Chapter 3.5: Color Comparsion</a></li>
+            </ol>
+            <li><a href="#ch4">Chapter 4: Color Schemes</a></li>
+            <ol>
+              <li>
+                <a href="#ch41">Chapter 4.1: Monochromatic Color Scheme</a>
+              </li>
+              <li><a href="#ch42">Chapter 4.2: Analogous Color Scheme</a></li>
+              <li>
+                <a href="#ch43">Chapter 4.3: Complementary Color Scheme</a>
+              </li>
+              <li>
+                <a href="#ch44"
+                  >Chapter 4.4: Split-Complementary Color Scheme</a
+                >
+              </li>
+              <li><a href="#ch45">Chapter 4.5: Triadic Color Scheme</a></li>
+              <li><a href="#ch46">Chapter 4.6: Tetradic Color Scheme</a></li>
+              <li><a href="#ch47">Chapter 4.7: Other Color Schemes</a></li>
+            </ol>
+          </ol>
+        </nav>
+      </header>
+      <hr />
+      <section>
+        <header>
+          <h2 id="ch1">Chapter 1: Color Types</h2>
+          <p>The three most common color types are:</p>
+          <ol>
+            <li>Primary Colors</li>
+            <li>Secondary Colors</li>
+            <li>Tertiary Colors</li>
+          </ol>
+        </header>
+        <hr />
+        <section>
+          <h3 id="ch11">Chapter 1.1: Primary Colors</h3>
+          <p>
+            Primary colors differ modern color models compared to older ones.
+            There are usually three primary colors. As example for this chapter
+            I will use the RYB color model because its the most universally
+            known. RYB standing for red, yellow and blue.
+          </p>
+          <table>
+            <tr>
+              <th>Primary</th>
+            </tr>
+            <tr>
+              <td><div class="ryb color-wheel three"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch12">Chapter 1.2: Secondary Colors</h3>
+          <p>
+            Secondary colors can be obtained through mixing two of the three
+            primary colors as followed:
+          </p>
+          <table>
+            <tr>
+              <th>Primary</th>
+              <th>Primary</th>
+              <th>Secondary</th>
+            </tr>
+            <tr>
+              <td style="background-color: #fe2712; color: black">Red</td>
+              <td style="background-color: #fefe33; color: black">Yellow</td>
+              <td style="background-color: #fb9902; color: black">Orange</td>
+            </tr>
+            <tr>
+              <td style="background-color: #fefe33; color: black">Yellow</td>
+              <td style="background-color: #0247fe; color: black">Blue</td>
+              <td style="background-color: #66b032; color: black">Green</td>
+            </tr>
+            <tr>
+              <td style="background-color: #0247fe; color: black">Blue</td>
+              <td style="background-color: #fe2712; color: black">Red</td>
+              <td style="background-color: #8601af; color: black">Purple</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Secondary</th>
+            </tr>
+            <tr>
+              <td><div class="ryb color-wheel six"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch13">Chapter 1.3: Tertiary Colors</h3>
+          <p>
+            Tertiary colors are colors that'll be created by mixing two
+            secondary colors, a primary with a secondary color, or a fully
+            saturated primary color with a half saturaed primary color. For the
+            sake of simplicty I'll only write down the primary + secondary
+            method.
+          </p>
+          <table>
+            <tr>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Tertiary</th>
+            </tr>
+            <tr>
+              <td style="background-color: #fe2712; color: black">Red</td>
+              <td style="background-color: #fb9902; color: black">Orange</td>
+              <td style="background-color: #fd5308; color: black">Vermilion</td>
+            </tr>
+            <tr>
+              <td style="background-color: #fefe33; color: black">Yellow</td>
+              <td style="background-color: #fb9902; color: black">Orange</td>
+              <td style="background-color: #fabc02; color: black">Amber</td>
+            </tr>
+            <tr>
+              <td style="background-color: #fefe33; color: black">Yellow</td>
+              <td style="background-color: #66b032; color: black">Green</td>
+              <td style="background-color: #d0ea2b; color: black">
+                Chartreuse
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #0247fe; color: black">Blue</td>
+              <td style="background-color: #66b032; color: black">Green</td>
+              <td style="background-color: #0392ce; color: black">Teal</td>
+            </tr>
+            <tr>
+              <td style="background-color: #0247fe; color: black">Blue</td>
+              <td style="background-color: #8601af; color: black">Purple</td>
+              <td style="background-color: #3d01a4; color: black">Violet</td>
+            </tr>
+            <tr>
+              <td style="background-color: #fe2712; color: black">Red</td>
+              <td style="background-color: #8601af; color: black">Purple</td>
+              <td style="background-color: #a7194b; color: black">Magenta</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Tertiary</th>
+            </tr>
+            <tr>
+              <td><div class="ryb color-wheel twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch14">Chapter 1.4: Further Color Types</h3>
+          <p>
+            You can mix these color types even further and further to get
+            quaternary, quinary, senary, septenary, octonary, nonary, denary
+            colors and on and on.
+          </p>
+          <p>A few examples of quaternary colors in the RYB color model:</p>
+          <table>
+            <tr>
+              <th>Primary</th>
+              <th>Tertiary</th>
+              <th>Quaternary</th>
+            </tr>
+            <tr>
+              <td>Red</td>
+              <td>Vermilion</td>
+              <td>Scarlet</td>
+            </tr>
+            <tr>
+              <td>Red</td>
+              <td>Magenta</td>
+              <td>Crimson</td>
+            </tr>
+            <tr>
+              <td>Blue</td>
+              <td>Violet</td>
+              <td>Indigo</td>
+            </tr>
+          </table>
+        </section>
+      </section>
+      <hr />
+      <section>
+        <header>
+          <h2 id="ch2">Chapter 2: Color Models</h2>
+          <p>
+            There are different models that define the color space through
+            different means. Stuff has to do with pigments and color mixing,
+            lightning, maths, adding light together, substracting light and
+            complicated stuff like that but I'll avoid going deeper into this
+            because it's rather complicated and not really relevant for what I'm
+            trying to explain here.<br />
+          </p>
+          <p>The most common color models:</p>
+          <ul>
+            <li>RYB - Red, Yellow, Blue</li>
+            <li>RGB - Red, Green, Blue</li>
+            <li>CYM(K) - Cyan, Yellow, Magenta (Key/Black)</li>
+            <li>HSL - Hue, Saturation, Lightning</li>
+            <li>HSV - Hue, Saturation, Value</li>
+          </ul>
+        </header>
+        <hr />
+        <section>
+          <h3 id="ch21">Chapter 2.1: RYB Color Model</h3>
+          <p>
+            This is the color model that I used as an example above. It is the
+            most well known and one of the oldest color models usually used for
+            painting and art. Most people probably learned this in school. The
+            biggest different to modern color models like RGB and CYMK is that
+            it uses yellow as a primary color instead of green. I wont go
+            furhter into this color model as it pretty much obsolete nowadays.
+          </p>
+          <table>
+            <tr>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Tertiary</th>
+            </tr>
+            <tr>
+              <td><div class="ryb color-wheel three"></div></td>
+              <td><div class="ryb color-wheel six"></div></td>
+              <td><div class="ryb color-wheel twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch22">Chapter 2.2: RGB Color Model</h3>
+          <p>
+            The main color model I'll use as an example from now on. Most web
+            development uses this color model and its pretty much superseding
+            the RYB color model. It's an additive color model, meaning you can
+            add the primary colors together to get new colors. Mixing red, green
+            and blue light you'll end up with a white light for example.
+          </p>
+          <table>
+            <tr>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Tertiary</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel three"></div></td>
+              <td><div class="rgb color-wheel six"></div></td>
+              <td><div class="rgb color-wheel twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch23">Chapter 2.3: CYMK Color Model</h3>
+          <p>
+            There are actually two very similar color models: CYM and CYMK where
+            the latter one uses black in combination with cyan, yellow and
+            magenta to form all kinds of colors through substraction.<br />
+            Mainly used in printing. Also based on the RGB color model.
+          </p>
+          <table>
+            <tr>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Tertiary</th>
+            </tr>
+            <tr>
+              <td><div class="cymk color-wheel three"></div></td>
+              <td><div class="cymk color-wheel six"></div></td>
+              <td><div class="cymk color-wheel twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch24">Chapter 2.4: HSL & HSV Color Models</h3>
+          <p>
+            I'll add these two color models together because they use pretty
+            much the same approach. These are cylindrical color models, meaning
+            the color is spread around in a circle with each degree representing
+            a different color. Red being 0° and 360°, green being 120° and blue
+            being 240°. Thats what is meant with Hue. I'll mainly talk about the
+            HSL color model because its used a lot more then the HSV one. The s
+            standing for saturation actually means the amount of gray in the
+            color and the Lightning stands for the amound of white or black.
+          </p>
+        </section>
+      </section>
+      <hr />
+      <section>
+        <header>
+          <h2 id="ch3">Chapter 3: Color Formats</h2>
+          <p>
+            Now we're getting to the fun part. I'll explain the typically used
+            color formats in web development and how to use and understand them.
+          </p>
+          <p>These are as followed:</p>
+          <ul>
+            <li>RGB (and RGBA)</li>
+            <li>HEX</li>
+            <li>HSL</li>
+          </ul>
+        </header>
+        <hr />
+        <section>
+          <h3 id="ch31">Chapter 3.1: RGB Color Format</h3>
+          <p>
+            The RGB color format is literally just the RGB color model in
+            numbers. Its usally written like this in CSS:
+            <code>rgb(255, 255, 255)</code> or
+            <code>rgba(255, 255, 255, 1)</code> if you add the alpha channel.
+            The first number indicating red, second yellow, third blue. The
+            numbers range from 0 to 255. The highest being fully saturated. If
+            all the primary colors are at 255 the color will be white like
+            shortly explained with the lights above. All three at 0 being black.
+            And the alpha channel aka the fourth number being the opacity of the
+            color, 0 being transparent and 1 being opaque. There are a total of
+            16 million possible combinations.
+          </p>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch32">Chapter 3.2: HEX Color Format</h3>
+          <p>
+            The HEX color format is just another way to use the RGB color model.
+            Your able to achieve the exact same number of colors with either the
+            HEX or RGB color format.<br />
+            HEX works as follows:<br />
+            It's typicall written like this <code>#000000</code>, a hashtag and
+            six numbers. The first two numbers indicating red, the second two
+            yellow and the third two blue. They span from 0 to 9 and after that
+            from a to f for a total of 16 different characters. That would look
+            like this written down in order: <code>0123456789abcdef</code> with
+            f being the highest. Each color has two characters for a total of 16
+            times 16 combinations. That are exactly 256 just like with the RGB
+            format (counting 0). The exact half of ff would be 7f. (7 being the
+            8th number counting from 0, 16 divided by 2 is 8 so 8 times 16
+            equals 128 which is the exact half of 256)
+          </p>
+          <p>Here are some examples how it works:</p>
+          <table>
+            <tr>
+              <th colspan="2">Color</th>
+              <th>HEX</th>
+            </tr>
+            <tr>
+              <th>Color</th>
+              <th>Name</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td style="background-color: #000"></td>
+              <td>Black</td>
+              <td>#000000</td>
+            </tr>
+            <tr>
+              <td style="background-color: #f00"></td>
+              <td>Red</td>
+              <td>#ff0000</td>
+            </tr>
+            <tr>
+              <td style="background-color: #0ff"></td>
+              <td>Cyan</td>
+              <td>#00ffff</td>
+            </tr>
+          </table>
+          <p>
+            You're also able to shorten HEX codes if both characters of a color
+            are the same.
+          </p>
+          <table>
+            <tr>
+              <th colspan="2">Color</th>
+              <th colspan="2">HEX</th>
+            </tr>
+            <tr>
+              <th>Color</th>
+              <th>Name</th>
+              <th>Full</th>
+              <th>Short</th>
+            </tr>
+            <tr>
+              <td style="background-color: #fff"></td>
+              <td>White</td>
+              <td>#ffffff</td>
+              <td>#fff</td>
+            </tr>
+            <tr>
+              <td style="background-color: #0f0"></td>
+              <td>Green</td>
+              <td>#00ff00</td>
+              <td>#0f0</td>
+            </tr>
+            <tr>
+              <td style="background-color: #96c"></td>
+              <td>Amethyst</td>
+              <td>#9966cc</td>
+              <td>#96c</td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch33">Chapter 3.3: HSL Color Format</h3>
+          <p>
+            This color format brings a few new terms into the mix.<br />
+            Color Tone, Tint and Shade.<br />
+            The format is written like this:
+            <code>hsl( 120, 100%, 50%)</code> with the example being the color
+            green.<br />
+            The first value controls the Hue, like explained above its a
+            circluar approach with every degree being another color. The second
+            number controls the tone of a color, in other words the amount of
+            gray. 100% being a fully saturated color and no gray in it. The
+            third number controls the lightning, 50% being neutral. Everything
+            above 50% adds white to our color to get different tints and
+            everything below 50% adds black and we end up with different shades.
+          </p>
+          <table>
+            <tr>
+              <th>Hue</th>
+              <th>Saturation</th>
+              <th>Lightness</th>
+            </tr>
+            <tr>
+              <td><div class="hsl smooth-wheel hue"></div></td>
+              <td><div class="hsl smooth-wheel saturation"></div></td>
+              <td><div class="hsl smooth-wheel lightness"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch34">Chapter 3.4: Color Examples</h3>
+          <p>
+            Here I'll show you all primary, secondary and tertiary colors
+            together with their differen color formats.<br />
+          </p>
+          <table>
+            <tr>
+              <th colspan="3">Color</th>
+              <th colspan="2">HEX</th>
+              <th colspan="3">RGB</th>
+              <th colspan="3">HSL</th>
+            </tr>
+            <tr>
+              <th>Color</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Full</th>
+              <th>Short</th>
+              <th>Red</th>
+              <th>Green</th>
+              <th>Blue</th>
+              <th>Hue</th>
+              <th>Saturation</th>
+              <th>Lightning</th>
+            </tr>
+            <tr>
+              <td style="background-color: #f00"></td>
+              <td>Red</td>
+              <td>Primary</td>
+              <td>#ff0000</td>
+              <td>#f00</td>
+              <td>255</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #ff7f00"></td>
+              <td>Orange</td>
+              <td>Tertiary</td>
+              <td>#ff7f00</td>
+              <td></td>
+              <td>255</td>
+              <td>125</td>
+              <td>0</td>
+              <td>30°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #ff0"></td>
+              <td>Yellow</td>
+              <td>Secondary</td>
+              <td>#ffff00</td>
+              <td>#ff0</td>
+              <td>255</td>
+              <td>255</td>
+              <td>0</td>
+              <td>60°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #7fff00"></td>
+              <td>Chartreuse</td>
+              <td>Tertiary</td>
+              <td>#7fff00</td>
+              <td></td>
+              <td>125</td>
+              <td>255</td>
+              <td>0</td>
+              <td>90°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #0f0"></td>
+              <td>Green</td>
+              <td>Primary</td>
+              <td>#00ff00</td>
+              <td>#0f0</td>
+              <td>0</td>
+              <td>255</td>
+              <td>0</td>
+              <td>120°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #00ff7f"></td>
+              <td>Spring Green</td>
+              <td>Tertiary</td>
+              <td>#00ff7f</td>
+              <td></td>
+              <td>0</td>
+              <td>255</td>
+              <td>125</td>
+              <td>150°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #0ff"></td>
+              <td>Cyan</td>
+              <td>Secondary</td>
+              <td>#00ffff</td>
+              <td>#0ff</td>
+              <td>0</td>
+              <td>255</td>
+              <td>255</td>
+              <td>180°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #007fff"></td>
+              <td>Azure</td>
+              <td>Tertiary</td>
+              <td>#007fff</td>
+              <td></td>
+              <td>0</td>
+              <td>125</td>
+              <td>255</td>
+              <td>210°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #00f"></td>
+              <td>Blue</td>
+              <td>Primary</td>
+              <td>#0000ff</td>
+              <td>#00f</td>
+              <td>0</td>
+              <td>0</td>
+              <td>255</td>
+              <td>240°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #7f00ff"></td>
+              <td>Violet</td>
+              <td>Tertiary</td>
+              <td>#7f00ff</td>
+              <td></td>
+              <td>125</td>
+              <td>0</td>
+              <td>255</td>
+              <td>270°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #ff00ff"></td>
+              <td>Magenta</td>
+              <td>Secondary</td>
+              <td>#ff00ff</td>
+              <td>#f0f</td>
+              <td>255</td>
+              <td>0</td>
+              <td>255</td>
+              <td>300°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #ff007f"></td>
+              <td>Rose</td>
+              <td>Tertiary</td>
+              <td>#ff007f</td>
+              <td></td>
+              <td>255</td>
+              <td>0</td>
+              <td>125</td>
+              <td>330°</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #7f7f7f"></td>
+              <td>Gray</td>
+              <td>Tone</td>
+              <td>#7f7f7f</td>
+              <td></td>
+              <td>125</td>
+              <td>125</td>
+              <td>125</td>
+              <td>*</td>
+              <td>0%</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #fff"></td>
+              <td>White</td>
+              <td>Tint</td>
+              <td>#ffffff</td>
+              <td>#fff</td>
+              <td>255</td>
+              <td>255</td>
+              <td>255</td>
+              <td>*</td>
+              <td>*</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td style="background-color: #000"></td>
+              <td>Black</td>
+              <td>Shade</td>
+              <td>#000000</td>
+              <td>#000</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>*</td>
+              <td>*</td>
+              <td>0%</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>RGB</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch35">Chapter 3.5: Color Comparsion</h3>
+          <p>
+            I'll compare the twelve colors from RGB to their RYB equivalents to
+            show that they look different. Also if you wanna express RYB color
+            through the RGB color formats like HEX they will have specific codes
+            aswell but its way harder to play around with them without external
+            tools.
+          </p>
+          <table>
+            <tr>
+              <th colspan="4">RGB Color Model</th>
+              <th colspan="4">RYB Color Model</th>
+            </tr>
+            <tr>
+              <th>Hex</th>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Color</th>
+              <th>Color</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Hex</th>
+            </tr>
+            <tr>
+              <td>#ff0000</td>
+              <td>Primary</td>
+              <td>Red</td>
+              <td style="background-color: #ff0000"></td>
+              <td style="background-color: #fe2712"></td>
+              <td>Red</td>
+              <td>Primary</td>
+              <td>#fe2712</td>
+            </tr>
+            <tr>
+              <td>#ff4000</td>
+              <td>Quaternary</td>
+              <td>Vermilion</td>
+              <td style="background-color: #ff4000"></td>
+              <td style="background-color: #fd5308"></td>
+              <td>Vermilion</td>
+              <td>Tertiary</td>
+              <td>#fd5308</td>
+            </tr>
+            <tr>
+              <td>#ff7f00</td>
+              <td>Tertiary</td>
+              <td>Orange</td>
+              <td style="background-color: #ff7f00"></td>
+              <td style="background-color: #fb9902"></td>
+              <td>Orange</td>
+              <td>Secondary</td>
+              <td>#fb9902</td>
+            </tr>
+            <tr>
+              <td>#ffff00</td>
+              <td>Secondary</td>
+              <td>Yellow</td>
+              <td style="background-color: #ffff00"></td>
+              <td style="background-color: #fefe33"></td>
+              <td>Yellow</td>
+              <td>Primary</td>
+              <td>#fefe33</td>
+            </tr>
+            <tr>
+              <td>#00ff7f</td>
+              <td>Tertiary</td>
+              <td>Chartreuse</td>
+              <td style="background-color: #00ff7f"></td>
+              <td style="background-color: #d0ea2b"></td>
+              <td>Chartreuse</td>
+              <td>Tertiary</td>
+              <td>#d0ea2b</td>
+            </tr>
+            <tr>
+              <td>#00ff00</td>
+              <td>Primary</td>
+              <td>Green</td>
+              <td style="background-color: #00ff00"></td>
+              <td style="background-color: #66b032"></td>
+              <td>Green</td>
+              <td>Secondary</td>
+              <td>#66b032</td>
+            </tr>
+            <tr>
+              <td>#0000ff</td>
+              <td>Primary</td>
+              <td>Blue</td>
+              <td style="background-color: #0000ff"></td>
+              <td style="background-color: #0247fe"></td>
+              <td>Blue</td>
+              <td>Primary</td>
+              <td>#0247fe</td>
+            </tr>
+            <tr>
+              <td>#7f00ff</td>
+              <td>Tertiary</td>
+              <td>Violet</td>
+              <td style="background-color: #7f00ff"></td>
+              <td style="background-color: #3d01a4"></td>
+              <td>Violet</td>
+              <td>Tertiary</td>
+              <td>#3d01a4</td>
+            </tr>
+            <tr>
+              <td>#ff00ff</td>
+              <td>Secondary</td>
+              <td>Magenta</td>
+              <td style="background-color: #ff00ff"></td>
+              <td style="background-color: #a7194b"></td>
+              <td>Magenta</td>
+              <td>Tertiary</td>
+              <td>#a7194b</td>
+            </tr>
+            <tr>
+              <td>#bf00ff</td>
+              <td>Quaternary</td>
+              <td>Purple</td>
+              <td style="background-color: #bf00ff"></td>
+              <td style="background-color: #8601af"></td>
+              <td>Purple</td>
+              <td>Tertiary</td>
+              <td>#8601af</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>RYB</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="ryb color-wheel twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+      </section>
+      <hr />
+      <section>
+        <header>
+          <h2 id="ch" 4>Chapter 4: Color Schemes</h2>
+          <p>
+            In this chapter we'll apply everything we learned to create color
+            schemes. Color schemes are a set of colors that work good together.
+            There are different ways to achieve this, through neighbouring
+            colors or through complementary colors. Complementary meaning two
+            colors that are opposite to each other on a color wheel thus
+            creating a good contrast that helps highlighting content.<br />
+            I'll explain the most common color schemes.<br />
+            Also keep in mind that for the sake of simplicty I will only use the
+            twelve most common colors and thus the example color schemes won't
+            look very pleasing.
+          </p>
+        </header>
+        <hr />
+        <section>
+          <h3 id="ch41">Chapter 4.1: Monochromatic Color Scheme</h3>
+          <p>
+            A monochromatic color schemes uses a single color/hue. A single
+            color incorporates every shade, tint and tone of it.
+          </p>
+          <p>Example (Azure):</p>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>Scheme</th>
+              <th>Variants</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="rgb color-wheel mono"></div></td>
+              <td><div class="rgb color-wheel mono-twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch42">Chapter 4.2: Analogous Color Scheme</h3>
+          <p>
+            Analogous schemes are created by picking a color and adding its two
+            neighbouring colors.
+          </p>
+          <p>
+            So if we pick the color blue its two neighbours would be violet and
+            azure in the case of the twelve colored color-wheel. Of course you
+            could use a much bigger color-wheel with a lot more destinct colors
+            to find a theme aswell, but for the sake of simplicty we keep the
+            twelve colored one.
+          </p>
+          <p>Example (Magenta, Violet, Rose):</p>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>Scheme</th>
+              <th>Variants</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="rgb color-wheel analogous"></div></td>
+              <td><div class="rgb color-wheel analogous-twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch43">Chapter 4.3: Complementary Color Scheme</h3>
+          <p>
+            This color scheme is simply achieved by picking a color and its
+            complementary color.<br />(The color opposite on the color wheel.)
+          </p>
+          <p>Example (Orange, Azure):</p>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>Scheme</th>
+              <th>Variants</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="rgb color-wheel complementary"></div></td>
+              <td>
+                <div class="rgb color-wheel complementary-twelve"></div>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch44">Chapter 4.4: Split-Complementary Color Scheme</h3>
+          <p>
+            If the contrast between the colors in the complementary schemes is
+            to abrupt for you, this color scheme may be the one. It uses a color
+            of your choice and the two neighbours of its complementary color to
+            lessen the overall contrast between them.
+          </p>
+          <p>Example (Orange, Blue, Cyan):</p>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>Scheme</th>
+              <th>Variants</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="rgb color-wheel split-complementary"></div></td>
+              <td>
+                <div class="rgb color-wheel split-complementary-twelve"></div>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch45">Chapter 4.5: Triadic Color Scheme</h3>
+          <p>
+            To achieve this color scheme we choose three colors that are equally
+            apart, so that it'll build an equilateral triangle.<br />
+            For example all three primary colors are equally apart.
+          </p>
+          <p>Example (Red, Green, Blue):</p>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>Scheme</th>
+              <th>Variants</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="rgb color-wheel triadic"></div></td>
+              <td><div class="rgb color-wheel triadic-twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch46">Chapter 4.6: Tetradic Color Scheme</h3>
+          <p>
+            This color scheme is also called double complementary color scheme
+            because you can built it with two colors and their respective
+            complementary colors. In this case it doesn't matter if they're
+            spaced equally. (But if they do its sometimes called square color
+            scheme.)
+          </p>
+          <p>Example (Yellow, Green, Blue, Magenta):</p>
+          <table>
+            <tr>
+              <th>RGB</th>
+              <th>Scheme</th>
+              <th>Variants</th>
+            </tr>
+            <tr>
+              <td><div class="rgb color-wheel twelve"></div></td>
+              <td><div class="rgb color-wheel tetradic"></div></td>
+              <td><div class="rgb color-wheel tetradic-twelve"></div></td>
+            </tr>
+          </table>
+        </section>
+        <hr />
+        <section>
+          <h3 id="ch47">Chapter 4.7: Other Color Schemes</h3>
+          <p>
+            There also a lot of other color schemes but thoose are the most
+            commonly used in web-design as well as art and painting.<br />
+            One other example would be bichromatic color scheme, which is the
+            same as monochromatic but with two adjacent colors or the diadic
+            color scheme which uses two colors aswell but with one color between
+            them.
+          </p>
+          <p>
+            Here's an image that makes everything a bit easier to understand
+            eventually:
+          </p>
+          <img src="src/colors.jpg" alt="image showing color schemes" />
+        </section>
+      </section>
+      <hr />
+      <section>
+        <header>
+          <h2>Last Words</h2>
+          <p>
+            Thanks for reading everything! If you find issues in this document
+            feel free to message me.
+          </p>
+        </header>
+      </section>
+    </main>
+  </body>
+</html>
