@@ -1,5 +1,24 @@
 # AnzuFTNW.github.io
-[CSS](https://anzuftnw.github.io)<br>
-[GTN](https://anzuftnw.github.io/gtn/)<br>
-[CT](https://anzuftnw.github.io/colors/)<br>
-[TL](https://anzuftnw.github.io/tl/)
+
+[AniList Custom CSS](https://anzuftnw.github.io)
+
+- All the pieces of Custom CSS i wrote for automail
+
+---
+
+[GuessTheNumber](https://anzuftnw.github.io/live-demo/
+guess-the-number)
+
+- Text-based minigame
+
+---
+
+[ColorTheory](https://anzuftnw.github.io/live-demo/color-theory)<br>
+
+- Document explaining color theory
+
+---
+
+[TierList](https://anzuftnw.github.io/live-demo/anilist-tierlist-maker)
+
+- Tierlist maker with integraded api from AniList
