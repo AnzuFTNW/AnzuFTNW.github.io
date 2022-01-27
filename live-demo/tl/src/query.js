@@ -56,6 +56,62 @@ function selectQuery() {
     }
     `;
     qSearch.setAttribute("placeholder", "One Punch Man");
+  } else if (qSelect.value === "staff") {
+    query = `
+    query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+      Page (page: $page, perPage: $perPage) {
+        pageInfo {
+          total
+          currentPage
+          lastPage
+          hasNextPage
+          perPage
+        }
+        staff (id: $id, search: $search) {
+          id
+          name {
+            full
+          }
+          image {
+            medium
+          }
+        }
+      }
+    }
+    `;
+    qSearch.setAttribute("placeholder", "Aoi Yuuki");
+  } else if (qSelect.value === "cast") {
+    query = `
+    query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+      Page (page: $page, perPage: $perPage) {
+        pageInfo {
+          total
+          currentPage
+          lastPage
+          hasNextPage
+          perPage
+        }
+        media (id: $id, search: $search) {
+          id
+          title {
+            romaji
+          }
+          characters {
+            nodes {
+              id
+              name {
+                full
+              }
+              image {
+                medium
+              }
+            }
+          }
+        }
+      }
+    }
+    `;
+    qSearch.setAttribute("placeholder", "Bakemonogatari");
   } else {
     qSearch.setAttribute("placeholder", "...");
   }
@@ -85,6 +141,7 @@ function requestQuery() {
   fetch(url, options).then(handleResponse).then(handleData).catch(handleError);
 
   const cardPool = document.getElementById("card-pool");
+  const menuIcon = document.querySelector(".pool-icon");
   cardPool.classList.add("out");
 }
 
@@ -110,7 +167,7 @@ function handleData(data) {
     qOutput = data.data.Page.characters;
 
     if (qOutput.length === 0) {
-      console.log("Nothing");
+      console.log("No results");
     } else {
       qOutput.forEach(function (character) {
         const cardDiv = document.createElement("DIV");
@@ -134,14 +191,14 @@ function handleData(data) {
         refreshEventListeners();
       });
       if (qOutput.length === 50) {
-        console.log("Too many");
+        console.log("More than 50 results");
       }
     }
   } else if (qSelect.value === "animanga") {
     qOutput = data.data.Page.media;
 
     if (qOutput.length === 0) {
-      console.log("Nothing");
+      console.log("No results");
     } else {
       qOutput.forEach(function (animanga) {
         const cardDiv = document.createElement("DIV");
@@ -165,11 +222,79 @@ function handleData(data) {
         refreshEventListeners();
       });
       if (qOutput.length === 50) {
-        console.log("Too many");
+        console.log("More than 50 results");
+      }
+    }
+  } else if (qSelect.value === "staff") {
+    qOutput = data.data.Page.staff;
+
+    if (qOutput.length === 0) {
+      console.log("No results");
+    } else {
+      qOutput.forEach(function (staff) {
+        const cardDiv = document.createElement("DIV");
+        const cardName = document.createElement("P");
+        const cardImg = document.createElement("IMG");
+
+        cardDiv.setAttribute("id", `c${cardIdCount}`);
+        cardDiv.classList.add("card");
+        cardDiv.setAttribute("draggable", true);
+        cardName.classList.add("card-name");
+        cardName.innerHTML = `${staff.name.full}`;
+        cardImg.classList.add("card-image");
+        cardImg.setAttribute("draggable", false);
+        cardImg.setAttribute("src", `${staff.image.medium}`);
+
+        cardDiv.appendChild(cardName);
+        cardDiv.appendChild(cardImg);
+        qResult.appendChild(cardDiv);
+
+        cardIdCount++;
+        refreshEventListeners();
+      });
+      if (qOutput.length === 50) {
+        console.log("More than 50 results");
+      }
+    }
+  } else if (qSelect.value === "cast") {
+    qOutput = data.data.Page.media[0].characters.nodes;
+    qTest = data.data.Page.media;
+
+    if (qOutput.length === 0) {
+      console.log("No results");
+    } else {
+      qOutput.forEach(function (character) {
+        const cardDiv = document.createElement("DIV");
+        const cardName = document.createElement("P");
+        const cardImg = document.createElement("IMG");
+
+        cardDiv.setAttribute("id", `c${cardIdCount}`);
+        cardDiv.classList.add("card");
+        cardDiv.setAttribute("draggable", true);
+        cardName.classList.add("card-name");
+        cardName.innerHTML = `${character.name.full}`;
+        cardImg.classList.add("card-image");
+        cardImg.setAttribute("draggable", false);
+        cardImg.setAttribute("src", `${character.image.medium}`);
+
+        cardDiv.appendChild(cardName);
+        cardDiv.appendChild(cardImg);
+        qResult.appendChild(cardDiv);
+
+        cardIdCount++;
+        refreshEventListeners();
+
+        // check dev console for all search results
+        qTest.forEach((x) => {
+          console.log(x.title.romaji);
+        });
+      });
+      if (qOutput.length === 50) {
+        console.log("More than 50 results");
       }
     }
   } else {
-    console.log("uhm..");
+    console.log("No query selected?");
   }
 }
 
@@ -188,7 +313,6 @@ function initializeQuery() {
   });
 
   qSelect.addEventListener("change", function () {
-    console.log("You selected: ", this.value);
     selectQuery();
   });
 }

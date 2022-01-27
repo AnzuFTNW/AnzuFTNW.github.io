@@ -37,13 +37,27 @@ body {
 #nav > * {
   margin: 0 8px;
 }
+.pool-icon {
+  color: #ddd;
+  cursor: pointer;
+  font-size: 3rem;
+  opacity: 0.5;
+  position: absolute;
+  right: 20px;
+  transition: opacity 200ms ease-in;
+  top: 0;
+  user-select: none;
+}
+.pool-icon:hover {
+  opacity: 1;
+}
 
 /* tierlist */
 #tierlist {
   background: var(--color-foreground);
   border: 4px solid var(--color-foreground);
   border-radius: 8px;
-  margin: 20px calc(1vw + 20px - 8px) 20px 20px;
+  margin: 20px;
 }
 .row {
   background: var(--color-background);
@@ -207,12 +221,12 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  transform: translateX(96%);
-  transition: transform 500ms 750ms ease-out;
+  transform: translateX(100%);
+  transition: transform 500ms ease-out;
   width: 25%;
   z-index: 700;
 }
-#card-pool:hover,
+
 #card-pool.out {
   transform: translateY(0);
   transition-delay: 0s;
@@ -250,6 +264,7 @@ body {
   margin: 4px;
   position: relative;
   width: 100px;
+  max-width: 100px;
 }
 .card-name {
   align-self: flex-end;

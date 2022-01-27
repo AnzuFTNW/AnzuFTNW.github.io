@@ -1,4 +1,5 @@
 const cardPool = document.getElementById("card-pool");
+const poolIcons = document.querySelectorAll(".pool-icon");
 let items = document.querySelectorAll(".card");
 let boxes = document.querySelectorAll(".card-box");
 
@@ -12,6 +13,7 @@ function handleDragStart(ev) {
 
 function handleDragEnd(ev) {
   this.style.opacity = "1";
+
   cardPool.classList.remove("out");
 
   boxes.forEach(function (box) {
@@ -50,7 +52,6 @@ function handleDrop(ev) {
     ev.target.appendChild(document.getElementById(data));
 
     const trash = document.querySelector(".trash");
-    console.log("eh?");
     trash.removeChild(trash.lastChild);
   } else if (ev.target.classList.contains("card-box")) {
     let data = ev.dataTransfer.getData("text/plain");
@@ -76,6 +77,17 @@ function refreshEventListeners() {
   });
 }
 
-function initializeDragAndDrop() {
-  cardPool.addEventListener("dragenter", handleDrawer);
+function handleMenu() {
+  if (cardPool.classList.contains("out")) {
+    cardPool.classList.remove("out");
+  } else {
+    cardPool.classList.add("out");
+  }
+}
+
+function initializePoolIcon() {
+  poolIcons.forEach((poolIcon) => {
+    poolIcon.addEventListener("dragenter", handleDrawer);
+    poolIcon.addEventListener("click", handleMenu);
+  });
 }

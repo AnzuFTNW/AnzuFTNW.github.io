@@ -1,5 +1,5 @@
-// initialize drag and drop
-initializeDragAndDrop();
+// initialize pool icon
+initializePoolIcon();
 
 // initialize and select query
 initializeQuery();

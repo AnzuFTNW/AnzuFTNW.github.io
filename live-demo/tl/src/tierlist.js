@@ -39,8 +39,6 @@ function openRowMenu(row) {
   const path = row.composedPath();
   const currentRow = path[1];
 
-  console.log(currentRow);
-
   const currentMenu = currentRow.querySelector(".menu");
   const currentMenuIcon = currentRow.querySelector(".icon");
 

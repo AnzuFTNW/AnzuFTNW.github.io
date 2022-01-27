@@ -23,11 +23,15 @@
     <nav id="nav">
       <select id="qSelect">
         <option value="character">Character</option>
+        <option value="cast">Cast</option>
+        <!-- ty baros -->
         <option value="animanga">Animanga</option>
+        <option value="staff">Staff</option>
       </select>
       <input type="search" id="qSearch" placeholder="Aki Adagaki" />
       <input type="submit" id="qSubmit" value="Search" />
       <button onclick="doScreenShot()">Screenshot</button>
+      <div class="pool-icon"></div>
     </nav>
     <main id="content">
       <!-- tierlist -->
@@ -45,6 +49,7 @@
       <!-- card pool -->
       <aside id="card-pool">
         <h1 id="title">Card Pool</h1>
+        <div class="pool-icon"></div>
         <div id="qResult" class="card-box"></div>
         <div class="card-box trash"></div>
       </aside>
