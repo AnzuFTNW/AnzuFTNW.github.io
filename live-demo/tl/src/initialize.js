@@ -10,3 +10,7 @@ initializeTierlist();
 
 // initialize event listeners
 refreshEventListeners();
+
+// load save files
+initializeImport();
+getFiles();

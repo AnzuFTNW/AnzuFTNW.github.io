@@ -15,12 +15,28 @@
     <!-- screenshot -->
     <script src="src/html2canvas.js" defer></script>
     <script src="src/screenshot.js" defer></script>
+    <!-- save -->
+    <script src="src/save.js" defer></script>
     <!-- initialize -->
     <script src="src/initialize.js" defer></script>
   </head>
   <body>
     <!-- navigation / query -->
     <nav id="nav">
+      <div class="save-icon"></div>
+      <div id="save">
+        <input id="saveName" type="text" placeholder="File Name" />
+        <button id="saveButton" onclick="saveFile()">Save</button>
+        <select id="fileSelection" disabled></select>
+        <button id="loadButton" onclick="loadFile()" disabled>Load</button>
+        <button id="deleteButton" onclick="deleteFile()" disabled>
+          Delete
+        </button>
+        <button id="exportButton" onclick="exportFile()" disabled>
+          Export
+        </button>
+        <input id="fileImport" type="file" accept=".tl" />
+      </div>
       <select id="qSelect">
         <option value="character">Character</option>
         <option value="cast">Cast</option>
@@ -34,8 +50,6 @@
       <div class="pool-icon"></div>
     </nav>
     <main id="content">
-      <!-- tierlist -->
-      <section id="tierlist"></section>
       <!-- screenshot -->
       <section id="output" style="display: none">
         <nav id="screenshotInfo">
@@ -53,6 +67,8 @@
         <div id="qResult" class="card-box"></div>
         <div class="card-box trash"></div>
       </aside>
+      <!-- tierlist -->
+      <section id="tierlist"></section>
     </main>
   </body>
 </html>
