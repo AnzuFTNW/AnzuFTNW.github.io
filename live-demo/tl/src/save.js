@@ -57,11 +57,19 @@ function getFiles() {
   const files = localStorage;
 
   if (files.length !== 0) {
-    Object.keys(files).forEach((name) => {
-      createFile(name);
+    Object.keys(files).forEach((file) => {
+      if (
+        file !== "bestGame" &&
+        file !== "highestWinStreak" &&
+        file !== "totalGames" &&
+        file !== "totalScore" &&
+        file !== "winRate" &&
+        file !== "winStreak"
+      ) {
+        createFile(file);
+        toggleButtons(false);
+      }
     });
-
-    toggleButtons(false);
   }
 }
 
@@ -96,7 +104,8 @@ function importFile(e) {
     () => {
       file = reader.result;
       localStorage.setItem(name, file);
-      getFiles();
+      createFile(name);
+      toggleButtons(false);
     },
     false
   );

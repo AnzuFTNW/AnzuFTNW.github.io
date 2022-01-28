@@ -12,6 +12,6 @@
 
 - Document explaining color theory
 
-## `V1.2` [TierList](https://anzuftnw.github.io/live-demo/tl)
+## `V1.3.1` [TierList](https://anzuftnw.github.io/live-demo/tl)
 
 - Tierlist maker with integraded api from AniList
