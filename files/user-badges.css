@@ -1,0 +1,40 @@
+/*
+  user-badges - version 2.1
+    by https://github.com/AnzuFTNW
+*/
+
+/* badges */
+.header > .name:after {
+  content: "Visitor";
+}
+.header > a[href="/user/Anzu/"].name:before {
+  content: "Mr.";
+}
+.header > a[href="/user/Anzu/"].name:after {
+  content: "Certified Nerd 📚";
+}
+
+/* settings */
+:root {
+  --badge-background: rgb(var(--color-background));
+  --badge-color: rgb(var(--color-text));
+  --badge-rounding: 3px;
+  --badge-font: Overpass;
+}
+
+/* code */
+.header > .name:after {
+  background: var(--badge-background);
+  border-radius: var(--badge-rounding);
+  color: var(--badge-color);
+  cursor: text;
+  font-family: var(--badge-font), -apple-system, BlinkMacSystemFont, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin-left: 5px;
+  padding: 4px 7px;
+  position: relative;
+  top: -2px;
+}
