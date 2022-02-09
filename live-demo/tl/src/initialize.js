@@ -2,8 +2,6 @@
 initializePoolIcon();
 
 // initialize and select query
-initializeQuery();
-selectQuery();
 
 // initialize tierlist
 initializeTierlist();

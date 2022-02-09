@@ -145,12 +145,6 @@ function requestQuery() {
   cardPool.classList.add("out");
 }
 
-function handleResponse(response) {
-  return response.json().then(function (json) {
-    return response.ok ? json : Promise.reject(json);
-  });
-}
-
 function addNewData() {}
 
 function removeOldData() {
@@ -296,6 +290,12 @@ function handleData(data) {
   } else {
     console.log("No query selected?");
   }
+}
+
+function handleResponse(response) {
+  return response.json().then(function (json) {
+    return response.ok ? json : Promise.reject(json);
+  });
 }
 
 function handleError(error) {

@@ -51,9 +51,6 @@ body {
   justify-content: center;
   padding: 20px;
 }
-#nav > * {
-  margin: 0 8px;
-}
 .pool-icon {
   color: #ddd;
   cursor: pointer;
@@ -85,6 +82,9 @@ body {
 .save-icon:hover ~ #save {
   transform: translateX(7%);
   transition-delay: 0s;
+}
+#screenshot-button {
+  margin: 0 5px;
 }
 
 /* tierlist */
@@ -299,7 +299,6 @@ body {
   margin: 4px;
   position: relative;
   width: 100px;
-  max-width: 100px;
 }
 .card-name {
   align-self: flex-end;
@@ -315,6 +314,9 @@ body {
 }
 .card-image {
   border-radius: 8px;
+  max-width: 100px;
+  object-fit: contain;
+  background-color: var(--color-background-transparent);
 }
 
 /* scrollbar */
@@ -324,4 +326,13 @@ body {
 }
 * {
   scrollbar-width: none;
+}
+
+/* v1.4 */
+#query-nav * {
+  margin: 0 5px;
+}
+
+#query-nav > select {
+  width: 85px;
 }

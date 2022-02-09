@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TierList</title>
     <link rel="stylesheet" href="src/style.css" />
+    <!-- build -->
+
     <!-- drag and drop -->
     <script src="src/dnd.js" defer></script>
     <!-- query -->
-    <script src="src/query.js" defer></script>
+    <!-- <script src="src/query.js" defer></script> -->
+    <script src="src/query-v2.js" defer></script>
+    <script src="src/build.js" defer></script>
+    <script src="src/nav.js" defer></script>
     <!-- tierlist -->
     <script src="src/tierlist.js" defer></script>
     <!-- screenshot -->
@@ -23,6 +28,7 @@
   <body>
     <!-- navigation / query -->
     <nav id="nav">
+      <!-- save -->
       <div class="save-icon"></div>
       <div id="save">
         <input id="saveName" type="text" placeholder="File Name" />
@@ -37,16 +43,13 @@
         </button>
         <input id="fileImport" type="file" accept=".tl" />
       </div>
-      <select id="qSelect">
-        <option value="character">Character</option>
-        <option value="cast">Cast</option>
-        <!-- ty baros -->
-        <option value="animanga">Animanga</option>
-        <option value="staff">Staff</option>
-      </select>
-      <input type="search" id="qSearch" placeholder="Aki Adagaki" />
-      <input type="submit" id="qSubmit" value="Search" />
-      <button onclick="doScreenShot()">Screenshot</button>
+      <!-- query -->
+      <div id="app"></div>
+      <!-- screenshot button -->
+      <button id="screenshot-button" onclick="doScreenShot()">
+        Screenshot
+      </button>
+      <!-- pool icon -->
       <div class="pool-icon"></div>
     </nav>
     <main id="content">
