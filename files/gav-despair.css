@@ -1,0 +1,179 @@
+/*
+  gav-despair.css - version 1.0
+    by https://github.com/AnzuFTNW
+    for https://anilist.co/user/Gav/
+*/
+
+@import url("https://anzuftnw.github.io/files/gav.css");
+@import url("https://anzuftnw.github.io/files/custom-profile-color.css");
+
+:root, .site-theme-dark, .site-theme-contrast {
+  --genre-color-one: #000000;
+  --genre-color-two: #FFFFFF;
+  --genre-color-thr: #000000;
+  --genre-color-fou: #FFFFFF;
+  --genre-color-fiv: #000000;
+  --genre-color-six: #FFFFFF;
+  --color-text: 255, 255, 255;
+  --color-text-light: 255, 255, 255:
+  --color-text-lightest: 255, 255, 255;
+  --color-gray-100: 255, 255, 255;
+  --color-gray-600: 255, 255, 255;
+  --color-gray-700: 255, 255, 255;
+  --color-gray-800: 255, 255, 255;
+  --color-gray-900: 255, 255, 255;
+	/* custom-profile-color-settings */ 
+	--cp-accent-color: 200, 200, 200;
+  --cp-accent-color-dim: 100, 100, 100;
+	
+	--color-background: 0,0,0,0;
+	--color-foreground: 0,0,0,0;
+	--color-foreground-grey: 0,0,0,0;
+	--color-red: 255,255,255;
+	--color-green: 255,255,255;
+	--color-background-300: 0,0,0,0;
+	--color-gray-300: 0,0,0,0;
+}
+
+.list-stats, .about > .content-wrap, .activity-entry > .wrap, .genre-overview, .activity-history, .load-more, .el-textarea, .markdown-editor, .favourites-wrap, .reply {
+    border: 1px solid #900;
+}
+
+#app {
+    background: url(https://files.catbox.moe/ywz4sv.gif) center center / 100% fixed;
+}
+
+#nav .link:hover {
+    color: rgb(var(--color-text-light))
+}
+
+.logo img {
+    content: url("https://cdn.discordapp.com/attachments/297133489252335618/970618961689448478/hayasakadespair2.png");
+    width: 50px !important;
+    height: 32px !important;
+    transition: 1s linear;
+}
+
+.banner-content h1.name {
+    filter: drop-shadow(0px 0px 6px #000000);
+}
+
+.banner .banner-content::after {
+    content: "it's just a burning memory...";
+    background: rgba(0, 0, 0, .7);
+}
+
+.overview[data-v-5c30286e] .content-wrap {
+border-radius: 15px;
+}
+
+.list-stats,
+.about > .content-wrap,
+.activity-entry > .wrap,
+.genre-overview,
+.activity-history,
+.load-more,
+.el-textarea,
+.markdown-editor,
+.favourites-wrap,
+.reply,
+#app .wrap .footer,
+.nav-wrap,
+
+#nav {
+	border: 0 solid #000000;
+  border-radius: 0px;
+  background: rgba(0,0,0,.2);
+}
+
+a:hover {
+    color: rgb(var(--color-text-lightest));
+}
+
+/* genre */
+.genre-overview > .genres > .genre:nth-child(2n) > .name {
+	color: #000;
+}
+
+.genre-overview > .genres > .genre:nth-child(1n) > .amount {
+	color: #fff !important;
+}
+
+/* bg */
+#app .about .content-wrap {
+	background: transparent;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* logo shit */
+.logo img {
+    transition: 0.25s linear;
+}
+.logo img:hover {
+    transform: scale(1.75);
+}
+
+/* death */
+#app {
+	filter: grayscale(1);
+}
+.list .title[data-v-b584a8de] {
+    color: rgb(var(--color-blue)) !important;
+}
+
+/* footer */
+.theme-selector > .theme-preview {
+    border-color: rgb(255,255,255);
+}
+
+/* spoiler */
+.markdown .markdown-spoiler:before {
+	content: "Despair..." !important;
+}
+
+.content > .summary {
+	font-size: 0;
+}
+.content > .summary::before {
+	font-size: 12px;
+	content: "Despair..."
+}
+
+.content.container::after {
+    content: "despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair despair";
+    background-image: url("https://cdn.discordapp.com/attachments/819867125878620170/970644259650801714/afkgaming_2022-02_e063c290-ee60-4c95-b732-82972cbf3298_Untitled_design__63___1__1.png");
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 330px;
+    left: 0;
+}
+.site-theme-dark .content.container::after {
+    display: none;
+}
+.theme-selector {
+    z-index: 9999999999;
+}
+
+/* this is a fucking performance killer PEPEGA */
+.content.container > .medialist,
+.content.container > .favourites,
+.content.container > .stats,
+.content.container > .user-social,
+.content.container > .user-reviews,
+.footer {
+    filter: grayscale(1);
+}
