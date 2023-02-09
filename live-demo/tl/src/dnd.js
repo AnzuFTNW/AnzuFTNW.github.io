@@ -5,7 +5,6 @@ let boxes = document.querySelectorAll(".card-box");
 
 function handleDragStart(ev) {
   this.style.opacity = "0.4";
-
   dragSrcEl = this;
   ev.dataTransfer.effectAllowed = "move";
   ev.dataTransfer.setData("text/plain", ev.target.id);
@@ -14,7 +13,10 @@ function handleDragStart(ev) {
 function handleDragEnd(ev) {
   this.style.opacity = "1";
 
-  cardPool.classList.remove("out");
+  if (cardPool.classList.contains("half")) {
+    cardPool.classList.remove("half");
+    cardPool.classList.add("out");
+  } 
 
   boxes.forEach(function (box) {
     box.classList.remove("over");
@@ -53,12 +55,24 @@ function handleDrop(ev) {
 
     const trash = document.querySelector(".trash");
     trash.removeChild(trash.lastChild);
-  } else if (ev.target.classList.contains("card-box")) {
+  } else if (ev.currentTarget.classList.contains("card-box")) {
     let data = ev.dataTransfer.getData("text/plain");
-    ev.target.appendChild(document.getElementById(data));
-  }
+    ev.currentTarget.appendChild(document.getElementById(data));
+  } 
 
   return false;
+}
+function handleDragOverPool(ev) {
+  if (ev.currentTarget.classList.contains("half")) {
+    cardPool.classList.remove("half");
+    cardPool.classList.add("out");
+  } 
+}
+function handleDragLeavePool(ev) {
+  if (ev.currentTarget.classList.contains("out")) {
+    cardPool.classList.remove("out");
+  cardPool.classList.add("half");
+  } 
 }
 
 function refreshEventListeners() {
@@ -75,6 +89,9 @@ function refreshEventListeners() {
     box.addEventListener("dragleave", handleDragLeave);
     box.addEventListener("drop", handleDrop);
   });
+
+  cardPool.addEventListener("dragleave", handleDragLeavePool);
+  cardPool.addEventListener("dragover", handleDragOverPool);
 }
 
 function handleMenu() {

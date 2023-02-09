@@ -39,6 +39,7 @@ function loadFile() {
   const name = fileSelection.value;
   const file = JSON.parse(localStorage.getItem(name));
   tierList.outerHTML = file;
+  refreshMenuIcons();
   refreshEventListeners();
 }
 
