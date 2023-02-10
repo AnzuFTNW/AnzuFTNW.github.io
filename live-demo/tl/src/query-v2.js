@@ -1,18 +1,3 @@
-/*
-
-tierlist-type
-search-mode
-
-Char      | Ani       | Staff    | User
-__________|___________|__________|____
-Name      | Name      | Name     | Name
-Origin    |           |          |
-          | Studio    |          |
-User Fav  | User Fav  | User Fav |
-          | User List |          |
-Season    | Season    |          |
-
-*/
 let query,
   queryPage = 1,
   queryDataType,
@@ -75,12 +60,7 @@ function searchQuery(type, mode) {
           `;
           queryDataType = "character.origin";
           break;
-        case "Season":
-          querySearch.setAttribute("placeholder", "Not working yet...");
-          // idk????
-          queryDataType = "character.season";
-          break;
-        case "User":
+        case "Favorites":
           querySearch.setAttribute("placeholder", "Baros");
           query = `
             query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -108,11 +88,11 @@ function searchQuery(type, mode) {
               }
             }
           `;
-          queryDataType = "character.users";
+          queryDataType = "character.favorites";
           break;
       }
       break;
-    case "Animanga":
+    case "Anime":
       switch (mode) {
         case "Name":
           querySearch.setAttribute("placeholder", "One Punch Man");
@@ -123,7 +103,7 @@ function searchQuery(type, mode) {
                   hasNextPage
                   perPage
                 }
-                media (id: $id, search: $search) {
+                media (id: $id, type: ANIME, search: $search) {
                   id
                   title {
                     romaji
@@ -135,12 +115,7 @@ function searchQuery(type, mode) {
               }
             }
           `;
-          queryDataType = "animanga.name";
-          break;
-        case "Season":
-          querySearch.setAttribute("placeholder", "Not working yet...");
-          // idk????
-          queryDataType = "animanga.season";
+          queryDataType = "anime.name";
           break;
         case "Studio":
           querySearch.setAttribute("placeholder", "Kyoto Animation");
@@ -167,9 +142,9 @@ function searchQuery(type, mode) {
               }
             }
           `;
-          queryDataType = "animanga.studios";
+          queryDataType = "anime.studios";
           break;
-        case "User":
+        case "Favorites":
           querySearch.setAttribute("placeholder", "Sei");
           query = `
             query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -191,32 +166,204 @@ function searchQuery(type, mode) {
                         }
                       }
                     }
-                    manga (page: $page, perPage: $perPage) {
-                      pageInfo {
-                        hasNextPage
-                        perPage
+
+                  }
+                }
+              }
+            }
+          `;
+          queryDataType = "anime.favorites";
+          break;
+        case "List":
+          querySearch.setAttribute("placeholder", "Lynnx");
+          query = `
+            query ($search: String) {
+              Completed: MediaListCollection (userName: $search, type: ANIME, status: COMPLETED) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
                       }
-                      nodes {
-                        id
-                        title {
-                          romaji
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+              Repeating: MediaListCollection (userName: $search, type: ANIME, status: REPEATING) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
+                      }
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+              Paused: MediaListCollection (userName: $search, type: ANIME, status: PAUSED) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
+                      }
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+            }
+          `;
+          queryDataType = "anime.list";
+          break;
+      }
+      break;
+    case "Manga":
+      switch (mode) {
+        case "Name":
+          querySearch.setAttribute("placeholder", "Aku no Hana");
+          query = `
+              query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+                Page (page: $page, perPage: $perPage) {
+                  pageInfo {
+                    hasNextPage
+                    perPage
+                  }
+                  media (id: $id, type: MANGA, search: $search) {
+                    id
+                    title {
+                      romaji
+                    }
+                    coverImage {
+                      medium
+                    }
+                  }
+                }
+              }
+            `;
+          queryDataType = "manga.name";
+          break;
+        case "Favorites":
+          querySearch.setAttribute("placeholder", "Robiracer");
+          query = `
+              query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+                Page {
+                  users (id: $id, search: $search) {
+                    favourites {
+                      manga (page: $page, perPage: $perPage) {
+                        pageInfo {
+                          hasNextPage
+                          perPage
                         }
-                        coverImage {
-                          medium
+                        nodes {
+                          id
+                          title {
+                            romaji
+                          }
+                          coverImage {
+                            medium
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-            }
-          `;
-          queryDataType = "animanga.users";
+            `;
+          queryDataType = "manga.favorites";
           break;
         case "List":
-          querySearch.setAttribute("placeholder", "Lynnx");
-          // not sure
-          queryDataType = "animanga.list";
+          querySearch.setAttribute("placeholder", "Ghoulish");
+          query = `
+            query ($search: String) {
+              Completed: MediaListCollection (userName: $search, type: MANGA, status: COMPLETED) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
+                      }
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+              Current: MediaListCollection (userName: $search, type: MANGA, status: CURRENT) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
+                      }
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+              Repeating: MediaListCollection (userName: $search, type: MANGA, status: REPEATING) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
+                      }
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+              Paused: MediaListCollection (userName: $search, type: MANGA, status: PAUSED) {
+                lists {
+                  entries {
+                    media {
+                      id
+                      title {
+                        romaji
+                      }
+                      coverImage {
+                        medium
+                      }
+                    }
+                  }
+                  isCustomList
+                  isSplitCompletedList
+                }
+              }
+            }
+          `;
+          queryDataType = "manga.list";
           break;
       }
       break;
@@ -245,7 +392,7 @@ function searchQuery(type, mode) {
           `;
           queryDataType = "staff.name";
           break;
-        case "User":
+        case "Favorites":
           querySearch.setAttribute("placeholder", "K1ngOfSloth");
           query = `
             query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -272,14 +419,14 @@ function searchQuery(type, mode) {
               }
             }
           `;
-          queryDataType = "staff.users";
+          queryDataType = "staff.favorites";
           break;
       }
       break;
     case "User":
       switch (mode) {
         case "Name":
-          querySearch.setAttribute("placeholder", "Robiracer");
+          querySearch.setAttribute("placeholder", "Zerro");
           query = `
           query ($id: Int, $page: Int, $perPage: Int, $search: String) {
             Page (page: $page, perPage: $perPage) {
@@ -298,16 +445,6 @@ function searchQuery(type, mode) {
           }
         `;
           queryDataType = "user.name";
-          break;
-        case "Following":
-          querySearch.setAttribute("placeholder", "Ghoulish");
-
-          queryDataType = "user.following";
-          break;
-        case "Followers":
-          querySearch.setAttribute("placeholder", "Rainling");
-
-          queryDataType = "user.followers";
           break;
       }
       break;
@@ -345,24 +482,33 @@ function handleResponse(response) {
 
 function handleData(data) {
   const queryDataBase = data.data.Page;
-  let queryData, hasNextPage;
+  const base = data.data;
+  let queryData,
+    hasNextPage,
+    completedLists,
+    repeatingLists,
+    pausedLists,
+    currentLists;
 
   function createCard(id, name, image) {
     const cardDiv = document.createElement("DIV");
+    const cardNameWrapper = document.createElement("DIV");
     const cardName = document.createElement("P");
     const cardImg = document.createElement("IMG");
 
     cardDiv.setAttribute("id", `c${id}`);
     cardDiv.classList.add("card");
     cardDiv.setAttribute("draggable", true);
+    cardNameWrapper.classList.add("card-name-wrapper");
     cardName.classList.add("card-name");
     cardName.innerHTML = `${name}`;
     cardImg.classList.add("card-image");
     cardImg.setAttribute("draggable", false);
     cardImg.setAttribute("src", `${image}`);
 
-    cardDiv.appendChild(cardName);
+    cardDiv.appendChild(cardNameWrapper);
     cardDiv.appendChild(cardImg);
+    cardNameWrapper.appendChild(cardName);
     qResult.appendChild(cardDiv);
 
     refreshEventListeners();
@@ -404,7 +550,7 @@ function handleData(data) {
           createCard(id, name, image);
         });
         break;
-      case "character.users":
+      case "character.favorites":
         queryData = queryDataBase.users[0].favourites.characters.nodes;
         hasNextPage =
           queryDataBase.users[0].favourites.characters.pageInfo.hasNextPage;
@@ -415,7 +561,7 @@ function handleData(data) {
           createCard(id, name, image);
         });
         break;
-      case "animanga.name":
+      case "anime.name":
         queryData = queryDataBase.media;
         hasNextPage = queryDataBase.pageInfo.hasNextPage;
         queryData.forEach((media) => {
@@ -425,7 +571,7 @@ function handleData(data) {
           createCard(id, name, image);
         });
         break;
-      case "animanga.studios":
+      case "anime.studios":
         queryData = queryDataBase.studios[0].media.nodes;
         hasNextPage = queryDataBase.studios[0].media.pageInfo.hasNextPage;
         queryData.forEach((media) => {
@@ -435,37 +581,133 @@ function handleData(data) {
           createCard(id, name, image);
         });
         break;
-      case "animanga.users":
-        if (querySwitch === false) {
-          queryData = queryDataBase.users[0].favourites.anime.nodes;
-          hasNextPage =
-            queryDataBase.users[0].favourites.anime.pageInfo.hasNextPage;
-          queryData.forEach((media) => {
-            const id = media.id;
-            const name = media.title.romaji;
-            const image = media.coverImage.medium;
-            createCard(id, name, image);
+      case "anime.favorites":
+        queryData = queryDataBase.users[0].favourites.anime.nodes;
+        hasNextPage =
+          queryDataBase.users[0].favourites.anime.pageInfo.hasNextPage;
+        queryData.forEach((media) => {
+          const id = media.id;
+          const name = media.title.romaji;
+          const image = media.coverImage.medium;
+          createCard(id, name, image);
+        });
+        break;
+      case "anime.list":
+        // filter out custom lists
+        completedLists = base.Completed.lists.filter(
+          (list) => !list.isCustomList
+        );
+        repeatingLists = base.Repeating.lists.filter(
+          (list) => !list.isCustomList
+        );
+        pausedLists = base.Paused.lists.filter((list) => !list.isCustomList);
+        // recreate complete list if split
+        if (completedLists[0].isSplitCompletedList) {
+          let tempList = [];
+          completedLists.forEach((list) => {
+            tempList = tempList.concat(list.entries);
           });
-
-          if (hasNextPage === false) {
-            querySwitch = true;
-          }
-          break;
-        } else if (querySwitch === true) {
-          queryData = queryDataBase.users[0].favourites.manga.nodes;
-          hasNextPage =
-            queryDataBase.users[0].favourites.manga.pageInfo.hasNextPage;
-          queryData.forEach((media) => {
-            const id = media.id;
-            const name = media.title.romaji;
-            const image = media.coverImage.medium;
-            createCard(id, name, image);
-          });
-          if (hasNextPage === false) {
-            querySwitch = false;
-          }
-          break;
+          queryData = tempList;
+        } else {
+          queryData = completedLists[0].entries;
         }
+        // check if returned arrays are empty and combine them
+        if (Object.keys(repeatingLists).length != 0) {
+          queryData = queryData.concat(repeatingLists[0].entries);
+        }
+        if (Object.keys(pausedLists).length != 0) {
+          queryData = queryData.concat(pausedLists[0].entries);
+        }
+        // sort array alphabetically
+        queryData.sort((a, b) => {
+          const nameA = a.media.title.romaji.toUpperCase();
+          const nameB = b.media.title.romaji.toUpperCase();
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+        });
+        // create cards
+        queryData.forEach((entry) => {
+          const id = entry.media.id;
+          const name = entry.media.title.romaji;
+          const image = entry.media.coverImage.medium;
+          createCard(id, name, image);
+        });
+        break;
+      case "manga.name":
+        queryData = queryDataBase.media;
+        hasNextPage = queryDataBase.pageInfo.hasNextPage;
+        queryData.forEach((media) => {
+          const id = media.id;
+          const name = media.title.romaji;
+          const image = media.coverImage.medium;
+          createCard(id, name, image);
+        });
+        break;
+      case "manga.favorites":
+        queryData = queryDataBase.users[0].favourites.manga.nodes;
+        hasNextPage =
+          queryDataBase.users[0].favourites.manga.pageInfo.hasNextPage;
+        queryData.forEach((media) => {
+          const id = media.id;
+          const name = media.title.romaji;
+          const image = media.coverImage.medium;
+          createCard(id, name, image);
+        });
+        break;
+      case "manga.list":
+        // filter out custom lists
+        completedLists = base.Completed.lists.filter(
+          (list) => !list.isCustomList
+        );
+        repeatingLists = base.Repeating.lists.filter(
+          (list) => !list.isCustomList
+        );
+        pausedLists = base.Paused.lists.filter((list) => !list.isCustomList);
+        currentLists = base.Current.lists.filter((list) => !list.isCustomList);
+        // recreate complete list if split
+        if (completedLists[0].isSplitCompletedList) {
+          let tempList = [];
+          completedLists.forEach((list) => {
+            tempList = tempList.concat(list.entries);
+          });
+          queryData = tempList;
+        } else {
+          queryData = completedLists[0].entries;
+        }
+        // check if returned arrays are empty and combine them
+        if (Object.keys(repeatingLists).length != 0) {
+          queryData = queryData.concat(repeatingLists[0].entries);
+        }
+        if (Object.keys(pausedLists).length != 0) {
+          queryData = queryData.concat(pausedLists[0].entries);
+        }
+        if (Object.keys(currentLists).length != 0) {
+          queryData = queryData.concat(currentLists[0].entries);
+        }
+        // sort array alphabetically
+        queryData.sort((a, b) => {
+          const nameA = a.media.title.romaji.toUpperCase();
+          const nameB = b.media.title.romaji.toUpperCase();
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+        });
+        // create cards
+        queryData.forEach((entry) => {
+          const id = entry.media.id;
+          const name = entry.media.title.romaji;
+          const image = entry.media.coverImage.medium;
+          createCard(id, name, image);
+        });
         break;
       case "staff.name":
         queryData = queryDataBase.staff;
@@ -477,7 +719,7 @@ function handleData(data) {
           createCard(id, name, image);
         });
         break;
-      case "staff.users":
+      case "staff.favorites":
         queryData = queryDataBase.users[0].favourites.staff.nodes;
         hasNextPage =
           queryDataBase.users[0].favourites.staff.pageInfo.hasNextPage;

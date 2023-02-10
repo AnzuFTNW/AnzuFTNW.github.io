@@ -12,3 +12,7 @@ refreshEventListeners();
 // load save files
 initializeImport();
 getFiles();
+
+function version() {
+  console.log("TierList - V1.5.1");
+}

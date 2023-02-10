@@ -4,12 +4,13 @@ const queryNav = createContainer("query-nav", "nav");
 app.appendChild(queryNav);
 
 /* query stuff */
-const queryTypes = ["character", "animanga", "staff", "user"];
+const queryTypes = ["character", "anime", "manga", "staff" /*, "user"*/];
 const queryModes = {
-  character: ["name", "origin", /*"season",*/ "user"],
-  animanga: ["name", /*"season",*/ "studio", "user" /*, "list"*/],
-  staff: ["name", "user"],
-  user: ["name" /*, "following", "followers"*/],
+  character: ["name", "origin", "favorites"],
+  anime: ["name", "studio", "favorites", "list"],
+  manga: ["name", "favorites", "list"],
+  staff: ["name", "favorites"],
+  // user: ["name"],
 };
 
 // build query nav

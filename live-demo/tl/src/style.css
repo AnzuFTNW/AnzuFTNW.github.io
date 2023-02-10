@@ -32,7 +32,7 @@ body {
   position: absolute;
   left: 20px;
   transform: translateX(-100%);
-  transition: transform 500ms ease-in;
+  transition: transform 100ms ease-in;
   transition-delay: 1s;
 }
 #save:hover {
@@ -50,6 +50,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 20px;
+  position: fixed;
+  z-index: 650;
+  top: 0;
+  width: 100%;
+  border-bottom: 7px solid var(--color-foreground);
 }
 .pool-icon {
   color: #ddd;
@@ -93,6 +98,7 @@ body {
   border: 4px solid var(--color-foreground);
   border-radius: 8px;
   margin: 20px;
+  margin-top: 60px;
 }
 .row {
   background: var(--color-background);
@@ -116,6 +122,8 @@ body {
 .tag {
   word-wrap: break-word;
   text-align: center;
+  max-width: calc(100% - 8px);
+  max-height: calc(100% - 8px);
 }
 #tierlist .card-box {
   display: flex;
@@ -258,12 +266,16 @@ body {
   top: 0;
   transform: translateX(100%);
   transition: transform 500ms ease-out;
+  min-width: 264px;
   width: 25%;
   z-index: 700;
 }
-
+#card-pool.half {
+  transform: translateX(70%);
+  transition-delay: 0s;
+}
 #card-pool.out {
-  transform: translateY(0);
+  transform: translateX(0);
   transition-delay: 0s;
 }
 #title {
@@ -300,22 +312,39 @@ body {
   position: relative;
   width: 100px;
 }
-.card-name {
+.card-name-wrapper {
+  display: flex;
   align-self: flex-end;
+  position: absolute;
   background: var(--color-background-transparent);
   border-radius: 8px;
+  width: calc(100% - 8px);
+  max-height: 38px;
+  padding: 4px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  justify-content: center;
+}
+.card-name-wrapper:hover {
+  overflow: scroll;
+  max-height: calc(100% - 8px);
+}
+.card-name {
   font-size: 12px;
   font-weight: bold;
-  margin: 4px;
-  padding: 4px;
-  position: absolute;
   text-align: center;
-  width: 92px;
+  width: calc(100% - 8px);
+  overflow: hidden;
+  text-shadow: 1px 1px 5px black;
 }
+.card-name:hover {
+  overflow: scroll;
+}
+
 .card-image {
   border-radius: 8px;
-  max-width: 100px;
-  object-fit: contain;
+  width: 100px;
+  object-fit: fill;
   background-color: var(--color-background-transparent);
 }
 

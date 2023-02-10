@@ -34,6 +34,12 @@ let letterIndex = 0;
 const colorPool = ["#ff7f7f", "#ffff7f", "#7fff7f", "#7fffff", "#7f7fff"];
 let colorIndex = 0;
 const textColor = "#22222c";
+const rgb2hex = (rgb) =>
+  `#${rgb
+    .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
+    .slice(1)
+    .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
+    .join("")}`;
 
 function openRowMenu(row) {
   const path = row.composedPath();
@@ -52,9 +58,14 @@ function openRowMenu(row) {
   const textColorPicker = currentRow.querySelector(
     `input[type="color"]:nth-child(4)`
   );
+  textColorPicker.value = `${rgb2hex(rankTagBackground.style.color)}`;
+
   const backgroundColorPicker = currentRow.querySelector(
     `input[type="color"]:nth-child(3)`
   );
+  backgroundColorPicker.value = `${rgb2hex(
+    rankTagBackground.style.background
+  )}`;
 
   if (currentMenu.style.display === "flex") {
     currentMenu.style.display = "none";
