@@ -122,8 +122,6 @@ body {
 .tag {
   word-wrap: break-word;
   text-align: center;
-  max-width: calc(100% - 8px);
-  max-height: calc(100% - 8px);
 }
 #tierlist .card-box {
   display: flex;
