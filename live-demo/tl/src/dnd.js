@@ -23,8 +23,10 @@ function handleDragStart(ev) {
   ev.dataTransfer.effectAllowed = "move";
   ev.dataTransfer.setData("text/plain", ev.target.id);
 
-  if (isDrawerOpen) {
-    toggleDrawer(ev);
+  if (cardPool.classList.contains("out")) {
+    if (isDrawerOpen) {
+      toggleDrawer(ev);
+    }
   }
 }
 
