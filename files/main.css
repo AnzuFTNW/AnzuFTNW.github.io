@@ -5,19 +5,19 @@
 - Character selection, scroll problems
 */
 .page-content {
-  background-image: url("https://i.imgur.com/giUnxCH.jpeg") !important;
-  background-attachment: fixed !important;
-  background-position: 100% 34% !important;
-  background-size: cover !important;
+  background-image: url("https://i.imgur.com/giUnxCH.jpeg");
+  background-attachment: fixed;
+  background-position: 100% 34%;
+  background-size: cover;
 }
 
 .page-content > .user {
-  background-image: url("https://i.imgur.com/Xaz3IVI.png") !important;
+  background-image: url("https://i.imgur.com/MLzl8ta.png"), url("https://i.imgur.com/Xaz3IVI.png") !important;
   background-attachment: scroll !important;
   background-position: 0% !important;
-  background-size: 10% !important;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  background-size: 50%, 10% !important;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 #nav {
@@ -34,9 +34,56 @@
 }
 .header-wrap .banner .container {
   visibility: visible;
+  max-width: 500px;
 }
-.header-wrap .banner .container .name {
+.header-wrap .banner .container .banner-content {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header-wrap .banner .container .banner-content .avatar {
+  content: url("https://i.imgur.com/jrR5U7z.png");
+  max-width: 50%;
+  max-height: unset;
+  width: unset;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.header-wrap .banner .container .banner-content .name-wrapper {
+  margin-top: 50px;
+  width: 50%;
+}
+.header-wrap .banner .container .banner-content .name-wrapper .name {
   text-transform: none;
+  font-size: 1.2rem;
+}
+.header-wrap .banner .container .banner-content .name-wrapper .name::before {
+  content: "アイ";
+  font-size: 3.5rem;
+}
+.header-wrap .banner .container .banner-content .name-wrapper .name::first-letter {
+  color: #e2007e;
+}
+.header-wrap .banner .container .banner-content .follower-badge {
+  background: #e2007e;
+  position: absolute;
+  bottom: 0;
+  right: 110px;
+}
+.header-wrap .banner .container .banner-content .actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.header-wrap .banner .container .banner-content .actions .nav-btn {
+  background: #e2007e;
+}
+.header-wrap .banner .container .banner-content .actions .dropdown {
+  display: none;
 }
 
 .header-wrap .nav-wrap {
@@ -114,7 +161,7 @@
 }
 .overview .about {
   position: absolute;
-  top: -512px;
+  top: -514px;
 }
 .overview .about .content-wrap {
   height: 456px;
@@ -142,9 +189,6 @@
   height: 456px;
   width: 194px;
   background: #e2007e !important;
-}
-.overview .desktop:nth-child(2) .content-wrap .history-day:nth-child(1) {
-  display: none;
 }
 .overview .favourites {
   margin-top: 30px;
@@ -184,7 +228,12 @@
   }
 }
 
-@media (min-width: 1540px) {
+@media (min-width: 2000px) {
+  .nav-wrap {
+    max-width: 2000px;
+  }
+}
+@media (min-width: 1540px) and (max-width: 2000px) {
   .nav-wrap {
     max-width: 1380px;
   }
@@ -201,26 +250,32 @@
   }
 }
 
-@media (min-width: 1540px) {
-  .content.container {
+@media (min-width: 2000px) {
+  .container {
+    max-width: 2000px;
+    padding: 0;
+  }
+}
+@media (min-width: 1540px) and (max-width: 2000px) {
+  .container {
     padding: 0;
     max-width: 1380px;
   }
 }
 @media (min-width: 1040px) and (max-width: 1540px) {
-  .content.container {
+  .container {
     padding: 0;
     max-width: 1100px;
   }
-  .content.container .list-stats:nth-child(2) {
+  .container .list-stats:nth-child(2) {
     margin-top: 30px;
   }
 }
 @media (max-width: 1040px) {
-  .content.container {
+  .container {
     padding: 0;
   }
-  .content.container .list-stats:nth-child(2) {
+  .container .list-stats:nth-child(2) {
     margin-top: 30px;
   }
 }
@@ -230,7 +285,13 @@
   left: 0;
   overflow-x: auto;
 }
-@media (min-width: 1540px) {
+@media (min-width: 2000px) {
+  .overview .about {
+    width: 1706px;
+    left: 234px;
+  }
+}
+@media (min-width: 1540px) and (max-width: 2000px) {
   .overview .about {
     width: 1086px;
     left: 234px;
@@ -265,7 +326,7 @@
 }
 .theme-selector .dark {
   color: #ddd;
-  background: #212326;
+  background: #16171a;
 }
 
 #nav .wrap {
@@ -281,15 +342,12 @@
   text-align: center;
   top: 13px;
   height: unset;
-  z-index: 9100;
+  z-index: 9000;
 }
 #nav .wrap .logo img {
   content: url("https://i.imgur.com/nENfyEI.png");
   height: unset;
   width: 203px;
-}
-#nav .wrap .links {
-  z-index: 9200;
 }
 #nav .wrap .links .link {
   padding: 18px 32px;
@@ -306,14 +364,12 @@
 #nav .wrap .search {
   position: absolute;
   margin: 18.5px 80px;
-  z-index: 9999;
 }
 #nav .wrap .user {
   position: absolute;
   right: 0;
   margin: 18.5px 80px;
   height: unset;
-  z-index: 9999;
 }
 #nav .wrap::before,
 #nav .wrap::after {
@@ -331,13 +387,11 @@
   width: 260px;
   height: 260px;
   background: #000;
-  z-index: 9000;
 }
 #nav .wrap::after {
   width: 280px;
   height: 280px;
   border: 5px solid #000;
-  z-index: 9000;
 }
 #nav.transparent {
   height: 100%;
@@ -363,6 +417,9 @@
           flex-direction: column;
   width: 100%;
 }
+#nav.transparent .wrap::before, #nav.transparent .wrap::after {
+  z-index: 8000;
+}
 #nav.transparent .wrap .logo {
   top: 40px;
 }
@@ -370,7 +427,6 @@
   width: 393px;
 }
 #nav.transparent .wrap .links {
-  z-index: 8000;
   margin-top: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,7 +489,7 @@
   margin: 0 0 0.1em;
 }
 #nav .dropdown {
-  z-index: 9999;
+  z-index: 9000;
   -webkit-box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1333333333);
           box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1333333333);
 }
@@ -514,7 +570,8 @@
 #app .input,
 #app .result-col,
 #app .result .image,
-#app .embed {
+#app .embed,
+#app .follower-badge {
   border-radius: 15px;
 }
 #app .dropdown .footer,
@@ -546,6 +603,9 @@
 
 body {
   color: #444;
+}
+body a:hover {
+  color: #e2007e;
 }
 body #app #nav, body #app #nav:hover, body #app #nav.transparent, body #app #nav.hide {
   background-color: #e2007e;
@@ -580,16 +640,16 @@ body #app #nav .dropdown .primary-link > svg:hover .icon,
 body #app #nav .dropdown .primary-link .icon:hover,
 body #app #nav .dropdown .primary-link .icon:hover > svg,
 body #app #nav .dropdown .primary-link .icon:hover .icon {
-  color: #000;
+  color: #e2007e;
 }
 body #app #nav .dropdown .primary-link-text:hover {
-  color: #000;
+  color: #e2007e;
 }
 body #app #nav .dropdown .secondary-links {
   color: #444;
 }
 body #app #nav .dropdown .secondary-links a:hover {
-  color: #000;
+  color: #e2007e;
 }
 body #app #nav .dropdown .footer {
   background-color: #eee;
@@ -599,7 +659,7 @@ body #app #nav .dropdown .footer a:hover,
 body #app #nav .dropdown .footer a:hover .icon,
 body #app #nav .dropdown .footer .secondary-link:hover,
 body #app #nav .dropdown .footer .secondray-link:hover > svg {
-  color: #000;
+  color: #e2007e;
 }
 body #app .header-wrap .name {
   color: #fff;
@@ -615,7 +675,7 @@ body #app .header-wrap .nav-wrap .nav .link:hover {
 }
 body #app .header-wrap .nav-wrap .nav .router-link-active {
   color: #ddd;
-  background: #212326;
+  background: #16171a;
 }
 body #app .page-content > .user > .content.container > div {
   background-color: #fff;
@@ -687,7 +747,7 @@ body #app .page-content > .user > .content.container > div .markdown-editor > [t
 body #app .page-content > .user > .content.container > div .markdown-editor > [title=Image],
 body #app .page-content > .user > .content.container > div .markdown-editor > [title="Youtube Video"],
 body #app .page-content > .user > .content.container > div .markdown-editor > [title="WebM Video"] {
-  color: #f00;
+  color: #f66;
 }
 body #app .page-content > .user > .content.container > div .el-textarea__inner::-webkit-input-placeholder {
   color: #444;
@@ -721,7 +781,7 @@ body #app .page-content > .user > .content.container > div .activity-feed .activ
   color: #e2007e;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .time .action.active {
-  color: #0f0;
+  color: #6f6;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .extras-dropdown .el-dropdown-link {
   color: #bbb;
@@ -745,10 +805,10 @@ body #app .page-content > .user > .content.container > div .activity-feed .activ
   stroke: #e2007e;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button.liked {
-  color: #f00;
+  color: #f66;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button.liked .fa-heart {
-  color: #f00;
+  color: #f66;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action:hover {
   color: #e2007e;
@@ -778,7 +838,7 @@ body #app .page-content > .user > .content.container > div .activity-feed .reply
   stroke: #e2007e;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .action .button.liked .fa-heart {
-  color: #f00;
+  color: #f66;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .list .title {
   color: #e2007e;
@@ -825,7 +885,7 @@ body #app .tooltip .title {
 }
 body #app .tooltip .title,
 body #app .tooltip .content {
-  color: #444;
+  color: #ddd;
 }
 body #app .tooltip::after {
   border-top-color: rgba(0, 0, 0, 0.5333333333);
@@ -870,10 +930,10 @@ body.site-theme-dark #app #nav .user:hover .chevron {
   color: rgba(255, 255, 255, 0.6);
 }
 body.site-theme-dark #app #nav .dropdown {
-  background-color: #212326;
+  background-color: #16171a;
 }
 body.site-theme-dark #app #nav .dropdown::before {
-  color: #212326;
+  color: #16171a;
 }
 body.site-theme-dark #app #nav .dropdown .primary-link,
 body.site-theme-dark #app #nav .dropdown .primary-link > svg,
@@ -887,29 +947,29 @@ body.site-theme-dark #app #nav .dropdown .primary-link > svg:hover .icon,
 body.site-theme-dark #app #nav .dropdown .primary-link .icon:hover,
 body.site-theme-dark #app #nav .dropdown .primary-link .icon:hover > svg,
 body.site-theme-dark #app #nav .dropdown .primary-link .icon:hover .icon {
-  color: #fff;
+  color: #e2007e;
 }
 body.site-theme-dark #app #nav .dropdown .primary-link-text:hover {
-  color: #fff;
+  color: #e2007e;
 }
 body.site-theme-dark #app #nav .dropdown .secondary-links {
   color: #ddd;
 }
 body.site-theme-dark #app #nav .dropdown .secondary-links a:hover {
-  color: #fff;
+  color: #e2007e;
 }
 body.site-theme-dark #app #nav .dropdown .footer {
-  background-color: #16171a;
+  background-color: #111111;
   color: #ddd;
 }
 body.site-theme-dark #app #nav .dropdown .footer a:hover,
 body.site-theme-dark #app #nav .dropdown .footer a:hover .icon,
 body.site-theme-dark #app #nav .dropdown .footer .secondary-link:hover,
 body.site-theme-dark #app #nav .dropdown .footer .secondray-link:hover > svg {
-  color: #fff;
+  color: #e2007e;
 }
 body.site-theme-dark #app .header-wrap .nav-wrap {
-  background: #212326;
+  background: #16171a;
 }
 body.site-theme-dark #app .header-wrap .nav-wrap .nav .link {
   color: #ddd;
@@ -922,7 +982,7 @@ body.site-theme-dark #app .header-wrap .nav-wrap .nav .router-link-active {
   background: #fff;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div {
-  background-color: #212326;
+  background-color: #16171a;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div h1,
 body.site-theme-dark #app .page-content > .user > .content.container > div h2,
@@ -941,7 +1001,7 @@ body.site-theme-dark #app .page-content > .user > .content.container > div .el-t
 body.site-theme-dark #app .page-content > .user > .content.container > div .markdown-editor,
 body.site-theme-dark #app .page-content > .user > .content.container > div .button.cancel,
 body.site-theme-dark #app .page-content > .user > .content.container > div .reply {
-  background: #212326;
+  background: #16171a;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .history-day {
   background: rgba(0, 0, 0, 0.1333333333);
@@ -1014,7 +1074,7 @@ body.site-theme-dark #app .page-content > .user > .content.container > div .acti
   color: #e2007e;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .users {
-  background: #212326;
+  background: #16171a;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed .reply .actions .time {
   color: #888;
@@ -1035,7 +1095,7 @@ body.site-theme-dark #app .load-more:hover {
   color: #e2007e;
 }
 body.site-theme-dark #app .footer {
-  background: #212326;
+  background: #16171a;
   color: #ddd;
 }
 body.site-theme-dark #app .footer .links a:hover {
