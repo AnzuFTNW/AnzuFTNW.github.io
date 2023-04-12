@@ -34,7 +34,7 @@
 }
 .header-wrap .banner .container {
   visibility: visible;
-  max-width: 500px;
+  max-width: 26%;
 }
 .header-wrap .banner .container .banner-content {
   position: relative;
@@ -72,15 +72,24 @@
   background: #e2007e;
   position: absolute;
   bottom: 0;
-  right: 110px;
+  right: 100px;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 15px;
 }
 .header-wrap .banner .container .banner-content .actions {
   position: absolute;
+  padding: 0;
   bottom: 0;
   right: 0;
 }
 .header-wrap .banner .container .banner-content .actions .nav-btn {
   background: #e2007e;
+  font-size: 1.2rem;
+  padding: 5px 8px;
+  margin: 0;
+  margin-bottom: 15px;
+  width: 90px;
 }
 .header-wrap .banner .container .banner-content .actions .dropdown {
   display: none;
@@ -706,16 +715,16 @@ body #app .page-content > .user > .content.container > div .history-day {
   background: rgba(0, 0, 0, 0.1333333333);
 }
 body #app .page-content > .user > .content.container > div .history-day.lv-1, body #app .page-content > .user > .content.container > div .history-day.lv-2 {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.7333333333);
 }
 body #app .page-content > .user > .content.container > div .history-day.lv-3, body #app .page-content > .user > .content.container > div .history-day.lv-4 {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.8);
 }
 body #app .page-content > .user > .content.container > div .history-day.lv-5, body #app .page-content > .user > .content.container > div .history-day.lv-6 {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8666666667);
 }
 body #app .page-content > .user > .content.container > div .history-day.lv-7, body #app .page-content > .user > .content.container > div .history-day.lv-8 {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9333333333);
 }
 body #app .page-content > .user > .content.container > div .history-day.lv-9 {
   background: white;
@@ -1007,16 +1016,16 @@ body.site-theme-dark #app .page-content > .user > .content.container > div .hist
   background: rgba(0, 0, 0, 0.1333333333);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-1, body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-2 {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.7333333333);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-3, body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-4 {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.8);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-5, body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-6 {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8666666667);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-7, body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-8 {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9333333333);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .history-day.lv-9 {
   background: white;
@@ -1162,4 +1171,116 @@ body #app .tooltip {
 
 .markdown {
   text-transform: none;
+}
+
+body #app .medialist.table .list-section {
+  background: #fff;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+body #app .medialist.table .list-section .entry:hover {
+  background: #e2007e;
+}
+body #app .theme-switch {
+  background: #fff;
+}
+body #app .theme-switch .active {
+  color: #e2007e;
+}
+body #app .filter-group > span,
+body #app .filter-group .group-header {
+  color: #444;
+}
+body #app .filter-group .active {
+  background: #fff;
+  color: #444;
+}
+body #app .el-slider .el-slider__runway {
+  background-color: rgba(0, 0, 0, 0.1333333333);
+}
+body #app .el-slider .el-slider__runway .el-slider__button {
+  border-color: #e2007e;
+}
+body #app .filters-wrap .random-btn,
+body #app .filters-wrap .hohButton {
+  background-color: #e2007e;
+}
+body #app .favourites > .favourites .actions > div {
+  background: #e2007e;
+}
+body #app .favourites > .favourites > .favourites-wrap {
+  background: #fff;
+}
+body #app .user-follow .follow-card {
+  background: #fff;
+}
+body #app .stats .highlight .circle {
+  background: #fff;
+}
+body #app .stats .highlight .circle svg {
+  color: #444;
+}
+body #app .stats .highlight .value {
+  color: #e2007e;
+}
+body #app .stats .highlight .label {
+  color: #bbb;
+}
+body #app .stats .switch {
+  background: #fff;
+  color: #444;
+}
+body #app .stats .switch .option.active {
+  background-color: #e2007e;
+}
+body #app .stats .bar-chart-wrap {
+  background: #fff;
+}
+body #app .stats .bar-chart-wrap .bar {
+  background: #e2007e;
+}
+body #app .stats .pie-chart {
+  background: #fff;
+}
+body #app .stats .horizontal-scroller,
+body #app .stats .line-chart-wrap {
+  background: #fff;
+}
+body #app .stats .horizontal-scroller .point,
+body #app .stats .line-chart-wrap .point {
+  fill: #e2007e;
+}
+body #app .stats .horizontal-scroller .line,
+body #app .stats .line-chart-wrap .line {
+  stroke: #e2007e;
+}
+
+body.site-theme-dark #app .medialist.table .list-section,
+body.site-theme-dark #app .favourites > .favourites > .favourites-wrap,
+body.site-theme-dark #app .user-follow .follow-card {
+  background: #16171a;
+}
+body.site-theme-dark #app .theme-switch,
+body.site-theme-dark #app .filter-group .active {
+  background: #16171a;
+}
+body.site-theme-dark #app .filter-group > span,
+body.site-theme-dark #app .group-header,
+body.site-theme-dark #app .filter-group .active {
+  color: #ddd;
+}
+body.site-theme-dark #app .stats .highlight .circle,
+body.site-theme-dark #app .stats .highlight svg,
+body.site-theme-dark #app .stats .switch,
+body.site-theme-dark #app .stats .bar-chart-wrap,
+body.site-theme-dark #app .stats .pie-chart,
+body.site-theme-dark #app .stats .horizontal-scroller,
+body.site-theme-dark #app .stats .line-chart-wrap {
+  background: #16171a;
+  color: #ddd;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+body.site-theme-dark #app .stats .label {
+  color: #888;
 }/*# sourceMappingURL=main.css.map */
