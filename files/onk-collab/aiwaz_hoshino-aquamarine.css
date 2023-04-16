@@ -1,9 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+JP:wght@300&display=swap");
-/* notes
+/* 
+  [Oshi no Ko] - Collab Profile V1.0
+    - @Ginchan    (https://anilist.co/user/Ginchan/)    as Hoshino, Ai
+    - @Awaiz      (https://anilist.co/user/Awaiz)       as Hoshino, Aquamarine
+    - @Saito      (https://anilist.co/user/Saito/)      as Hoshino, Ruby
+    - @Eonch      (https://anilist.co/user/Eonch/)      as Arima, Kana
+    - @Anzu       (https://anilist.co/user/Anzu/)       as Kurokawa, Akane
+    - @Robiracer  (https://anilist.co/user/Robiracer/)  as Mem-Cho
 
-- Character selection, scroll problems
+  Banners by @Awaiz, CSS by @Anzu, Profile by @Awaiz & @Ginchan
+
+  Special Thanks:
+    - @Cakes
+    - @Robiracer
 */
+:root {
+  --character-accent-color: #84d2f6;
+  --character-accent-color-dim: #a0c7d9;
+}
+
 .page-content {
   background-image: url("https://i.imgur.com/giUnxCH.jpeg");
   background-attachment: fixed;
@@ -46,7 +62,7 @@
           align-items: flex-start;
 }
 .header-wrap .banner .container .banner-content .avatar {
-  content: url("https://i.imgur.com/jrR5U7z.png");
+  content: url("https://i.imgur.com/rBSPpWk.png");
   max-width: 50%;
   max-height: unset;
   width: unset;
@@ -62,14 +78,14 @@
   font-size: 1.2rem;
 }
 .header-wrap .banner .container .banner-content .name-wrapper .name::before {
-  content: "アイ";
+  content: "アクア";
   font-size: 3.5rem;
 }
 .header-wrap .banner .container .banner-content .name-wrapper .name::first-letter {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 .header-wrap .banner .container .banner-content .follower-badge {
-  background: #e2007e;
+  background: var(--character-accent-color);
   position: absolute;
   bottom: 0;
   right: 100px;
@@ -84,7 +100,7 @@
   right: 0;
 }
 .header-wrap .banner .container .banner-content .actions .nav-btn {
-  background: #e2007e;
+  background: var(--character-accent-color);
   font-size: 1.2rem;
   padding: 5px 8px;
   margin: 0;
@@ -93,6 +109,10 @@
 }
 .header-wrap .banner .container .banner-content .actions .dropdown {
   display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--character-accent-color) !important;
 }
 
 .header-wrap .nav-wrap {
@@ -108,7 +128,7 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 3px solid #e2007e;
+  border: 3px solid var(--character-accent-color);
   border-radius: 15px;
 }
 .header-wrap .nav-wrap .nav.container .link {
@@ -175,7 +195,7 @@
 .overview .about .content-wrap {
   height: 456px;
   margin: 10px 0 0 0;
-  background: #e2007e !important;
+  background: var(--character-accent-color) !important;
 }
 .overview .about::before {
   content: "About me";
@@ -197,7 +217,7 @@
   grid-gap: 8px;
   height: 456px;
   width: 194px;
-  background: #e2007e !important;
+  background: var(--character-accent-color) !important;
 }
 .overview .favourites {
   margin-top: 30px;
@@ -212,8 +232,14 @@
   margin-top: unset;
 }
 .overview .activity-feed .activity-entry > .wrap {
-  border: 3px solid #e2007e;
+  border: 3px solid var(--character-accent-color);
   border-radius: 15px;
+}
+.overview .activity-feed .activity-replies {
+  border: 3px solid var(--character-accent-color);
+  border-top: unset;
+  margin-top: unset;
+  border-radius: 0 0 15px 15px;
 }
 
 @media (max-height: 920px) {
@@ -511,8 +537,8 @@
 }
 
 #nav {
-  -webkit-transition: height 250ms ease 0ms, top 250ms ease 0ms !important;
-  transition: height 250ms ease 0ms, top 250ms ease 0ms !important;
+  -webkit-transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1) 0ms, top 250ms ease 0ms !important;
+  transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1) 0ms, top 250ms ease 0ms !important;
 }
 #nav .wrap * {
   -webkit-transition: unset;
@@ -532,8 +558,8 @@
   transition: width 500ms ease 0ms, height 500ms ease 0ms;
 }
 #nav.transparent {
-  -webkit-transition: height 250ms ease 0ms, top 250ms ease 0ms !important;
-  transition: height 250ms ease 0ms, top 250ms ease 0ms !important;
+  -webkit-transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1) 0ms, top 250ms ease 0ms !important;
+  transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1) 0ms, top 250ms ease 0ms !important;
 }
 #nav.hide {
   top: 0 !important;
@@ -614,10 +640,10 @@ body {
   color: #444;
 }
 body a:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app #nav, body #app #nav:hover, body #app #nav.transparent, body #app #nav.hide {
-  background-color: #e2007e;
+  background-color: var(--character-accent-color);
   color: #fff;
 }
 body #app #nav .search svg,
@@ -649,16 +675,16 @@ body #app #nav .dropdown .primary-link > svg:hover .icon,
 body #app #nav .dropdown .primary-link .icon:hover,
 body #app #nav .dropdown .primary-link .icon:hover > svg,
 body #app #nav .dropdown .primary-link .icon:hover .icon {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app #nav .dropdown .primary-link-text:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app #nav .dropdown .secondary-links {
   color: #444;
 }
 body #app #nav .dropdown .secondary-links a:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app #nav .dropdown .footer {
   background-color: #eee;
@@ -668,7 +694,7 @@ body #app #nav .dropdown .footer a:hover,
 body #app #nav .dropdown .footer a:hover .icon,
 body #app #nav .dropdown .footer .secondary-link:hover,
 body #app #nav .dropdown .footer .secondray-link:hover > svg {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .header-wrap .name {
   color: #fff;
@@ -680,7 +706,7 @@ body #app .header-wrap .nav-wrap .nav .link {
   color: #444;
 }
 body #app .header-wrap .nav-wrap .nav .link:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .header-wrap .nav-wrap .nav .router-link-active {
   color: #ddd;
@@ -709,7 +735,7 @@ body #app .page-content > .user > .content.container > div .reply {
   background: #fff;
 }
 body #app .page-content > .user > .content.container > div .button.save {
-  background: #e2007e;
+  background: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .history-day {
   background: rgba(0, 0, 0, 0.1333333333);
@@ -733,7 +759,7 @@ body #app .page-content > .user > .content.container > div .genre-overview .labe
   color: #bbb;
 }
 body #app .page-content > .user > .content.container > div .list-stats .stat .value {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .list-stats .stat .label {
   color: #bbb;
@@ -742,16 +768,16 @@ body #app .page-content > .user > .content.container > div .activity-feed-wrap .
   color: #bbb;
 }
 body #app .page-content > .user > .content.container > div .activity-feed-wrap .section-header .el-dropdown-menu__item:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .markdown-editor {
   color: #444;
 }
 body #app .page-content > .user > .content.container > div .markdown-editor > div:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .markdown-editor > [title=Link] {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .markdown-editor > [title=Image],
 body #app .page-content > .user > .content.container > div .markdown-editor > [title="Youtube Video"],
@@ -778,7 +804,7 @@ body #app .page-content > .user > .content.container > div .button.save {
   color: #bbb;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .name {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .time {
   color: #bbb;
@@ -787,7 +813,7 @@ body #app .page-content > .user > .content.container > div .activity-feed .activ
   background: unset;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .time .action:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .time .action.active {
   color: #6f6;
@@ -796,22 +822,22 @@ body #app .page-content > .user > .content.container > div .activity-feed .activ
   color: #bbb;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .extras-dropdown .el-dropdown-link:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions {
-  color: #a83876;
+  color: var(--character-accent-color-dim);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button {
-  color: #a83876;
+  color: var(--character-accent-color-dim);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button .fa-heart {
-  stroke: #a83876;
+  stroke: var(--character-accent-color-dim);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button .fa-heart:hover {
-  stroke: #e2007e;
+  stroke: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action .button.liked {
   color: #f66;
@@ -820,48 +846,48 @@ body #app .page-content > .user > .content.container > div .activity-feed .activ
   color: #f66;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .action:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .users {
   background: #fff;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .name {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions {
-  color: #a83876;
+  color: var(--character-accent-color-dim);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .time {
   color: #bbb;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .action .button {
-  color: #a83876;
+  color: var(--character-accent-color-dim);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .action .button:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .action .button .fa-heart {
-  stroke: #a83876;
+  stroke: var(--character-accent-color-dim);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .action .button .fa-heart:hover {
-  stroke: #e2007e;
+  stroke: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .reply .actions .action .button.liked .fa-heart {
   color: #f66;
 }
 body #app .page-content > .user > .content.container > div .activity-feed .list .title {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .page-content > .user > .content.container > div .activity-feed .activity-manga_list > div > div > div > div > .title,
 body #app .page-content > .user > .content.container > div .activity-feed .hohPinned .list .title[href^="/manga/"] {
-  color: #e2007e !important;
+  color: var(--character-accent-color) !important;
 }
 body #app .markdown a,
 body #app .markdown a:visited {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .markdown .markdown-spoiler::before {
-  color: #e2007e;
+  color: var(--character-accent-color);
   background: rgba(0, 0, 0, 0.1333333333);
 }
 body #app .markdown .markdown-spoiler.spoiler-visible .hide-spoiler,
@@ -875,7 +901,7 @@ body #app .markdown .embed .wrap {
   color: #444;
 }
 body #app .markdown .embed .wrap .title {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .about .markdown {
   color: #ddd;
@@ -903,28 +929,28 @@ body #app .load-more {
   color: #444;
 }
 body #app .load-more:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .footer {
   background: #fff;
   color: #444;
 }
 body #app .footer h2 {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .footer .links a:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body .el-dropdown-menu__item:focus,
 body .el-dropdown-menu__item:not(.is-disabled):hover {
-  background: #e2007e;
+  background: var(--character-accent-color);
 }
 
 body.site-theme-dark {
   color: #ddd;
 }
 body.site-theme-dark #app #nav, body.site-theme-dark #app #nav:hover, body.site-theme-dark #app #nav.transparent, body.site-theme-dark #app #nav.hide {
-  background-color: #e2007e;
+  background-color: var(--character-accent-color);
   color: #fff;
 }
 body.site-theme-dark #app #nav .search svg,
@@ -956,16 +982,16 @@ body.site-theme-dark #app #nav .dropdown .primary-link > svg:hover .icon,
 body.site-theme-dark #app #nav .dropdown .primary-link .icon:hover,
 body.site-theme-dark #app #nav .dropdown .primary-link .icon:hover > svg,
 body.site-theme-dark #app #nav .dropdown .primary-link .icon:hover .icon {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app #nav .dropdown .primary-link-text:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app #nav .dropdown .secondary-links {
   color: #ddd;
 }
 body.site-theme-dark #app #nav .dropdown .secondary-links a:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app #nav .dropdown .footer {
   background-color: #111111;
@@ -975,7 +1001,7 @@ body.site-theme-dark #app #nav .dropdown .footer a:hover,
 body.site-theme-dark #app #nav .dropdown .footer a:hover .icon,
 body.site-theme-dark #app #nav .dropdown .footer .secondary-link:hover,
 body.site-theme-dark #app #nav .dropdown .footer .secondray-link:hover > svg {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .header-wrap .nav-wrap {
   background: #16171a;
@@ -984,7 +1010,7 @@ body.site-theme-dark #app .header-wrap .nav-wrap .nav .link {
   color: #ddd;
 }
 body.site-theme-dark #app .header-wrap .nav-wrap .nav .link:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .header-wrap .nav-wrap .nav .router-link-active {
   color: #444;
@@ -1040,13 +1066,13 @@ body.site-theme-dark #app .page-content > .user > .content.container > div .acti
   color: #888;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed-wrap .section-header .el-dropdown-menu__item:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .markdown-editor {
   color: #ddd;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .markdown-editor > div:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .el-textarea__inner::-webkit-input-placeholder {
   color: #ddd;
@@ -1074,13 +1100,13 @@ body.site-theme-dark #app .page-content > .user > .content.container > div .acti
   background: unset;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .time .action:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .extras-dropdown .el-dropdown-link {
   color: #888;
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .extras-dropdown .el-dropdown-link:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .page-content > .user > .content.container > div .activity-feed .activity-entry > .wrap .actions .users {
   background: #16171a;
@@ -1101,14 +1127,14 @@ body.site-theme-dark #app .load-more {
   color: #ddd;
 }
 body.site-theme-dark #app .load-more:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body.site-theme-dark #app .footer {
   background: #16171a;
   color: #ddd;
 }
 body.site-theme-dark #app .footer .links a:hover {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 
 body {
@@ -1179,13 +1205,13 @@ body #app .medialist.table .list-section {
           box-shadow: unset;
 }
 body #app .medialist.table .list-section .entry:hover {
-  background: #e2007e;
+  background: var(--character-accent-color);
 }
 body #app .theme-switch {
   background: #fff;
 }
 body #app .theme-switch .active {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .filter-group > span,
 body #app .filter-group .group-header {
@@ -1199,14 +1225,14 @@ body #app .el-slider .el-slider__runway {
   background-color: rgba(0, 0, 0, 0.1333333333);
 }
 body #app .el-slider .el-slider__runway .el-slider__button {
-  border-color: #e2007e;
+  border-color: var(--character-accent-color);
 }
 body #app .filters-wrap .random-btn,
 body #app .filters-wrap .hohButton {
-  background-color: #e2007e;
+  background-color: var(--character-accent-color);
 }
 body #app .favourites > .favourites .actions > div {
-  background: #e2007e;
+  background: var(--character-accent-color);
 }
 body #app .favourites > .favourites > .favourites-wrap {
   background: #fff;
@@ -1221,7 +1247,7 @@ body #app .stats .highlight .circle svg {
   color: #444;
 }
 body #app .stats .highlight .value {
-  color: #e2007e;
+  color: var(--character-accent-color);
 }
 body #app .stats .highlight .label {
   color: #bbb;
@@ -1231,13 +1257,13 @@ body #app .stats .switch {
   color: #444;
 }
 body #app .stats .switch .option.active {
-  background-color: #e2007e;
+  background-color: var(--character-accent-color);
 }
 body #app .stats .bar-chart-wrap {
   background: #fff;
 }
 body #app .stats .bar-chart-wrap .bar {
-  background: #e2007e;
+  background: var(--character-accent-color);
 }
 body #app .stats .pie-chart {
   background: #fff;
@@ -1248,11 +1274,11 @@ body #app .stats .line-chart-wrap {
 }
 body #app .stats .horizontal-scroller .point,
 body #app .stats .line-chart-wrap .point {
-  fill: #e2007e;
+  fill: var(--character-accent-color);
 }
 body #app .stats .horizontal-scroller .line,
 body #app .stats .line-chart-wrap .line {
-  stroke: #e2007e;
+  stroke: var(--character-accent-color);
 }
 
 body.site-theme-dark #app .medialist.table .list-section,
