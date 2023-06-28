@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anzu's Library - OnK Collab</title>
+    <link rel="stylesheet" href="../src/github-markdown.css" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/images-compare.css" />
+  </head>
+  <body>
+    <a href="../index.html" class="back">🠔</a>
+    <article class="markdown-body">
+      <!-- Title -->
+      <h1>
+        <code>V1.0</code>
+        <a href="../files/ginchan_hoshino-ai.css">OnK Collab</a>
+      </h1>
+      <!-- Description -->
+      <h2>Description</h2>
+      <p>
+        CSS Files themed after Oshi no Ko.<br>
+        This was planned as a 6-man collobration but sadly didn't work out.<br>
+        <br>
+        <a href="https://anilist.co/user/Ginchan/" target="_blank">@Ginchan</a> as <a href="https://anilist.co/character/172759/Hoshino-Ai" target="_blank">Hoshino Ai</a><br>
+        <a href="https://anilist.co/user/Awaiz/" target="_blank">@Aiwaz</a> as <a href="https://anilist.co/character/183885/Hoshino-Aquamarine" target="_blank">Hoshino Aquamarine</a><br>
+        <a href="https://anilist.co/user/Saito/" target="_blank">@Saito</a> as <a href="https://anilist.co/character/183884/Hoshino-Ruby" target="_blank">Hoshino Ruby</a><br>
+        <a href="https://anilist.co/user/Eonch/" target="_blank">@Eonch</a> as <a href="https://anilist.co/character/188783/Arima-Kana" target="_blank">Arima Kana</a><br>
+        <a href="https://anilist.co/user/Anzu/" target="_blank">@Anzu</a> as <a href="https://anilist.co/character/203384/Kurokawa-Akane" target="_blank">Kurokawa Akane</a><br>
+        <a href="https://anilist.co/user/Robiracer/" target="_blank">@Robiracer</a> as <a href="https://anilist.co/character/205434/MEMcho" target="_blank">Mem-cho</a><br>
+        <br>
+        Files:<br>
+        <a href="https://anzuftnw.github.io/files/onk-collab/ginchan_hoshino-ai.css" target="_blank">Ai</a><br>
+        <a href="https://anzuftnw.github.io/files/onk-collab/aiwaz_hoshino-aquamarine.css" target="_blank">Aqua</a><br>
+        <a href="https://anzuftnw.github.io/files/onk-collab/saito_hoshino-ruby.css" target="_blank">Ruby</a><br>
+        <a href="https://anzuftnw.github.io/files/onk-collab/eonch_arima-kana.css" target="_blank">Arima</a><br>
+        <a href="https://anzuftnw.github.io/files/onk-collab/anzu_kurokawa-akane.css" target="_blank">Akane</a><br>
+        <a href="https://anzuftnw.github.io/files/onk-collab/robiracer_mem-cho.css" target="_blank">Mem-cho</a><br>
+      </p>
+      <!-- Screenshots & Comparsion -->
+      <h2>Sceenshots</h2>
+      <p>
+        <code>Screenshot</code> - Preview
+      </p>
+      <!-- Main div container -->
+      <div id="myImageCompare" class="comparsion">
+        <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
+        <div style="display: none">
+          <span class="images-compare-label">Before</span>
+          <img src="../src/img/onk-collab-before.png" alt="Before" />
+        </div>
+        <!-- This div will be the back element -->
+        <div>
+          <span class="images-compare-label">After</span>
+          <img src="../src/img/onk-collab-after.jpg" alt="After" />
+        </div>
+      </div>
+      <!-- Installation Guide -->
+      <h2>Installation</h2>
+      <h3>Quick Setup</h3>
+      <p>
+        Add
+        <code
+          >@import
+          url("https://anzuftnw.github.io/files/onk-collab/ginchan_hoshino-ai.css");</code
+        >
+        into the custom css box inside your app settings and press submit.
+      </p>
+      <center>
+        <img
+          class="tutorial"
+          width="720px"
+          src="../src/img/tutorial.png"
+          alt="tutorial image"
+        />
+      </center>
+      <h3>Customize</h3>
+      <p>
+        If you want more freedom and disable or modify some of the things this
+        code snippet does you probably already know how to do so. Copy the contents
+        of
+        <code
+          ><a href="../files/onk-collab/ginchan_hoshino-ai.css">ginchan_hoshino-ai.css</a></code
+        >
+        into your custom css box or a seperat file and get started.
+      </p>
+
+      <!-- Changelog -->
+      <h2>Changelog</h2>
+      <blockquote>
+        <ul>
+          <li>
+            <code><b>2023/04/16</b></code> - <i>Version 1.0</i>
+            <ul>
+              <li>Initial release</li>
+            </ul>
+          </li>
+        </ul>
+      </blockquote>
+    </article>
+    <!-- Scripts -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../src/jquery.images-compare.js"
+    ></script>
+    <script>
+      $("#myImageCompare").imagesCompare({
+        initVisibleRatio: 0.5,
+        interactionMode: "drag",
+        addSeparator: true,
+        addDragHandle: true,
+        animationDuration: 400,
+        animationEasing: "swing",
+        precision: 4,
+      });
+    </script>
+  </body>
+</html>
